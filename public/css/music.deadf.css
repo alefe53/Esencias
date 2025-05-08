@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	background-image: url("/images/fondomusicdeadf.png"); /* Asegúrate que esta imagen exista en public/images/ */
+	color: #333;
+	/* Propiedades de fondo recomendadas: */
+	background-size: cover; /* Para que la imagen cubra todo el fondo */
+	background-position: center; /* Para centrar la imagen */
+	background-repeat: no-repeat; /* Para que no se repita si es más pequeña que la pantalla */
+	background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
+	min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
+}
+
+.container {
+	width: 80%;
+	margin: 40px auto; /* Aumenté un poco el margen superior para mejor espaciado */
+	/* CAMBIO AQUÍ: Fondo blanco semitransparente */
+	background-color: rgba(255, 255, 255, 0.25); /* Blanco con 85% de opacidad. Ajusta el 0.85 según tu gusto */
+	padding: 25px; /* Aumenté un poco el padding */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra un poco más pronunciada */
+	border-radius: 15px; /* Opcional: bordes redondeados para el contenedor */
+}
+
+h1 {
+	font-family: "Fredericka the Great", cursive; /* Fuente con estilo natural */
+	font-size: 3.5rem; /* Ajusta el tamaño según prefieras */
+	text-align: center;
+	color: #2e7d32; /* Este es el color de RELLENO de las letras (verde oscuro) */
+	margin-top: 40px;
+	margin-bottom: 35px;
+	letter-spacing: 1px;
+
+	/* Sombra de texto sutil (se aplicará por fuera del borde) */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), /* Sombra principal oscura */ 0 0
+		10px rgba(200, 255, 200, 0.2); /* Un leve brillo verdoso muy sutil */
+
+	/* Propiedades flex comentadas (pueden o no ser necesarias para "Mis Lanzamientos") */
+	/* display: flex; */
+	/* justify-content: center; */
+	/* gap: 20px; */
+}
+.album-item {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 30px;
+	padding: 20px; /* Aumenté el padding */
+	border: 1px solid #ddd;
+	/* Para que los album-item también tengan un fondo semitransparente y se integren mejor: */
+	background-color: rgba(249, 249, 249, 0.9); /* Gris muy claro con 90% opacidad. Ajusta si es necesario */
+	border-radius: 10px; /* Bordes redondeados para los items de álbum */
+}
+
+.album-cover {
+	margin-right: 20px;
+	flex-shrink: 0;
+}
+
+.album-cover img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 3px solid #ccc;
+	object-fit: cover;
+	display: block;
+}
+
+.album-info {
+	flex-grow: 1;
+}
+
+.album-info p {
+	margin: 5px 0;
+	line-height: 1.6;
+}
+
+.album-info strong {
+	color: #555;
+}
+
+.tracklist {
+	margin-top: 15px;
+	padding-top: 10px;
+	border-top: 1px dashed #ccc;
+}
+
+.tracklist ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.tracklist li {
+	padding: 3px 0;
+}
+
+.album-cover a {
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.album-cover a:hover img {
+	opacity: 0.8;
+	border-color: #888;
+}
