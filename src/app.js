@@ -14,7 +14,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.get("/music", (req, res) => {
-	const pathToHtml = path.join(__dirname, "..", "views", "music.html");
+	const pathToHtml = path.join(__dirname, ".", "views", "music.html");
 	console.log(`Intentando servir: ${pathToHtml}`); // Para depuración
 	res.sendFile(pathToHtml, (err) => {
 		if (err) {
@@ -29,7 +29,7 @@ app.get("/music", (req, res) => {
 });
 
 app.get("/music/musicdeadf", (req, res) => {
-	const pathToDeadf = path.join(__dirname, "..", "views", "music.deadf.html");
+	const pathToDeadf = path.join(__dirname, ".", "views", "music.deadf.html");
 	res.sendFile(pathToDeadf, (err) => {
 		if (err) {
 			console.error("Error al enviar music.deadf.html:", err);
