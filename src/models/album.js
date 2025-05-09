@@ -1,5 +1,5 @@
 export class Album {
-	constructor(id, nombre, participes, descripcion, portada, anio,temas ) {
+	constructor(id, nombre, participes, descripcion, portada, anio, temas) {
 		this.id = id;
 		this.nombre = nombre;
 		this.participes = participes;
