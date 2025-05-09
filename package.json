@@ -29,6 +29,7 @@
     "@biomejs/biome": "1.9.4"
   },
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0"
   }
 }

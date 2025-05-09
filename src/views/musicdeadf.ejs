@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title><% if (typeof pageTitle !== 'undefined' && pageTitle) { %><%= pageTitle %><% } else { %>Mis Lanzamientos<% } %></title>
+    
+    <link rel="stylesheet" href="/css/music.deadf.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Mis Lanzamientos</h1>
+
+        <% if (typeof lanzamientos !== 'undefined' && Array.isArray(lanzamientos) && lanzamientos.length > 0) { %>
+            <% lanzamientos.forEach(function(album) { %> 
+                <% if (typeof album !== 'undefined' && album) { %>
+                    <div class="album-item">
+                        <div class="album-cover">
+                            <a href="#">
+                                <img src="<% if (typeof album.portada !== 'undefined' && album.portada) { %><%= album.portada %><% } else { %>/images/default_cover.png<% } %>" 
+                                     alt="<% if (typeof album.nombre !== 'undefined' && album.nombre) { %>Portada de <%= album.nombre %><% } else { %>Portada de Álbum<% } %>">
+                            </a>
+                        </div>
+                        <div class="album-info">
+                            <p><strong>Nombre del Proyecto:</strong> <% if (typeof album.nombre !== 'undefined' && album.nombre) { %><%= album.nombre %><% } %></p>
+                            
+                            <p><strong>Artistas partícipes:</strong> 
+                                <% if (typeof album.participes !== 'undefined' && album.participes) { %>
+                                    <% if (Array.isArray(album.participes)) { %>
+                                        <%= album.participes.join(', ') %>
+                                    <% } else { %>
+                                        <%= album.participes %>
+                                    <% } %>
+                                <% } %>
+                            </p>
+                            
+                            <p><strong>Año:</strong> <% if (typeof album.anio !== 'undefined' && album.anio) { %><%= album.anio %><% } %></p>
+                            
+                            <% if (typeof album.descripcion !== 'undefined' && album.descripcion && album.descripcion.trim() !== '') { %>
+                                <p><em><%= album.descripcion %></em></p>
+                            <% } %>
+
+                            <% if (typeof album.temas !== 'undefined' && Array.isArray(album.temas) && album.temas.length > 0) { %>
+                                <div class="tracklist">
+                                    <p><strong>Lista de Temas:</strong></p>
+                                    <ul>
+                                        <% album.temas.forEach(function(tema) { %>
+                                            <% if (typeof tema !== 'undefined' && tema) { %>
+                                                <li>
+                                                    <% if (typeof tema.nombre !== 'undefined' && tema.nombre) { %><%= tema.nombre %><% } %>
+                                                    <% if (typeof tema.anio !== 'undefined' && tema.anio) { %> (<%= tema.anio %>) <% } %>
+                                                    
+                                                    <% if (typeof tema.ruta !== 'undefined' && tema.ruta) { %>
+                                                        <audio controls preload="none" style="width: 100%; max-width: 250px; height: 30px; margin-top: 5px;">
+                                                            <source src="<%= tema.ruta %>" type="audio/mpeg">
+                                                            Tu navegador no soporta el elemento de audio.
+                                                        </audio>
+                                                    <% } %>
+                                                    <% if (typeof tema.descripcion !== 'undefined' && tema.descripcion && tema.descripcion.trim() !== '') { %>
+                                                        <p style="font-size: 0.9em; margin-left: 15px;"><em><%= tema.descripcion %></em></p>
+                                                    <% } %>
+                                                </li>
+                                            <% } %>
+                                        <% }); %>
+                                    </ul>
+                                </div>
+                            <% } %>
+                            
+                            <% if (typeof album.audioPreviewAlbumSrc !== 'undefined' && album.audioPreviewAlbumSrc && (!Array.isArray(album.temas) || album.temas.length === 0 || (Array.isArray(album.temas) && !album.temas.some(t => typeof t !== 'undefined' && t && t.ruta)))) { %>
+                                <div style="margin-top: 15px;">
+                                    <p><strong>Preview del Álbum:</strong></p>
+                                    <audio controls preload="none" style="width: 100%; max-width: 250px; height: 30px;">
+                                        <source src="<%= album.audioPreviewAlbumSrc %>" type="audio/mpeg">
+                                        Tu navegador no soporta el elemento de audio.
+                                    </audio>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } %>
+            <% }); %>
+        <% } else { %>
+            <p>No hay lanzamientos disponibles en este momento.</p>
+        <% } %>
+    </div>
+</body>
+</html>

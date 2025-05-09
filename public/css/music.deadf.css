@@ -46,9 +46,9 @@ h1 {
 	align-items: flex-start;
 	margin-bottom: 30px;
 	padding: 20px; /* Aumenté el padding */
-	border: 1px solid #ddd;
+	border: 0.5px solid #ddd;
 	/* Para que los album-item también tengan un fondo semitransparente y se integren mejor: */
-	background-color: rgba(249, 249, 249, 0.9); /* Gris muy claro con 90% opacidad. Ajusta si es necesario */
+	background-color: rgba(249, 249, 249, 0.3); /* Gris muy claro con 90% opacidad. Ajusta si es necesario */
 	border-radius: 10px; /* Bordes redondeados para los items de álbum */
 }
 
