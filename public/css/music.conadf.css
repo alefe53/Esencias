@@ -1,0 +1,219 @@
+/* public/css/musicconadf.css */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Nosifier&display=swap'); */ /* Comentada o eliminada */
+@import url('https://fonts.googleapis.com/css2?family=Hit+me,+punk!&display=swap'); /* Si esta es la fuente que instalaste y es de Google Fonts, sino, asegúrate que tu @font-face esté aquí */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); /* NUEVA FUENTE PARA NOMBRES DE BANDA */
+
+
+body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-image: url("/images/fondovioleta1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    min-height: 100vh; 
+    line-height: 1.6;
+    position: relative; 
+    padding-top: 60px; 
+}
+
+.back-button-container-bandas {
+    position: fixed; 
+    top: 20px;
+    left: 20px;
+    z-index: 1000; 
+}
+
+.back-button-bandas {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; 
+    font-size: 0.9em;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-button-bandas:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.back-button-bandas:active {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1);
+}
+
+
+.main-container-bandas {
+    width: 90%;
+    max-width: 1000px; 
+    margin: 20px auto 40px auto; 
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85); 
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.page-header-bandas {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 15px; 
+    border-bottom: 1px solid rgba(222, 226, 230, 0.7); 
+    background: transparent; 
+    position: relative; 
+}
+
+.page-header-bandas h1 {
+    font-family: "Hit me, punk! 01", cursive; 
+    font-size: 3.5em; 
+    color: #f5f5dc; 
+    font-weight: normal; 
+    margin-bottom: 15px;
+    text-shadow: 
+        2px 2px 0px #000000, 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+        4px 4px 8px rgba(0, 0, 0, 0.5); 
+
+    display: inline-block; 
+    position: relative; 
+    transition: transform 0.3s ease-out, color 0.3s ease-out; 
+    transform-origin: center center; 
+    letter-spacing: 1px; 
+}
+
+.page-header-bandas h1:hover {
+    transform: scale(1.05); 
+    color: #fffacd; 
+    text-shadow: 
+        2px 2px 0px #1a1a1a,
+        -1px -1px 0 #1a1a1a,  
+         1px -1px 0 #1a1a1a,
+        -1px  1px 0 #1a1a1a,
+         1px  1px 0 #1a1a1a,
+        5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.band-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    padding: 20px 0; 
+}
+
+.band-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    height: 100%; 
+}
+
+.band-card-link:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.band-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.95); 
+    border: 1px solid rgba(233, 236, 239, 0.7); 
+}
+
+.band-card-image-container {
+    width: 100%;
+    padding-top: 75%; 
+    position: relative;
+    background-color: rgba(248, 249, 250, 0.5); 
+}
+
+.band-card-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.band-card-name {
+    padding: 18px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(233, 236, 239, 0.7); 
+    background-color: rgba(255, 255, 255, 0.9); 
+}
+
+.band-card-name span {
+    /* CAMBIO DE FUENTE PARA EL NOMBRE DE LA BANDA */
+    font-family: 'Bangers', cursive; /* Nueva fuente "Bangers" */
+    font-size: 1.8em; /* Ajusta el tamaño para "Bangers" */
+    font-weight: normal; /* "Bangers" es inherentemente bold */
+    color: #333; /* Un color oscuro para buen contraste */
+    letter-spacing: 1px; /* Espaciado entre letras para "Bangers" */
+    display: block; /* Asegura que ocupe su propia línea si es necesario */
+    line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+}
+
+.no-bands-message {
+    grid-column: 1 / -1; 
+    text-align: center;
+    font-size: 1.1em;
+    color: #6c757d;
+    padding: 40px 20px;
+    background-color: rgba(248, 249, 250, 0.8); 
+    border-radius: 8px;
+    border: 1px dashed #dee2e6;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) { 
+    .main-container-bandas {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 20px auto 30px auto;
+    }
+    
+    .band-grid-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    
+    .page-header-bandas h1 {
+        font-size: 2.8em; 
+        letter-spacing: 1px; 
+    }
+    
+    .band-card-name span {
+        font-size: 1.5em; /* Ajusta para "Bangers" en móviles */
+    }
+
+    .back-button-bandas {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header-bandas h1 {
+        font-size: 2.2em; 
+    }
+    .band-card-name span {
+        font-size: 1.3em; /* Ajusta para "Bangers" en móviles más pequeños */
+    }
+}

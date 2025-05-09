@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% if (typeof pageTitle !== 'undefined' && pageTitle) { %><%= pageTitle %><% } else { %>Bandas en las que participé<% } %></title>
+    <link rel="stylesheet" href="/css/music.conadf.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main-container-bandas">
+        <header class="page-header-bandas">
+            <h1><% if (typeof pageTitle !== 'undefined' && pageTitle) { %><%= pageTitle %><% } else { %>Bandas en las que participé<% } %></h1>
+            <div class="back-button-container-bandas">
+                <a href="/music" class="back-button-bandas">‹ Volver a Música</a>
+            </div>
+        </header>
+
+        <div class="band-grid-container">
+            <% if (typeof bandas !== 'undefined' && Array.isArray(bandas) && bandas.length > 0) { %>
+                <% bandas.forEach(function(banda) { %>
+                    <% if (typeof banda !== 'undefined' && banda) { %>
+                        <a href="#" class="band-card-link"> 
+                            <div class="band-card">
+                                <div class="band-card-image-container">
+                                    <img src="<% if (typeof banda.imagen !== 'undefined' && banda.imagen) { %><%= banda.imagen %><% } else { %>/images/default_band_cover.png<% } %>" 
+                                         alt="<% if (typeof banda.nombre !== 'undefined' && banda.nombre) { %>Imagen de <%= banda.nombre %><% } else { %>Imagen de Banda<% } %>">
+                                </div>
+                                <div class="band-card-name">
+                                    <% if (typeof banda.nombre !== 'undefined' && banda.nombre) { %>
+                                        <span><%= banda.nombre %></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </a>
+                    <% } %>
+                <% }); %>
+            <% } else { %>
+                <p class="no-bands-message">No hay información de bandas disponible en este momento.</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

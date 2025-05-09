@@ -1,0 +1,582 @@
+[
+	{
+		"id": "001",
+		"nombre": "Pirutecnia",
+		"integrantes": "Gabriel Ordoñez, Stefano Vitacca, Ivan Silberstein, El Piojo, Christian Heinz, Alejandro D. Fenos",
+		"descripcion": "Voz: Gabriel Ordoñez / Bajo: Ivan Silberstein / Bateria: Stefano Vitacca / Armónica: El Piojo / Teclados: Christian Heinz / Guitarras: Alejandro D. Fenos",
+		"imagen": "/images/pirutecnia.jpg",
+		"lanzamientos": [
+			{
+				"id": "001",
+				"nombre": "EP - Pirutecnia",
+				"participes": [
+					"Gabriel Ordoñez",
+					"Stefano Vitacca",
+					"Alejandro D. Fenos",
+					"El Piojo"
+				],
+				"descripcion": "Ep de 4 temas. Lady de Terciopelo, Libertad, Sangre, Nuevo Show.",
+				"portada": "/images/pirutecniaep.jpg",
+				"anio": "¿2010?",
+				"temas": [
+					{
+						"id": "ptcnia001",
+						"nombre": "Lady de Terciopelo",
+						"ruta": "/musicadf/ladydeterciopelo.mp3",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"El Piojo"
+						],
+						"descripcion": "Descripción: De los primeros temas de la banda....",
+						"anio": "¿2010?"
+					},
+					{
+						"id": "ptcnia002",
+						"nombre": "Libertad",
+						"ruta": "/musicadf/libertad.mp3",
+						"participes": ["Garbiel Ordoñez", "Stefano Vitacca", "ADF"],
+						"descripcion": "Descripción: Compuesto en una consola de leo, en la casa de la familia de Gaby....",
+						"anio": "¿2010?"
+					},
+					{
+						"id": "ptcnia003",
+						"nombre": "Sangre",
+						"ruta": "/musicadf/sangre.mp3",
+						"participes": ["Garbiel Ordoñez", "Stefano Vitacca", "ADF"],
+						"descripcion": "Descripción: El tema posiblemente más querido por sus integrantes....",
+						"anio": "¿2010?"
+					},
+					{
+						"id": "ptcnia004",
+						"nombre": "Nuevo Show",
+						"ruta": "/musicadf/nuevoshow.mp3",
+						"participes": ["Garbiel Ordoñez", "Stefano Vitacca", "ADF"],
+						"descripcion": "Descripción: Me acuerdo que fue el último tema en grabarse y en una sola toma por tiempo en el estudio....",
+						"anio": "¿2010?"
+					}
+				]
+			},
+			{
+				"id": "002",
+				"nombre": "EP 2 - Pirutecnia",
+				"participes": [
+					"Gabriel Ordoñez",
+					"Stefano Vitacca",
+					"Alejandro D. Fenos",
+					"El Piojo",
+					"Christian Heinz"
+				],
+				"descripcion": "Ep de 5 temas. Perdido en el Tiempo, Hijo de la Noche, Sangre 2, Noche Salvaje, Chica de Verano. Un disco marcado por la pérdida...",
+				"portada": "/images/pirutecniasegundoep.jpg",
+				"anio": "¿2015?",
+				"temas": [
+					{
+						"id": "ptcnia001",
+						"nombre": "Perdido en el Tiempo",
+						"ruta": "/musicadf/perdidoeneltiempo.mp3",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"El Piojo",
+							"Christian Heinz"
+						],
+						"descripcion": "Descripción: Tema que....",
+						"anio": "¿2015?"
+					},
+					{
+						"id": "ptcnia002",
+						"nombre": "Sangre  2",
+						"ruta": "/musicadf/sangredos.mp3",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz"
+						],
+						"descripcion": "Descripción: Tema que....",
+						"anio": "¿2015?"
+					},
+					{
+						"id": "ptcnia003",
+						"nombre": "Hijo de la Noche",
+						"ruta": "/musicadf/hijodelanoche.mp3",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz"
+						],
+						"descripcion": "Descripción: Tema que....",
+						"anio": "¿2015?"
+					},
+					{
+						"id": "ptcnia004",
+						"nombre": "Noche Salvaje",
+						"ruta": "/musicadf/nochesalvaje.mp3",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz",
+							"El Piojo"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "¿2015?"
+					},
+					{
+						"id": "ptcnia005",
+						"nombre": "Chica de Verano",
+						"ruta": "/musicadf/chicadeverano.mp3",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz",
+							"El Piojo"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "¿2015?"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "002",
+		"nombre": "Etnia Rupik",
+		"integrantes": "Stefano Vitacca, Ivan Silberstein, El Piojo, Alejandro D. Fenos",
+		"descripcion": "Bajo: Ivan Silberstein / Bateria: Stefano Vitacca / Armónica: El Piojo / Guitarras: Alejandro D. Fenos. Una banda fugaz que nunca llegó a tocar en vivo pero que dejó una grabación que aprecio mucho.",
+		"imagen": "/images/amigos.jpeg",
+		"lanzamientos": [
+			{
+				"id": "001",
+				"nombre": "EP - Pirutecnia",
+				"participes": [
+					"Gabriel Ordoñez",
+					"Stefano Vitacca",
+					"Alejandro D. Fenos",
+					"El Piojo"
+				],
+				"descripcion": "Ep de 4 temas. Lady de Terciopelo, Libertad, Sangre, Nuevo Show.",
+				"portada": "/images/etniarupik.jpg",
+				"anio": "¿2010?",
+				"temas": [
+					{
+						"id": "etnrpk001",
+						"nombre": "En 3",
+						"ruta": "/musicadf/entres.mp3",
+						"participes": [
+							"Stefano Vitacca",
+							"Ivan Silberstein",
+							"Ramiro Fenos",
+							"Alejandro D. Fenos",
+							"El Piojo",
+							"Damián \"Chompi\" Giménez"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "¿2010?"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "003",
+		"nombre": "Media Octava",
+		"integrantes": "Joe Ablop, Milton Zini, Juma Nalda, Alejandro D. Fenos",
+		"descripcion": "Teclado y Voz: Joe Ablop / Bateria: Juma Nulda / Guitarras: Milton Zini (luego ADF) / Bajo: Alejandro D. Fenos.",
+		"imagen": "/images/mediaoctava.jpg",
+		"lanzamientos": [
+			{
+				"id": "001",
+				"nombre": "La Abolición de los Rascacielos",
+				"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+				"descripcion": "Disco Conceptual de la mano de Joe Ablop, el mejor socio que he tenido a nivel musical...",
+				"portada": "/images/ladlr.jpg",
+				"anio": "2019",
+				"temas": [
+					{
+						"id": "moladlr001",
+						"nombre": "Bicicleta",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr002",
+						"nombre": "Y Cuando...",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr003",
+						"nombre": "Festejo",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr004",
+						"nombre": "Ciudad",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr005",
+						"nombre": "Wikigroove",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr006",
+						"nombre": "La Suave Dulzura",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr007",
+						"nombre": "Moscardones de Goma",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr008",
+						"nombre": "Once",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr009",
+						"nombre": "Mi Sol",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr010",
+						"nombre": "Oxido y Metal",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr011",
+						"nombre": "Sigue el Curso",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr012",
+						"nombre": "Sin Metáfora",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr013",
+						"nombre": "Sigue la Basura",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					},
+					{
+						"id": "moladlr014",
+						"nombre": "Tan Próximos",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
+						"descripcion": "Descripción: ....",
+						"anio": "2019"
+					}
+				]
+			},
+			{
+				"id": "002",
+				"nombre": "Temprano",
+				"participes": ["Alejandro D. Fenos", "Joe Ablop"],
+				"descripcion": "Media Octava ya había sacado La Abolición de los Rascacielos, el grupo se estaba reformulando mientras con Joe seguíamos haciendo...",
+				"portada": "/images/ladlr.jpg",
+				"anio": "2021",
+				"temas": [
+					{
+						"id": "motemp001",
+						"nombre": "Aldeano Montañés",
+						"ruta": "",
+						"participes": ["Alejandro D. Fenos", "Joe Ablop", "Milton Zini"],
+						"descripcion": "Descripción: ....",
+						"anio": "2021"
+					},
+					{
+						"id": "motemp002",
+						"nombre": "Pérgola de Estrellas",
+						"ruta": "",
+						"participes": ["Alejandro D. Fenos", "Joe Ablop", "Juma Nalda"],
+						"descripcion": "Descripción: ....",
+						"anio": "2021"
+					},
+					{
+						"id": "motemp003",
+						"nombre": "Pasos y Huellas",
+						"ruta": "",
+						"participes": [
+							"Alejandro D. Fenos",
+							"Joe Ablop",
+							"Oboe.. amigo de Joe"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "2021"
+					},
+					{
+						"id": "motemp004",
+						"nombre": "Piel de Hojas",
+						"ruta": "",
+						"participes": [
+							"Alejandro D. Fenos",
+							"Joe Ablop",
+							"Flautista... amigo de Ledc"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "2021"
+					},
+					{
+						"id": "motemp005",
+						"nombre": "Gigante de Hormigas",
+						"ruta": "",
+						"participes": ["Alejandro D. Fenos", "Joe Ablop"],
+						"descripcion": "Descripción: ....",
+						"anio": "2021"
+					},
+					{
+						"id": "motemp006",
+						"nombre": "Anguila Electrica",
+						"ruta": "",
+						"participes": ["Alejandro D. Fenos", "Joe Ablop"],
+						"descripcion": "Descripción: ....",
+						"anio": "2021"
+					}
+				]
+			},
+			{
+				"id": "003",
+				"nombre": "Te Ve",
+				"participes": [
+					"Alejandro D. Fenos",
+					"Joe Ablop",
+					"Juma Nalda",
+					"Milton Zini"
+				],
+				"descripcion": "Media Octava ya en San Juan...",
+				"portada": "/images/moteve.jpg",
+				"anio": "2023",
+				"temas": [
+					{
+						"id": "moteve001",
+						"nombre": "Uikenmolen",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve002",
+						"nombre": "Alunizar",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve003",
+						"nombre": "Masterplanta",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve004",
+						"nombre": "La Venganza de Adrian",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve005",
+						"nombre": "Maquina",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve006",
+						"nombre": "Fantasma",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve007",
+						"nombre": "Zapping",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve008",
+						"nombre": "Encuentrate",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve009",
+						"nombre": "Te Ve",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					},
+					{
+						"id": "moteve010",
+						"nombre": "Diez",
+						"ruta": "",
+						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
+						"descripcion": "Descripción: ....",
+						"anio": "2023"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "004",
+		"nombre": "Ventarron Funk",
+		"integrantes": "Lucho Devita, ADF, Victor, Nacho, Mariano Quintana",
+		"descripcion": "Trompeta y Voz: Lucho Devita / Bajo: Victor / Bateria: Nacho / Saxo Tenor: Claudio / Saxo Baritono: Mariano Quintana / Saxo Alto: / Guitarra: Alejandro D. Fenos. Banda con la que toqué muchas veces en vivo en lugares copados, pero solo me quedó una única grabación con los chicos por más que hicimos varios temas diferentes.",
+		"imagen": "/images/ventarron.jpg",
+		"lanzamientos": [
+			{
+				"id": "001",
+				"nombre": "Donde Estar",
+				"participes": [
+					"Lucho Devita",
+					"Stefano Vitacca",
+					"Alejandro D. Fenos",
+					"Victor",
+					"Claudio",
+					"Mariano Quintana"
+				],
+				"descripcion": "Iba a ser un Ep de varios temas, pero en su momento no hubo buena organización de los integrantes y la mayoría se difuminó quedando solo este maravilloso tema. La mezcla fue hermosa de realizar con tantos vientos, teniendo el placer de dividir el panorama a piacere.",
+				"portada": "/images/etniarupik.jpg",
+				"anio": "2021",
+				"temas": [
+					{
+						"id": "vnt001",
+						"nombre": "Donde Estar",
+						"ruta": "",
+						"participes": [
+							"Lucho Devita",
+							"Stefano Vitacca",
+							"Alejandro D. Fenos",
+							"Victor",
+							"Claudio",
+							"Mariano Quintana"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "2021"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "005",
+		"nombre": "FlashBand",
+		"integrantes": "Joe Ablop, Alejandro D. Fenos, Zafiro, Nicolas Moreno",
+		"descripcion": "Teclados: Joe Ablop / Bajo: Zafiro / Bateria: Nicolas Moreno / Guitarra: Alejandro D. Fenos. Banda creada exclusivamente para la composición y grabación de estos tres temas.",
+		"imagen": "/images/flashband.jpeg",
+		"lanzamientos": [
+			{
+				"id": "001",
+				"nombre": "Ep 3 temas - FlashBand",
+				"participes": [
+					"Joe Ablop",
+					"Zafiro",
+					"Alejandro D. Fenos",
+					"Nicolas Moreno"
+				],
+				"descripcion": "Pura sangre Sanjuanina que me invitaba a participar.",
+				"portada": "/images/flashband.jpg",
+				"anio": "2024",
+				"temas": [
+					{
+						"id": "flshbnd001",
+						"nombre": "Pat Rick",
+						"ruta": "",
+						"participes": [
+							"Joe Ablop",
+							"Zafiro",
+							"Alejandro D. Fenos",
+							"Nicolas Moreno"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "2024"
+					},
+					{
+						"id": "flshbnd002",
+						"nombre": "Desi Erto",
+						"ruta": "",
+						"participes": [
+							"Joe Ablop",
+							"Zafiro",
+							"Alejandro D. Fenos",
+							"Nicolas Moreno"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "2024"
+					},
+					{
+						"id": "flshbnd003",
+						"nombre": "Fun Ky",
+						"ruta": "",
+						"participes": [
+							"Joe Ablop",
+							"Zafiro",
+							"Alejandro D. Fenos",
+							"Nicolas Moreno"
+						],
+						"descripcion": "Descripción: ....",
+						"anio": "2024"
+					}
+				]
+			}
+		]
+	}
+]

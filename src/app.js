@@ -2,7 +2,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import express from "express";
 import { config } from "../config/config.js";
+import { getMusicConAdfPage } from "./controllers/music.conadf.controller.js";
 import { getLanzamientosPage } from "./controllers/music.deadf.controller.js";
+
+// ... (tu configuración existente de Express) ...
 
 // Obtener el directorio actual en ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -23,6 +26,9 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 // --- RUTAS ---
 // Ruta para la página de lanzamientos (usa el controlador y EJS)
 app.get("/music/musicdeadf", getLanzamientosPage);
+
+// Nueva ruta para la página de bandas
+app.get("/music/musicconadf", getMusicConAdfPage);
 
 // Ruta para la página principal de música (sirve HTML estático)
 app.get("/music", (req, res) => {
