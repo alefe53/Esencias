@@ -4,7 +4,7 @@
 		"nombre": "Pirutecnia",
 		"integrantes": "Gabriel Ordoñez, Stefano Vitacca, Ivan Silberstein, El Piojo, Christian Heinz, Alejandro D. Fenos",
 		"descripcion": "Voz: Gabriel Ordoñez / Bajo: Ivan Silberstein / Bateria: Stefano Vitacca / Armónica: El Piojo / Teclados: Christian Heinz / Guitarras: Alejandro D. Fenos",
-		"imagen": "/images/pirutecnia.jpg",
+		"imagen": "/images/pirutecniaprimerep.png",
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -15,14 +15,14 @@
 					"Alejandro D. Fenos",
 					"El Piojo"
 				],
-				"descripcion": "Ep de 4 temas. Lady de Terciopelo, Libertad, Sangre, Nuevo Show.",
-				"portada": "/images/pirutecniaep.jpg",
-				"anio": "¿2010?",
+				"descripcion": "Ep de 5 temas. Lady de Terciopelo, Libertad, Sangre, Descontrol en la Ciudad, Nuevo Show.",
+				"portada": "/images/pirutecniavieja.jpg",
+				"anio": "2011",
 				"temas": [
 					{
 						"id": "ptcnia001",
 						"nombre": "Lady de Terciopelo",
-						"ruta": "/musicadf/ladydeterciopelo.mp3",
+						"ruta": "BlelScKxSYk",
 						"participes": [
 							"Garbiel Ordoñez",
 							"Stefano Vitacca",
@@ -30,37 +30,66 @@
 							"El Piojo"
 						],
 						"descripcion": "Descripción: De los primeros temas de la banda....",
-						"anio": "¿2010?"
+						"anio": "2011"
 					},
 					{
 						"id": "ptcnia002",
 						"nombre": "Libertad",
-						"ruta": "/musicadf/libertad.mp3",
-						"participes": ["Garbiel Ordoñez", "Stefano Vitacca", "ADF"],
+						"ruta": "VLX3-TeRPgY",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz"
+						],
 						"descripcion": "Descripción: Compuesto en una consola de leo, en la casa de la familia de Gaby....",
-						"anio": "¿2010?"
+						"anio": "2011"
 					},
 					{
 						"id": "ptcnia003",
 						"nombre": "Sangre",
-						"ruta": "/musicadf/sangre.mp3",
-						"participes": ["Garbiel Ordoñez", "Stefano Vitacca", "ADF"],
+						"ruta": "I7BPufQvK_E",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz"
+						],
 						"descripcion": "Descripción: El tema posiblemente más querido por sus integrantes....",
-						"anio": "¿2010?"
+						"anio": "2011"
 					},
 					{
 						"id": "ptcnia004",
+						"nombre": "Descontrol en la Ciudad",
+						"ruta": "tBpFoZt_wx8",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz"
+						],
+						"descripcion": "Descripción: Recuerdos de flangers...",
+						"anio": "2011"
+					},
+					{
+						"id": "ptcnia005",
 						"nombre": "Nuevo Show",
-						"ruta": "/musicadf/nuevoshow.mp3",
-						"participes": ["Garbiel Ordoñez", "Stefano Vitacca", "ADF"],
+						"ruta": "BlbLs33lwLI",
+						"participes": [
+							"Garbiel Ordoñez",
+							"Stefano Vitacca",
+							"ADF",
+							"Christian Heinz"
+						],
 						"descripcion": "Descripción: Me acuerdo que fue el último tema en grabarse y en una sola toma por tiempo en el estudio....",
-						"anio": "¿2010?"
+						"anio": "2011"
 					}
 				]
 			},
+
 			{
 				"id": "002",
-				"nombre": "EP 2 - Pirutecnia",
+				"nombre": "Ep 2 - Pirutecnia",
 				"participes": [
 					"Gabriel Ordoñez",
 					"Stefano Vitacca",
@@ -69,13 +98,13 @@
 					"Christian Heinz"
 				],
 				"descripcion": "Ep de 5 temas. Perdido en el Tiempo, Hijo de la Noche, Sangre 2, Noche Salvaje, Chica de Verano. Un disco marcado por la pérdida...",
-				"portada": "/images/pirutecniasegundoep.jpg",
-				"anio": "¿2015?",
+				"portada": "/images/atra.jpg",
+				"anio": "2016",
 				"temas": [
 					{
 						"id": "ptcnia001",
 						"nombre": "Perdido en el Tiempo",
-						"ruta": "/musicadf/perdidoeneltiempo.mp3",
+						"ruta": "m7jpvM7XW6k",
 						"participes": [
 							"Garbiel Ordoñez",
 							"Stefano Vitacca",
@@ -83,39 +112,39 @@
 							"El Piojo",
 							"Christian Heinz"
 						],
-						"descripcion": "Descripción: Tema que....",
-						"anio": "¿2015?"
+						"descripcion": "Descripción: Tema que compuse a partir del riff del estribillo. Fue tomando forma a través de los ensayos, la guitarra de la estrofa me fue surgiendo naturalmente. Recuerdo usar una guitarra Les Paul para el estribillo, una Stratocaste y una Telecaster para las estrofas. Recuerdo también ideas de Gaby en la producción como tener notas agudas sonando de los costados. Recuerdo el proceso de grabación de la batería porque había mucha expectativa por el resultado.",
+						"anio": "2016"
 					},
 					{
 						"id": "ptcnia002",
 						"nombre": "Sangre  2",
-						"ruta": "/musicadf/sangredos.mp3",
+						"ruta": "3O6aa5Gl9Go",
 						"participes": [
 							"Garbiel Ordoñez",
 							"Stefano Vitacca",
 							"ADF",
 							"Christian Heinz"
 						],
-						"descripcion": "Descripción: Tema que....",
-						"anio": "¿2015?"
+						"descripcion": "Descripción: Buscabamos imitar el efecto que nos generaba el 'primer sangre'. Como detalle recuerdo la grabación del slide que en principio no tenía letra encima pero luego el Piru le metió una onda impresionante. También recuerdo el final, tratar de generar una onda Nirvana.",
+						"anio": "2016"
 					},
 					{
 						"id": "ptcnia003",
 						"nombre": "Hijo de la Noche",
-						"ruta": "/musicadf/hijodelanoche.mp3",
+						"ruta": "ghVhxS0LQPc",
 						"participes": [
 							"Garbiel Ordoñez",
 							"Stefano Vitacca",
 							"ADF",
 							"Christian Heinz"
 						],
-						"descripcion": "Descripción: Tema que....",
-						"anio": "¿2015?"
+						"descripcion": "Descripción: Más allá de la composición este tema no hubiera sido lo mismo sin la intervención fantástica de Christian en las teclas.",
+						"anio": "2016"
 					},
 					{
 						"id": "ptcnia004",
 						"nombre": "Noche Salvaje",
-						"ruta": "/musicadf/nochesalvaje.mp3",
+						"ruta": "",
 						"participes": [
 							"Garbiel Ordoñez",
 							"Stefano Vitacca",
@@ -123,13 +152,13 @@
 							"Christian Heinz",
 							"El Piojo"
 						],
-						"descripcion": "Descripción: ....",
-						"anio": "¿2015?"
+						"descripcion": "Descripción: Tema compuesto por Gaby. Me encantaba el timbre de las guitarras con las que grabé. Cuando grabé el solo de guitarra mi idea era generar una onda medio Ac Dc.",
+						"anio": "2016"
 					},
 					{
 						"id": "ptcnia005",
 						"nombre": "Chica de Verano",
-						"ruta": "/musicadf/chicadeverano.mp3",
+						"ruta": "",
 						"participes": [
 							"Garbiel Ordoñez",
 							"Stefano Vitacca",
@@ -137,37 +166,47 @@
 							"Christian Heinz",
 							"El Piojo"
 						],
-						"descripcion": "Descripción: ....",
-						"anio": "¿2015?"
+						"descripcion": "Descripción: Tema de Gaby con la intervención de piojo en la armónica. Green Day un poroto en comparación a este tema jaja.",
+						"anio": "2016"
 					}
 				]
 			}
+		],
+		"imagenesextra": [
+			"/images/pirutecnia/pirutecnia1.jpg",
+			"/images/pirutecnia/pirutecnia2.jpg",
+			"/images/pirutecnia/pirutecnia3.jpg",
+			"/images/pirutecnia/pirutecnia4.jpg",
+			"/images/pirutecnia/pirutecnia5.jpg",
+			"/images/pirutecnia/pirutecnia6.jpg",
+			"/images/pirutecnia/pirutecnia7.jpg",
+			"/images/pirutecnia/pirutecnia8.jpg"
 		]
 	},
 	{
 		"id": "002",
 		"nombre": "Etnia Rupik",
 		"integrantes": "Stefano Vitacca, Ivan Silberstein, El Piojo, Alejandro D. Fenos",
-		"descripcion": "Bajo: Ivan Silberstein / Bateria: Stefano Vitacca / Armónica: El Piojo / Guitarras: Alejandro D. Fenos. Una banda fugaz que nunca llegó a tocar en vivo pero que dejó una grabación que aprecio mucho.",
-		"imagen": "/images/amigos.jpeg",
+		"descripcion": "Bajo: Ivan Silberstein / Bateria: Stefano Vitacca / Armónica: El Piojo / Guitarras: Alejandro D. Fenos. Una banda fugaz que nunca llegó a tocar en vivo. Pudo haber sido un proyecto que, de darle más manija, podría habernos dado temas rockeros memorables. Al menos nos dejó una grabación que aprecio mucho. Hubo varios integrantes en la banda que pasaron también como Hernán en otra guitarra y creo que hasta teclados.",
+		"imagen": "/images/etniarupikachicado.png",
 		"lanzamientos": [
 			{
 				"id": "001",
-				"nombre": "EP - Pirutecnia",
+				"nombre": "Etnia Rupik",
 				"participes": [
 					"Gabriel Ordoñez",
 					"Stefano Vitacca",
 					"Alejandro D. Fenos",
 					"El Piojo"
 				],
-				"descripcion": "Ep de 4 temas. Lady de Terciopelo, Libertad, Sangre, Nuevo Show.",
-				"portada": "/images/etniarupik.jpg",
-				"anio": "¿2010?",
+				"descripcion": "A partir de una idea de Iván en el bajo y junto a un acompañamiento fantástico de Stefa en la bata, surge este tema. Fue realmente hermoso meter la guitarra. De los temas que más aprecio.",
+				"portada": "/images/etniarupik1.png",
+				"anio": "2015",
 				"temas": [
 					{
 						"id": "etnrpk001",
 						"nombre": "En 3",
-						"ruta": "/musicadf/entres.mp3",
+						"ruta": "TDFPqw7TPKU",
 						"participes": [
 							"Stefano Vitacca",
 							"Ivan Silberstein",
@@ -176,34 +215,38 @@
 							"El Piojo",
 							"Damián \"Chompi\" Giménez"
 						],
-						"descripcion": "Descripción: ....",
-						"anio": "¿2010?"
+						"descripcion": "Descripción: Imposible olvidar la jornada de grabación. Nos fuimos todos a lo de Stefa. Armamos todo en el comedor, tuvimos que cerrar todas las puertas del quilombo que hacía en el vecindario. Algunos llegaron a la casa guiados directamente por la música en esa zona residencial. Lo que considero más especial es la participación de mi hermano en el saxo.",
+						"anio": "2015"
 					}
 				]
 			}
+		],
+		"imagenesextra": [
+			"/images/etniarupik/amigos.jpeg",
+			"/images/etniarupik/etniarupik.png"
 		]
 	},
 	{
 		"id": "003",
 		"nombre": "Media Octava",
 		"integrantes": "Joe Ablop, Milton Zini, Juma Nalda, Alejandro D. Fenos",
-		"descripcion": "Teclado y Voz: Joe Ablop / Bateria: Juma Nulda / Guitarras: Milton Zini (luego ADF) / Bajo: Alejandro D. Fenos.",
-		"imagen": "/images/mediaoctava.jpg",
+		"descripcion": "Teclado y Voz: Joe Ablop / Bateria: Juma Nulda / Guitarras: Milton Zini (luego ADF) / Bajo: Alejandro D. Fenos. Entré buscando experimentar y encontré unos hermanos del alma. Muchos años de caminos, kilómetros de distancias y toda la música. Tocamos en muchos lugares, hasta en festivales de la talla de Alejandro Lerner y Lali Espósito entre otros. También montamos, con Juma y Joe, un estudio de grabación propio que se llamó La Escena del Crimen. Trabajamos en cientos, sino miles de proyectos, propios y ajenos. Con el tiempo roté a ser guitarra y bajo en las producciones y en nuestra música. Luego lo mudamos a San Juan capital, allí todavía lo mantiene Joe. Seguimos haciendo música a la distancia y planeamos sacar el 5to disco de Media Octava pronto...",
+		"imagen": "/images/mediaoctavalogo.jpg",
 		"lanzamientos": [
 			{
 				"id": "001",
 				"nombre": "La Abolición de los Rascacielos",
 				"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-				"descripcion": "Disco Conceptual de la mano de Joe Ablop, el mejor socio que he tenido a nivel musical...",
-				"portada": "/images/ladlr.jpg",
+				"descripcion": "Disco Conceptual de la mano de Joe Ablop. La mayoría de los temas suyos, otros de Milton y de Juma. Las líneas de bajo también estaban compuestas. Aporté principalmente desde la grabación y la mezcla de las que me encargué y de la interpretación del bajo. ",
+				"portada": "/images/moladlr.jpg",
 				"anio": "2019",
 				"temas": [
 					{
 						"id": "moladlr001",
 						"nombre": "Bicicleta",
-						"ruta": "",
+						"ruta": "LTol-FyxbKk",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Primer tema del disco y que saqué de la banda. Recuerdo ensayar los temas en la sala que tenía Juma en la casa de su madre. Luego cuando alquilamos sala para el estudio fue pura joda. Como detalle, recuerdo que el sonido de la bicicleta lo grabamos con una Tascam dr680 (que todavía poseo), en el estacionamiento del origen de la fiesta que habíamos organizado.",
 						"anio": "2019"
 					},
 					{
@@ -211,7 +254,7 @@
 						"nombre": "Y Cuando...",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tema super chill. Siempre resonó en mi mente la frase 'Y cuando no te haces escuchar, a nadie importan las ideas'. Como detalle recuerdo la idea de Joe de posicionar la batería en la mayoría de un costado para emular los 70. Para equilibrar el flasheo, mandé el bajo al lugar opuesto y traté de equilibrar todo en el medio.",
 						"anio": "2019"
 					},
 					{
@@ -219,7 +262,7 @@
 						"nombre": "Festejo",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tema compuesto por Milton. Las composiciones de Milton suelen ser muy melódicas, con tintes muy Queen y muy divertidos de tocar",
 						"anio": "2019"
 					},
 					{
@@ -227,7 +270,7 @@
 						"nombre": "Ciudad",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Conceptualmente es como el eje del disco. El hombre que llega a la capital, el deslumbre de las luces y más. Recuerdo el hincapié en el bajo. Para ser más preciso solía tocar este tema con púa.",
 						"anio": "2019"
 					},
 					{
@@ -235,7 +278,7 @@
 						"nombre": "Wikigroove",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tema compuesto en su mayoría por Juma. También mucho protagonismo del bajo. De los temás bailables a mi gusto del disco, también super divertido de tocar.",
 						"anio": "2019"
 					},
 					{
@@ -243,7 +286,7 @@
 						"nombre": "La Suave Dulzura",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: A mi gusto el mejor tema del disco. También recuerdo que es el que más horas de mezcla tuvo. El final es un nirvana puro. Una verdadera locura los sonidos de teclados que fuimos consiguiendo con Joe. Una obra psicodélica espléndida.",
 						"anio": "2019"
 					},
 					{
@@ -251,7 +294,7 @@
 						"nombre": "Moscardones de Goma",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Se podría decir que es el tema más agresivo del disco. Recuerdo que en los ensayos era un tema que costaba en general mantener el groove por el riff principal. Siempre que escuchaba este tema me hacía recordar por alguna razón a la banda 'Marillion'.",
 						"anio": "2019"
 					},
 					{
@@ -259,7 +302,7 @@
 						"nombre": "Once",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tema instrumental compuesto por Milton. Una verdadera obra musical. Tocarlo era un verdadero desafío que cuando salía bien era sentirse como en orquesta sinfónica. Hermoso tema, gran composición.",
 						"anio": "2019"
 					},
 					{
@@ -267,7 +310,7 @@
 						"nombre": "Mi Sol",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tengo entendido que es un tema muy viejo de Joe que siempre le surgía solo en la guitarra. Una oda a la banda.",
 						"anio": "2019"
 					},
 					{
@@ -275,7 +318,7 @@
 						"nombre": "Oxido y Metal",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Primera parte de un tema que contiene tambipen a Sigue el curso. Una linda forma de agregar ritmos latinos y diferente variedad al disco.",
 						"anio": "2019"
 					},
 					{
@@ -283,7 +326,7 @@
 						"nombre": "Sigue el Curso",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: La segunda parte del tema que según el compositor (Joe) es como el riff del tema anterior pero tocado de forma inversa. Lindo tema también.",
 						"anio": "2019"
 					},
 					{
@@ -291,7 +334,7 @@
 						"nombre": "Sin Metáfora",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Locura de tema. Ritmo irregular. Letra memorable compuesta en parte por una Senadora de la Nación. De los primeros temas que saqué de la banda y recuerdo también que lo ensayamos mucho. Como detalle recuerdo que se nos comió la primera letra del tema, tanta atención a los detalles para comernos la primera letra jajaja. Horas y horas de edición y mezcla apuradas por una persona que se iba de vacaciones.",
 						"anio": "2019"
 					},
 					{
@@ -299,7 +342,7 @@
 						"nombre": "Sigue la Basura",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Top 3 temas del disco. Un aire medio tanguero increible. El piano se lleva todo a mi gusto pero el solo de Milton en la guitarra también me parecía re copado. La versión en inglés de este tema es monstruoso.",
 						"anio": "2019"
 					},
 					{
@@ -307,7 +350,7 @@
 						"nombre": "Tan Próximos",
 						"ruta": "",
 						"participes": ["Joe Ablop", "Juma Nalda", "Milton Zini", "ADF"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Último tema del disco 'La Abolición de los Rascacielos'. El final fue un estallo de risa porque parecía no terminar nunca.",
 						"anio": "2019"
 					}
 				]
@@ -316,16 +359,16 @@
 				"id": "002",
 				"nombre": "Temprano",
 				"participes": ["Alejandro D. Fenos", "Joe Ablop"],
-				"descripcion": "Media Octava ya había sacado La Abolición de los Rascacielos, el grupo se estaba reformulando mientras con Joe seguíamos haciendo...",
-				"portada": "/images/ladlr.jpg",
+				"descripcion": "Media Octava ya había sacado La Abolición de los Rascacielos, el grupo se estaba reformulando mientras con Joe seguíamos haciendo mucha música. Un día caí al estudio queriendo grabar lo que luego fue 'Pérgola de Estrellas' y allí nacio la idea de un nuevo disco pero un formato acústico. Era como que una vez que se abolieron los rascacielos lo que quedaba era la naturaleza.",
+				"portada": "/images/mediaoctavatemprano.png",
 				"anio": "2021",
 				"temas": [
 					{
 						"id": "motemp001",
 						"nombre": "Aldeano Montañés",
-						"ruta": "",
+						"ruta": "TA3K_9qgEWI",
 						"participes": ["Alejandro D. Fenos", "Joe Ablop", "Milton Zini"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Hermosa intervención del violin. Milton ya no tocaba la guitarra en MO porque prefería dedicarse a otros proyectos. Lo invitamos a participar desde el violín. Un Crack.",
 						"anio": "2021"
 					},
 					{
@@ -333,7 +376,7 @@
 						"nombre": "Pérgola de Estrellas",
 						"ruta": "",
 						"participes": ["Alejandro D. Fenos", "Joe Ablop", "Juma Nalda"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Es el tema que inicio la creación del disco. Juma le agrega al final tintes percusivos.",
 						"anio": "2021"
 					},
 					{
@@ -345,7 +388,7 @@
 							"Joe Ablop",
 							"Oboe.. amigo de Joe"
 						],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tema super tranqui, natural. El oboe es un instrumento hermoso y muy claramente intepretado.",
 						"anio": "2021"
 					},
 					{
@@ -357,7 +400,7 @@
 							"Joe Ablop",
 							"Flautista... amigo de Ledc"
 						],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Un riff que trajó Joe que fue creciendo. La frutilla del postre fue encontrar a un flautista fanático de 'Snowgoose' disco de Camel. Que increíble sonido el de una flauta bien tocada.",
 						"anio": "2021"
 					},
 					{
@@ -365,7 +408,7 @@
 						"nombre": "Gigante de Hormigas",
 						"ruta": "",
 						"participes": ["Alejandro D. Fenos", "Joe Ablop"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Cuando Joe trajo el bandoneon fue ver un instrumento pesado, grande y ruidoso. Se lo calzó y grabamos hasta el ruido de su movimiento sin notas. Ese es el sonido de la entrada, el bandoneon respirando sin nota alguna. Se asemeja al sonido de una playa.",
 						"anio": "2021"
 					},
 					{
@@ -373,7 +416,7 @@
 						"nombre": "Anguila Electrica",
 						"ruta": "",
 						"participes": ["Alejandro D. Fenos", "Joe Ablop"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: En este tema dejamos de lado el concepto acústico y metimos guitarra eléctrica. Al principio dudaba porque la armonía era lenta en transiciones y larga. Cuando empezamos a meter arreglos nos dimos cuenta que eso fue una ventaja porque nos dejó un montón de espacio para meter melodías. Juma al escucharlo, aportó con la idea del arreglo final, un lujo.",
 						"anio": "2021"
 					}
 				]
@@ -381,106 +424,112 @@
 			{
 				"id": "003",
 				"nombre": "Te Ve",
-				"participes": [
-					"Alejandro D. Fenos",
-					"Joe Ablop",
-					"Juma Nalda",
-					"Milton Zini"
-				],
-				"descripcion": "Media Octava ya en San Juan...",
-				"portada": "/images/moteve.jpg",
+				"participes": ["Alejandro D. Fenos", "Joe Ablop", "Juma Nalda"],
+				"descripcion": "Pasó la pandemia. Teníamos algo de material grabado pero la mudanza a San Juan demoró un poco más el proceso. Allí se terminaron de armar algunas canciones y se crearon nuevas. Unimos composiciones de los 3 y Joe se encargó de las letras.",
+				"portada": "/images/mediaoctavateve.png",
 				"anio": "2023",
 				"temas": [
 					{
 						"id": "moteve001",
 						"nombre": "Uikenmolen",
-						"ruta": "",
+						"ruta": "Jv8OxV_sk1U",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tema que tenían Joe y Juma, agregué algunas notas en la guitarra pero la participación mía fue discreta.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve002",
 						"nombre": "Alunizar",
-						"ruta": "",
+						"ruta": "OJjLyUsq6hs",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Cuando el estudio de grabación Ledc (La Escena del Crimen) todavía se encontraba en capital. Estabamos improvisando y grabando como siempre allí en Parque Patricios. Me surgió esa base en la guitarra que, con el color del Vox, tenía una potencia abrupta. Entre los 3 creamos ese tema zappando con violencia.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve003",
 						"nombre": "Masterplanta",
-						"ruta": "",
+						"ruta": "G4vnUqus6zs",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Base de Joe. Aquí hubo muchos participantes. Un guitarrista amigo de una banda que grabó un disco en Ledc. Una cantante de San Juan. Arreglos de Vientos, caños de amigos. Me acuerdo como detalle que con Joe jodíamos porque se lo habíamos mostrado a quien había hecho el mastering de nuestro 2do disco (La Abolición de los Rascacielos) Carlos Laurenz (Un ingeniero de sonido de los mejores de latinoamérica) y Joe le insistía para que cantara en el tema, el ingeniero se reía y tiraba chistes para salir de esa.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve004",
 						"nombre": "La Venganza de Adrian",
-						"ruta": "",
+						"ruta": "ICrvUab-XTo",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Este tema lo compuso Joe durante la pandemia. Intercambiabamos audio mientras estaba el toque de queda y no podíamos salir de casa. A su vez me compartía la historia de Adrian la esposa de Rocky en la pelicula de Stalone. Esta canción era su historia.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve005",
 						"nombre": "Maquina",
-						"ruta": "",
+						"ruta": "AG09_LrICFw",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: El primer tema grabado y que sirvió como el engranaje del disco. Estabamos componiendo En3 cuando traje ese tema personal para grabar. Caí al estudio con la base que había compuesto con la 6ta cuerda de la guitarra afinada en D. En esa época estaba volviendo a escuchar Rage Against The Machine y quería hacer un tema así. Joe lo escuchó y me ayudó a grabarlo. Juma le puso la batería, sin saber del virus que estaba por venir, resultó ser un adelantado. Como estábamos con la intensión de hacer un disco y los 2 habían participado con ganas en el proyecto, decidí cederlo a la banda para el disco. Joe le puso la letra haciendo alusión a las máquinas que a su vez hace alusión a la insipiración, Rage Against the MACHINE. Como detalle, uno de los solos de guitarra personales que más disfruto como quedó. La mezcla también la hice yo.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve006",
 						"nombre": "Fantasma",
-						"ruta": "",
+						"ruta": "zWIovkxfcoo",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Juma aportó este tema laburado desde su hogar. Con Joe metimos voces como de conversaciones, susurros, sonidos inentendibles.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve007",
 						"nombre": "Zapping",
-						"ruta": "",
+						"ruta": "9deny9uDhF8",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Otro de los temas creadores del disco. Un día en el estudio estábamos Juma y yo jugando. Tiré una base de bajo y Juma la siguió con la batería riendo. Esa base.. esa base es de Jeff o de Weather o alguno de esos.. es re choreada. Yo me reía, simplemente tiré un ritmo que sonaba divertido y bien en el bajo. Juma cantaba 'este tema es robado, es robado, no sabemos de quien', nos cagábamos de risa. Joe lo escuchó, le copó la idea y tiró la estructura: ir rotando entre géneros acorde a la idea de robar. El tema va moviéndose por climas diferentes, algunos que suenan 'robados'. El final vino de casualidad; Joe con las teclas dejó ese beat y, cuando estábamos con los micrófonos grabando las voces, llegó solo y recuerdo haber tirado esos surrusos de 'Copy Paste', por las charlas sobre la forma en que se 'crea' hoy en día, casi sin alma. Cuando hice la mezcla aproveché algunos audios de juma y, literal le hice un 'copy paste' feo al final para resaltarlo.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve008",
 						"nombre": "Encuentrate",
-						"ruta": "",
+						"ruta": "FtFEUsfZZLQ",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Oficialmente el más viejo. Pero éste tiene una historia muuuy particular. Resulta que cuando 'La Escena Del Crimen' comienza sus trabajos de producción de música, hubo un interesado llamado Jon Oroche que se contactó con nosotros. Tenía la visión de un tema instrumental que quería plasmar con gente libre de meter lo que quisiera. Él trajo una armonía grabada de una guitarra que sonaba y sonaba y quería producirlo. Cuando grabamos las baterías, nos dió total libertad. Juma es un malabarista, está siempre al límite jugando por eso es el mejor. Jon le decía 'que siga, que siga lo que sea que está sucediendo acá', no comprendía el proceso pero entendía que algo bueno se gestaba. El bajo grabarlo también me resultó un flash; (no recuerdo si fue antes o después) siempre jugar con Juma es hermoso y el bajo terminó de acoplarse de forma natural. Joe grabó las teclas, unos pianos con dinámicas de pétalos de flores y opuestos estruendos de relámpagos. Yo no grabé las guitarras en ese entonces, las grabó Jon. El tema creo que duró un mes en hacerse. Salió bajo su nombre, pero recuerdo que nos dió la mayoría del crédito a nosotros. Tiempo, años, después cuando estábamos grabando este disco en San Juan, Joe sugirió renovar esta canción, les sacamos las guitarras de Jon y les grabé las mías.",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve009",
 						"nombre": "Te Ve",
-						"ruta": "",
+						"ruta": "BqaMR4TV6lA",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: El anteúltimo tema en ser compuesto. Ya cómodos en el increíble estudio que montó Joe en San Juan, una envidia de muchos estudios profesionales incluso de capital federal, en la sala de monitoreo, nos encontrábamos con Joe discutiendo sobre como seguir. Trajo la base él, yo le metí la parte del medio medio latina. Algunos recuerdos: cuando me mostró la letra Joe me pareció muy copada y los audios del locutor que agregó, y por otro lado un guiño a Bob Marley con un arreglo suyo para el que sepa darse cuenta...",
 						"anio": "2023"
 					},
 					{
 						"id": "moteve010",
 						"nombre": "Diez",
-						"ruta": "",
+						"ruta": "25cPgPOadA4",
 						"participes": ["Joe Ablop", "Juma Nalda", "Alejandro D. Fenos"],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Un pequeño honor al mejor de todos, antes de que su sucesor sea coronado. Tiré la idea del décimo tema a traves de una grabación de muestra. En el estudio convertimos esa idea en el funky que terminó siendo. Como recuerdos extras, se me vienen a la mente la guitarra Fender con la que grabé, cuyo timbre me hipnotizaba y el sintetizador del final de Joe que vuelve a unir las partes con el saludo final de la madre.",
 						"anio": "2023"
 					}
 				]
 			}
+		],
+		"imagenesextra": [
+			"/images/mediaoctava/mediaoctava1.jpg",
+			"/images/mediaoctava/mediaoctava2.jpg",
+			"/images/mediaoctava/mediaoctava3.jpg",
+			"/images/mediaoctava/mediaoctava4.jpg",
+			"/images/mediaoctava/mediaoctava5.jpg",
+			"/images/mediaoctava/mediaoctava6.jpg",
+			"/images/mediaoctava/mediaoctava7.jpg",
+			"/images/mediaoctava/mediaoctava8.jpg",
+			"/images/mediaoctava/mediaoctava9.jpg"
 		]
 	},
 	{
 		"id": "004",
 		"nombre": "Ventarron Funk",
 		"integrantes": "Lucho Devita, ADF, Victor, Nacho, Mariano Quintana",
-		"descripcion": "Trompeta y Voz: Lucho Devita / Bajo: Victor / Bateria: Nacho / Saxo Tenor: Claudio / Saxo Baritono: Mariano Quintana / Saxo Alto: / Guitarra: Alejandro D. Fenos. Banda con la que toqué muchas veces en vivo en lugares copados, pero solo me quedó una única grabación con los chicos por más que hicimos varios temas diferentes.",
-		"imagen": "/images/ventarron.jpg",
+		"descripcion": "Trompeta y Voz: Lucho Devita / Bajo: Victor / Bateria: Nacho / Saxo Tenor: Claudio / Saxo Baritono: Mariano Quintana / Saxo Alto: / Percusión: Daniel Ledesma / Guitarra: Alejandro D. Fenos. Banda de funk/rock, hard rock, con la que toqué muchas veces en vivo y conocí mucha gente copada. Solo me quedó una única grabación con los chicos por más que hicimos varios temas diferentes. Lucho en la trompeta, la verdad que un crack total, un lujo tenerlo en la banda, lo mismo con Daniel Ledesma en la percu. ¡Si pudiera pagarles fijo los tendría laburando conmigo!",
+		"imagen": "/images/ventarronfunklogo.jpg",
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -493,8 +542,8 @@
 					"Claudio",
 					"Mariano Quintana"
 				],
-				"descripcion": "Iba a ser un Ep de varios temas, pero en su momento no hubo buena organización de los integrantes y la mayoría se difuminó quedando solo este maravilloso tema. La mezcla fue hermosa de realizar con tantos vientos, teniendo el placer de dividir el panorama a piacere.",
-				"portada": "/images/etniarupik.jpg",
+				"descripcion": "Iba a ser un Ep de varios temas... pero en su momento no hubo buena organización de los integrantes y la mayoría de los temas se difuminaron quedando solo este único y maravilloso testimonio. La mezcla fue hermosa de realizar con tantos vientos, teniendo el placer de dividir el panorama a piacere. La guitarra la toqué y la grabé sólo, en ledc, tratando de respetar el espacio ya que el protagonismo está en los caños. Salió muchos años después que grabado.",
+				"portada": "/images/ventarron.jpg",
 				"anio": "2021",
 				"temas": [
 					{
@@ -509,19 +558,27 @@
 							"Claudio",
 							"Mariano Quintana"
 						],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Mezclar un tema con tantos instrumentos es un desafío, pero para mí siempre ha sido un privilegio. Hubiera adorado poder grabar más temas con ellos como guitarrista.",
 						"anio": "2021"
 					}
 				]
 			}
+		],
+		"imagenesextra": [
+			"/images/ventarronfunk/ventarron1.jpg",
+			"/images/ventarronfunk/ventarron2.jpg",
+			"/images/ventarronfunk/ventarron3.jpg",
+			"/images/ventarronfunk/ventarron4.jpg",
+			"/images/ventarronfunk/ventarron5.jpg",
+			"/images/ventarronfunk/ventarron6.jpg"
 		]
 	},
 	{
 		"id": "005",
 		"nombre": "FlashBand",
 		"integrantes": "Joe Ablop, Alejandro D. Fenos, Zafiro, Nicolas Moreno",
-		"descripcion": "Teclados: Joe Ablop / Bajo: Zafiro / Bateria: Nicolas Moreno / Guitarra: Alejandro D. Fenos. Banda creada exclusivamente para la composición y grabación de estos tres temas.",
-		"imagen": "/images/flashband.jpeg",
+		"descripcion": "Teclados: Joe Ablop / Bajo: Zafiro / Bateria: Nicolas Moreno / Guitarra: Alejandro D. Fenos. Banda creada exclusivamente para la composición y grabación de estos tres temas. Con Joe, con Ledc ya funcionando regularmente, siempre habrientos de más música, nos asociamos a Zafiro y Nicolás para flashearla.",
+		"imagen": "/images/flashband2.png",
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -532,8 +589,8 @@
 					"Alejandro D. Fenos",
 					"Nicolas Moreno"
 				],
-				"descripcion": "Pura sangre Sanjuanina que me invitaba a participar.",
-				"portada": "/images/flashband.jpg",
+				"descripcion": "Luego de varios años volví a ensayar regularmente con gente. Siempre estoy con la música, pero en ese último tiempo grababa mucho pero no ensayaba con gente. Hacerlo fue una liberación de expresión, en un lugar tan hermoso como Ledc.",
+				"portada": "/images/flashband3.png",
 				"anio": "2024",
 				"temas": [
 					{
@@ -546,7 +603,7 @@
 							"Alejandro D. Fenos",
 							"Nicolas Moreno"
 						],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Tema que nace a partir de una idea de las teclas que acompañé con funky con la guitarra. La parte del medio nace de la mano de Zafiro con la idea del fuzz y el clima denso que detona en un estilo grunge pesado decantando en el riff principal.",
 						"anio": "2024"
 					},
 					{
@@ -559,7 +616,7 @@
 							"Alejandro D. Fenos",
 							"Nicolas Moreno"
 						],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Este tema lo mostré a través de una grabación que tenía. De esa grabación, el final era un riff en un ritmo irregular pero que confluía de forma bastante rockera. Tomamos ese final y armamos el tema. Como detalle recuerdo la composición del solo de guitarra en casa allí en San Juan, que luego Zafiro catalogó como 'desértica'.",
 						"anio": "2024"
 					},
 					{
@@ -572,11 +629,70 @@
 							"Alejandro D. Fenos",
 							"Nicolas Moreno"
 						],
-						"descripcion": "Descripción: ....",
+						"descripcion": "Descripción: Idea de Joe para mover los pies. Agarramos entre los 2 y fuimos produciendo el tema, también vimos algunos partes con Zafiro por separado, lo mismo con Nicolás. Es el más improvisado de los 3. Como detalle aprecio el 'solito' blusero que metí en el medio.",
 						"anio": "2024"
 					}
 				]
 			}
+		],
+		"imagenesextra": [
+			"/images/flashband/flashband1.jpeg",
+			"/images/flashband/flashband2.jpeg",
+			"/images/flashband/flashband3.jpeg",
+			"/images/flashband/flashband4.jpeg",
+			"/images/flashband/flashband5.jpeg",
+			"/images/flashband/flashband6.jpeg",
+			"/images/flashband/flashband7.jfif",
+			"/images/flashband/flashband8.jpeg",
+			"/images/flashband/flashband9.jpeg"
+		]
+	},
+	{
+		"id": "006",
+		"nombre": "Sofi y Ale",
+		"integrantes": "Sofía Leon, Alejandro Fenos",
+		"descripcion": "Música por ADF. Letra por Sofia Leon en conjunto con ADF. Aprovechando la hermosa voz de mi pareja armamos esta obra de 3 temas cuya portada también fue pintada en conjunto para este fin.",
+		"imagen": "/images/sofiyale.jpg",
+		"lanzamientos": [
+			{
+				"id": "001",
+				"nombre": "Elementales",
+				"participes": ["Alejandro D. Fenos", "Sofía Leon"],
+				"descripcion": "A la par de mi trabajo en La Escena Del Crimen, decidimos con Sofi sacar una obra de 3 temas creando la letra y portada en conjunto.",
+				"portada": "/images/sofiyale.jpg",
+				"anio": "2024",
+				"temas": [
+					{
+						"id": "syaelem001",
+						"nombre": "Alquimia Dorada",
+						"ruta": "",
+						"participes": ["Alejandro D. Fenos", "Sofía Leon"],
+						"descripcion": "Descripción: Experimentando con la voz de Sofi y jugando con melodías, nace la intro. El udu inicial se programó y luego agregué los instrumentos reales. Sobre eso Sofi volvió a meter su magia y surgió las ganas de transformar esta obra en un ep de 3 temas acústicos.",
+						"anio": "2024"
+					},
+					{
+						"id": "syaelem002",
+						"nombre": "Murmullo de Viento",
+						"ruta": "",
+						"participes": ["Alejandro D. Fenos", "Sofía Leon"],
+						"descripcion": "Descripción: Mantuvimos el formato y los instrumentos. Jugando con la letra y el acompañamiento, compusimos el principio. Debo admitir que el canto nunca fue mucho lo mío pero acompañado es más llevadero. Recuerdo, como detalle, que la guitarra en realidad estaba grabada del proyecto anterior pero al irse construyendo 'Alquimia Dorada', esta parte fue quedando pospuesta y dió lugar a este segundo tema.",
+						"anio": "2024"
+					},
+					{
+						"id": "syaelem003",
+						"nombre": "Sofuego",
+						"ruta": "",
+						"participes": ["Alejandro D. Fenos", "Sofía Leon"],
+						"descripcion": "Descripción: Tratando de rotar un poco el esquema, añadimos la Mandolina como instrumento principal. EL formato acústico también se fue medio al carajo al final, pero bue, había que hacer fuego.",
+						"anio": "2024"
+					}
+				]
+			}
+		],
+		"imagenesextra": [
+			"/images/sofiyale/sofiyale1.jfif",
+			"/images/sofiyale/sofiyale2.jpeg",
+			"/images/sofiyale/sofiyale3.jpeg"
 		]
 	}
 ]

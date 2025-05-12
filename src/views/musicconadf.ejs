@@ -6,22 +6,24 @@
     <title><% if (typeof pageTitle !== 'undefined' && pageTitle) { %><%= pageTitle %><% } else { %>Bandas en las que participé<% } %></title>
     <link rel="stylesheet" href="/css/music.conadf.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Hit+me,+punk!&display=swap" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main-container-bandas">
+    <div class="page-top-section">
+        <div class="back-button-container-bandas">
+            <a href="/music" class="back-button-bandas">‹ Volver a Música</a>
+        </div>
         <header class="page-header-bandas">
             <h1><% if (typeof pageTitle !== 'undefined' && pageTitle) { %><%= pageTitle %><% } else { %>Bandas en las que participé<% } %></h1>
-            <div class="back-button-container-bandas">
-                <a href="/music" class="back-button-bandas">‹ Volver a Música</a>
-            </div>
         </header>
+    </div>
 
+    <div class="main-container-bandas">
         <div class="band-grid-container">
             <% if (typeof bandas !== 'undefined' && Array.isArray(bandas) && bandas.length > 0) { %>
                 <% bandas.forEach(function(banda) { %>
-                    <% if (typeof banda !== 'undefined' && banda) { %>
-                        <a href="#" class="band-card-link"> 
+                    <% if (typeof banda !== 'undefined' && banda && typeof banda.id !== 'undefined') { %>
+                        <a href="/music/con-adf/banda/<%= banda.id %>" class="band-card-link"> 
                             <div class="band-card">
                                 <div class="band-card-image-container">
                                     <img src="<% if (typeof banda.imagen !== 'undefined' && banda.imagen) { %><%= banda.imagen %><% } else { %>/images/default_band_cover.png<% } %>" 

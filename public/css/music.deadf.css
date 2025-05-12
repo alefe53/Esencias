@@ -1,138 +1,348 @@
+/* public/css/music.deadf.css */
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
+@font-face {
+  font-family: "Camapana Script PERSONAL USE";
+  src: url("/fonts/CamapanaScriptPERSONALUSE.woff2") format("woff2"),
+       url("/fonts/CamapanaScriptPERSONALUSE.woff") format("woff"),  
+       url("/fonts/CamapanaScriptPERSONALUSE.ttf") format("truetype"); 
+  font-weight: normal; 
+  font-style: normal;  
+}
+
 body {
-	font-family: sans-serif;
-	margin: 0;
-	background-image: url("/images/fondomusicdeadf.png"); /* Asegúrate que esta imagen exista en public/images/ */
-	color: #333;
-	/* Propiedades de fondo recomendadas: */
-	background-size: cover; /* Para que la imagen cubra todo el fondo */
-	background-position: center; /* Para centrar la imagen */
-	background-repeat: no-repeat; /* Para que no se repita si es más pequeña que la pantalla */
-	background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
-	min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
+    font-family: "Camapana Script PERSONAL USE", "Times New Roman", serif; 
+    margin: 0;
+    padding: 0; 
+    background-image: url("/images/fondomusicdeadf.png"); 
+    color: #333;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    min-height: 100vh; 
+    position: relative; 
+    padding-top: 160px; 
 }
 
-.container {
-	width: 80%;
-	margin: 40px auto; /* Aumenté un poco el margen superior para mejor espaciado */
-	/* CAMBIO AQUÍ: Fondo blanco semitransparente */
-	background-color: rgba(255, 255, 255, 0.25); /* Blanco con 85% de opacidad. Ajusta el 0.85 según tu gusto */
-	padding: 25px; /* Aumenté un poco el padding */
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra un poco más pronunciada */
-	border-radius: 15px; /* Opcional: bordes redondeados para el contenedor */
+.page-top-lanzamientos {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    text-align: center; 
+    box-sizing: border-box;
+    background-color: transparent; 
+    box-shadow: none; 
 }
 
-h1 {
-	font-family: "Fredericka the Great", cursive; /* Fuente con estilo natural */
-	font-size: 3.5rem; /* Ajusta el tamaño según prefieras */
-	text-align: center;
-	color: #2e7d32; /* Este es el color de RELLENO de las letras (verde oscuro) */
-	margin-top: 40px;
-	margin-bottom: 35px;
-	letter-spacing: 1px;
-
-	/* Sombra de texto sutil (se aplicará por fuera del borde) */
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), /* Sombra principal oscura */ 0 0
-		10px rgba(200, 255, 200, 0.2); /* Un leve brillo verdoso muy sutil */
-
-	/* Propiedades flex comentadas (pueden o no ser necesarias para "Mis Lanzamientos") */
-	/* display: flex; */
-	/* justify-content: center; */
-	/* gap: 20px; */
-}
-.album-item {
-	display: flex;
-	align-items: flex-start;
-	margin-bottom: 30px;
-	padding: 20px; /* Aumenté el padding */
-	border: 0.5px solid #ddd;
-	/* Para que los album-item también tengan un fondo semitransparente y se integren mejor: */
-	background-color: rgba(249, 249, 249, 0.3); /* Gris muy claro con 90% opacidad. Ajusta si es necesario */
-	border-radius: 10px; /* Bordes redondeados para los items de álbum */
-}
-
-.album-cover {
-	margin-right: 20px;
-	flex-shrink: 0;
-}
-
-.album-cover img {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	border: 3px solid #ccc;
-	object-fit: cover;
-	display: block;
-}
-
-.album-info {
-	flex-grow: 1;
-}
-
-.album-info p {
-	margin: 5px 0;
-	line-height: 1.6;
-}
-
-.album-info strong {
-	color: #555;
-}
-
-.tracklist {
-	margin-top: 15px;
-	padding-top: 10px;
-	border-top: 1px dashed #ccc;
-}
-
-.tracklist ul {
-	list-style-type: none;
-	padding-left: 0;
-}
-
-.tracklist li {
-	padding: 3px 0;
-}
-
-.album-cover a {
-	display: inline-block;
-	border-radius: 50%;
-	overflow: hidden;
-}
-
-.album-cover a:hover img {
-	opacity: 0.8;
-	border-color: #888;
-}
-
-/* Estilos para el contenedor del botón de volver */
 .back-button-container {
-    margin-bottom: 25px; /* Espacio debajo del botón, antes de los álbumes */
-    text-align: left; /* Alinea el botón a la izquierda, o usa 'center' o 'right' */
+    position: absolute; 
+    top: 25px; 
+    left: 20px;
 }
 
-/* Estilos para el botón de volver */
 .back-button {
     display: inline-block;
-    padding: 10px 18px;
-    background-color: #4CAF50; /* Un color verde, puedes cambiarlo */
-    color: white;
+    padding: 8px 16px; 
+    background-color: rgba(30, 30, 30, 0.75); 
+    color: #f0f0f0; 
     text-decoration: none;
-    border-radius: 5px;
-    font-family: sans-serif; /* O la fuente que prefieras para el botón */
-    font-size: 0.95em;
-    border: none;
+    border-radius: 20px; 
+    font-family: "Camapana Script PERSONAL USE", sans-serif; 
+    font-size: 1em; 
+    border: 1px solid rgba(255, 255, 255, 0.25);
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .back-button:hover {
-    background-color: #45a049; /* Un verde un poco más oscuro al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.85); 
+    transform: scale(1.05);
 }
 
 .back-button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    transform: translateY(1px);
+    background-color: rgba(0, 0, 0, 0.95);
+    transform: scale(0.98);
 }
+
+.page-top-lanzamientos h1 {
+    font-family: "Fredericka the Great", cursive; 
+    font-size: 2.8em; 
+    color: #D0F0C0; 
+    display: inline-block; 
+    padding: 15px 35px;   
+    border-radius: 15px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35); 
+    text-shadow: 
+        1px 1px 0px rgba(0,0,0,0.7), 
+        -1px -1px 0 rgba(0,0,0,0.7),  
+         1px -1px 0 rgba(0,0,0,0.7),
+        -1px  1px 0 rgba(0,0,0,0.7),
+         1px  1px 0 rgba(0,0,0,0.7),
+        2px 2px 3px rgba(0,0,0,0.5); 
+    margin: 0; 
+    letter-spacing: 1.5px; 
+    border: 1px solid rgba(255,255,255,0.1); 
+    position: relative; 
+    z-index: 1; 
+    overflow: hidden; 
+    transition: transform 0.3s ease-out, text-shadow 0.3s ease-out; 
+}
+
+.page-top-lanzamientos h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/images/adfLogo.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.55; 
+    border-radius: inherit; 
+    z-index: -1; 
+    transition: opacity 0.3s ease-out;
+}
+
+.page-top-lanzamientos h1:hover {
+    transform: scale(1.03);
+    text-shadow: 
+		0 0 1px #743131, 
+		0 0 5px #fff,
+		0 0 5px #ffffff, 
+		0 0 10px #2fdcff,
+		0 0 25px #ADFF2F,
+        1px 1px 0px rgba(0,0,0,0.5), 
+        -1px -1px 0 rgba(0,0,0,0.5),  
+         1px -1px 0 rgba(0,0,0,0.5),
+        -1px  1px 0 rgba(0,0,0,0.5),
+         1px  1px 0 rgba(0,0,0,0.5);
+}
+
+.page-top-lanzamientos h1:hover::before {
+    opacity: 0.7; 
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto 40px auto; 
+    background-color: rgba(255, 255, 255, 0.25); 
+    padding: 25px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px; 
+}
+
+.album-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px; 
+    border: 0.5px solid #ddd;
+    background-color: rgba(249, 249, 249, 0.3); 
+    border-radius: 10px; 
+}
+
+.album-cover {
+    margin-right: 20px;
+    flex-shrink: 0;
+    position: relative; 
+}
+
+.album-cover-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in; 
+    transition: opacity 0.2s ease-in-out;
+}
+
+.album-cover-image:hover {
+    opacity: 0.8; 
+}
+
+/* Estilos del Modal para la imagen agrandada */
+.image-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.92); 
+}
+
+.image-modal-content {
+    margin: auto;
+    display: block;
+    width: auto; 
+    height: auto; 
+    max-width: 80vw;  
+    max-height: 80vh; 
+    border: 4px solid white;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+}
+
+#caption {
+    margin: 15px auto 0 auto; 
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-family: sans-serif; 
+    font-size: 1.1em;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.image-modal-close:hover,
+.image-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ... (resto de tus estilos) ... */
+.album-info {
+    flex-grow: 1;
+    font-family: "Camapana Script PERSONAL USE", cursive; 
+    font-size: 1.1em; 
+}
+
+.album-info p {
+    margin: 8px 0; 
+    line-height: 1.5; 
+
+}
+
+.album-info p em {
+    font-family: "Camapana Script PERSONAL USE", cursive; 
+    font-style: normal; 
+    font-size: 1em;  
+
+}
+
+.album-info strong {
+    font-weight: bold; 
+    color: #222; 
+}
+
+.tracklist {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.tracklist p strong { 
+    font-family: "Camapana Script PERSONAL USE", cursive;
+    font-size: 1.1em; 
+    color: #333;
+}
+
+.tracklist ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tracklist li { 
+    padding: 4px 0;
+    font-family: "Camapana Script PERSONAL USE", cursive;
+    font-size: 1em;
+    color: #383838;
+}
+
+.song-item-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.song-item-layout:last-child {
+    border-bottom: none;
+}
+
+.song-details-text {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.song-details-text strong { 
+    font-family: "Camapana Script PERSONAL USE", cursive; 
+    font-weight: bold; 
+    font-size: 1.05em;
+    color: #222; 
+}
+
+.song-year {
+    font-family: "Camapana Script PERSONAL USE", cursive;
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 5px;
+}
+
+.song-description { 
+    font-family: "Camapana Script PERSONAL USE", cursive; 
+    font-style: normal; 
+    font-size: 0.9em;  
+    color: #505050; 
+    margin-top: 3px;
+}
+
+.song-audio-player-container {
+    flex-shrink: 0; 
+    min-width: 220px; 
+}
+
+.song-audio-player-container audio {
+    width: 100%;
+    max-width: 220px; 
+    height: 30px;   
+    display: block; 
+}
+
+.song-audio-player-container.no-audio span {
+    font-family: "Camapana Script PERSONAL USE", cursive;
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+    display: inline-block; 
+    min-width: 220px; 
+    text-align: right; 
+}
+
+/* Contenedor del nombre del proyecto */
+.album-info .nombre-proyecto {
+    font-family: "Freshman"; 
+    font-size: 2em; /* Tamaño */
+    color: #005f2b;
+}
+.album-info .nombre-proyecto strong {
+    font-family: inherit; /* Hereda "Freshman" del padre .nombre-proyecto */
+    font-weight: bold;    /* Mantiene la negrita */
+    color: inherit;       /* Hereda el color del padre .nombre-proyecto */
+}
+

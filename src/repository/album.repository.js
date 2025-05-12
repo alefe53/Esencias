@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 // CORRECCIÓN DE RUTAS DE IMPORTACIÓN:
 // Asumiendo que tus modelos están en 'src/models/' (plural)
 // y los archivos se llaman 'Album.js' (PascalCase) y 'cancion.js' (minúsculas).
-import { Album } from "../models/Album.js";
+import { Album } from "../models/album.js";
 import { Cancion } from "../models/cancion.js";
 
 // --- Configuración de la Ruta al Archivo JSON ---

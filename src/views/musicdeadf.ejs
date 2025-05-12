@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title><% if (typeof pageTitle !== 'undefined' && pageTitle) { %><%= pageTitle %><% } else { %>Mis Lanzamientos<% } %></title>
-    
     <link rel="stylesheet" href="/css/music.deadf.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Mis Lanzamientos</h1>
-
-        <div class="back-button-container">
-            <a href="/music" class="back-button">‹ Volver a la página principal</a>
+    <div class="page-top-lanzamientos">
+        <div class="back-button-container"> <a href="/music" class="back-button">‹ Volver a la página principal</a>
         </div>
-
+        <h1>Mis Lanzamientos</h1>
+    </div>
+    
+    <div class="container">
         <% if (typeof lanzamientos !== 'undefined' && Array.isArray(lanzamientos) && lanzamientos.length > 0) { %>
             <% lanzamientos.forEach(function(album) { %> 
                 <% if (typeof album !== 'undefined' && album) { %>
                     <div class="album-item">
                         <div class="album-cover">
-                            <a href="#"> <img src="<% if (typeof album.portada !== 'undefined' && album.portada) { %><%= album.portada %><% } else { %>/images/default_cover.png<% } %>" 
-                                     alt="<% if (typeof album.nombre !== 'undefined' && album.nombre) { %>Portada de <%= album.nombre %><% } else { %>Portada de Álbum<% } %>">
-                            </a>
+                            <img class="album-cover-image" 
+                                 src="<% if (typeof album.portada !== 'undefined' && album.portada) { %><%= album.portada %><% } else { %>/images/default_cover.png<% } %>" 
+                                 alt="<% if (typeof album.nombre !== 'undefined' && album.nombre) { %>Portada de <%= album.nombre %><% } else { %>Portada de Álbum<% } %>">
                         </div>
                         <div class="album-info">
-                            <p><strong>Nombre del Proyecto:</strong> <% if (typeof album.nombre !== 'undefined' && album.nombre) { %><%= album.nombre %><% } %></p>
-                            
+                            <div class="nombre-proyecto">
+                            <p> 
+                                <% if (typeof album.nombre !== 'undefined' && album.nombre) { %><%= album.nombre %><% } %></p>
+                            </div>
                             <p><strong>Artistas partícipes:</strong> 
                                 <% if (typeof album.participes !== 'undefined' && album.participes) { %>
                                     <% if (Array.isArray(album.participes)) { %>
@@ -38,9 +38,7 @@
                                     <% } %>
                                 <% } %>
                             </p>
-                            
                             <p><strong>Año:</strong> <% if (typeof album.anio !== 'undefined' && album.anio) { %><%= album.anio %><% } %></p>
-                            
                             <% if (typeof album.descripcion !== 'undefined' && album.descripcion && album.descripcion.trim() !== '') { %>
                                 <p><em><%= album.descripcion %></em></p>
                             <% } %>
@@ -59,12 +57,16 @@
                                                             <p class="song-description"><em><%= tema.descripcion %></em></p>
                                                         <% } %>
                                                     </div>
-                                                    <% if (typeof tema.ruta !== 'undefined' && tema.ruta) { %>
+                                                    <% if (typeof tema.ruta !== 'undefined' && tema.ruta && tema.ruta.trim() !== '') { %>
                                                         <div class="song-audio-player-container">
                                                             <audio controls preload="none">
                                                                 <source src="<%= tema.ruta %>" type="audio/mpeg">
-                                                                Tu navegador no soporta el elemento de audio.
+                                                                Tu navegador no soporta el audio.
                                                             </audio>
+                                                        </div>
+                                                    <% } else if (typeof tema.ruta !== 'undefined') { %>
+                                                        <div class="song-audio-player-container no-audio">
+                                                            <span>(Audio no disponible)</span>
                                                         </div>
                                                     <% } %>
                                                 </li>
@@ -91,5 +93,55 @@
             <p>No hay lanzamientos disponibles en este momento.</p>
         <% } %>
     </div>
+
+    <div id="imageModal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const captionText = document.getElementById('caption');
+        const closeBtn = document.querySelector('.image-modal-close');
+        const albumImages = document.querySelectorAll('.album-cover-image');
+        
+        let openTimeout;
+        let closeTimeout;
+
+        albumImages.forEach(img => {
+            img.style.cursor = 'zoom-in'; // Asegura que el cursor cambie
+            img.onclick = function() {
+                clearTimeout(openTimeout);
+                clearTimeout(closeTimeout);
+                openTimeout = setTimeout(() => {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                }, 200); // Reducido el retraso a 0.2 segundos para una mejor experiencia
+            }
+        });
+
+        closeBtn.onclick = function() {
+            clearTimeout(openTimeout);
+            clearTimeout(closeTimeout);
+            closeTimeout = setTimeout(() => {
+                modal.style.display = "none";
+            }, 200); // Reducido el retraso a 0.2 segundos
+        }
+
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                 clearTimeout(openTimeout);
+                 clearTimeout(closeTimeout);
+                 closeTimeout = setTimeout(() => {
+                    modal.style.display = "none";
+                }, 200); // Reducido el retraso a 0.2 segundos
+            }
+        }
+    });
+</script>
 </body>
 </html>

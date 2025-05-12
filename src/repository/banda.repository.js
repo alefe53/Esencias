@@ -10,7 +10,7 @@ import { Banda } from "../models/banda.js";
 // import { Banda } from '../model/banda.js';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename); // Debe ser src/repositories
+const __dirname = path.dirname(__filename); // src/repositories
 
 // Ruta al archivo JSON de bandas (asumiendo que está en src/db/bandas.json)
 const dataPath = path.join(__dirname, "..", "db", "bandas.json");
@@ -49,15 +49,41 @@ export const findAllBandas = async () => {
 		return new Banda(
 			bandaData.id,
 			bandaData.nombre,
-			bandaData.integrantes, // Esto es un string en tu JSON, si necesitas un array, debes procesarlo
+			bandaData.integrantes,
 			bandaData.descripcion,
-			bandaData.imagen, // Esta es la imagen principal de la banda
-			bandaData.lanzamientos || [], // Asegura que sea un array
+			bandaData.imagen,
+			bandaData.lanzamientos || [],
+			bandaData.imagenesextra,
 		);
 	});
 
-	return bandas.reverse(); // Para mostrar las más recientes (o últimas añadidas al JSON) primero
+	return bandas.reverse();
 };
 
-// Podrías añadir findBandaById si necesitas una página de detalle por banda
-// export const findBandaById = async (id) => { /* ... */ }
+/**
+ * Encuentra una banda por su ID.
+ * @param {string} id - El ID de la banda a buscar.
+ * @returns {Promise<Banda|null>} Una promesa que resuelve a la instancia de Banda o null si no se encuentra.
+ */
+export const findBandaById = async (id) => {
+	const jsonData = await _readData();
+	const bandaData = jsonData.find((banda) => banda.id === id);
+
+	if (!bandaData) {
+		return null; // Retorna null si no se encuentra la banda
+	}
+
+	// Convierte el objeto encontrado a una instancia de Banda
+	// 'lanzamientos' y sus 'temas' internos se pasarán como objetos genéricos
+	// tal como están en el JSON, ya que no tenemos modelos específicos para ellos aquí.
+	// La plantilla EJS los manejará directamente.
+	return new Banda(
+		bandaData.id,
+		bandaData.nombre,
+		bandaData.integrantes,
+		bandaData.descripcion,
+		bandaData.imagen,
+		bandaData.lanzamientos || [],
+		bandaData.imagenesextra,
+	);
+};
