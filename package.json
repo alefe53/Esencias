@@ -23,7 +23,8 @@
 	"contributors": [],
 	"scripts": {
 		"dev": "node --watch ./src/app.js",
-		"lint": "npx @biomejs/biome check --write ./src"
+		"lint": "npx @biomejs/biome check --write ./src",
+		"lintcss":"npx @biomejs/biome check --write ./src"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4"

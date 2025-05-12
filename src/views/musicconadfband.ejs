@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="/css/music.conadf.band.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+
+    <div class="back-button-container-detail">
+        <a href="/music/musicconadf" class="back-button-detail">‹ Volver a Bandas</a>
+    </div>
+
     <div class="band-detail-container">
         <% if (typeof banda !== 'undefined' && banda) { %>
             <header class="band-detail-header">
                 <div class="band-main-image-container">
-                    <img class="zoomable-image"
-                     src="<% if (banda.imagen) { %><%= banda.imagen %><% } else { %>/images/default_band_cover.png<% } %>" 
+                    <img class="zoomable-image" src="<% if (banda.imagen) { %><%= banda.imagen %><% } else { %>/images/default_band_cover.png<% } %>" 
                          alt="Imagen de <%= banda.nombre || 'la banda' %>">
                 </div>
                 <div class="band-header-info">
@@ -27,28 +30,35 @@
                 </div>
             </header>
 
-            <div class="back-button-container-detail">
-                <a href="/music/musicconadf" class="back-button-detail">‹ Volver a Bandas</a>
-            </div>
-
-            <%# --- INICIO: Botón para abrir la Galería de Imágenes Extra --- %>
             <% if (typeof banda.imagenesextra !== 'undefined' && Array.isArray(banda.imagenesextra) && banda.imagenesextra.length > 0) { %>
                 <div class="gallery-button-container">
                     <button id="openGalleryBtn" class="gallery-button">Ver Galería de Fotos</button>
                 </div>
             <% } %>
-            <%# --- FIN: Botón para abrir la Galería de Imágenes Extra --- %>
-
+            <% if (typeof banda.youtubeVideoId !== 'undefined' && banda.youtubeVideoId && banda.youtubeVideoId.trim() !== '') { %>
+                <section class="band-video-section">
+                    <h2>Video Destacado</h2>
+                    <div class="video-responsive-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/<%= banda.youtubeVideoId %>" 
+                            title="Video de YouTube de <%= banda.nombre %>" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </section>
+            <% } %>
+            
             <% if (typeof banda.lanzamientos !== 'undefined' && Array.isArray(banda.lanzamientos) && banda.lanzamientos.length > 0) { %>
-                
                 <section class="band-lanzamientos-section">
                     <h2>Lanzamientos de <%= banda.nombre %></h2>
                     <% banda.lanzamientos.forEach(function(lanzamiento) { %>
                         <% if (typeof lanzamiento !== 'undefined' && lanzamiento) { %>
                             <div class="lanzamiento-item">
                                 <div class="lanzamiento-cover">
-                                    <img class="zoomable-image" 
-                                         src="<% if (lanzamiento.portada) { %><%= lanzamiento.portada %><% } else { %>/images/default_cover.png<% } %>" 
+                                    <img class="zoomable-image" src="<% if (lanzamiento.portada) { %><%= lanzamiento.portada %><% } else { %>/images/default_cover.png<% } %>" 
                                          alt="<% if (lanzamiento.nombre) { %>Portada de <%= lanzamiento.nombre %><% } else { %>Portada de Lanzamiento<% } %>">
                                 </div>
                                 <div class="lanzamiento-info">
@@ -67,38 +77,31 @@
                                                                 <% if (tema.nombre) { %><strong><%= tema.nombre %></strong><% } %>
                                                                 <% if (tema.anio) { %> <span class="song-year-banda">(<%= tema.anio %>)</span><% } %>
                                                             </div>
-                                                            <% if (tema.ruta && tema.ruta.trim() !== '') { %>
-                                                                <div class="song-audio-player-container-banda">
-                                                                    <%# Asumimos que tema.ruta ahora contiene el ID del video de YouTube %>
-                                                                    <div class="youtube-video-container"> <%# Necesitarás CSS para esta clase %>
-                                                                        <iframe 
-                                                                            width="560" <%# El CSS lo hará responsive, estos son valores por defecto %>
-                                                                            height="315"
-                                                                            src="https://www.youtube.com/embed/<%= tema.ruta %>" 
-                                                                            title="Video de YouTube: <% if (tema.nombre) { %><%= tema.nombre %><% } %>" 
-                                                                            frameborder="0" 
-                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                                                            referrerpolicy="strict-origin-when-cross-origin" 
-                                                                            allowfullscreen>
-                                                                        </iframe>
-                                                                    </div>
-                                                                <% } else { %>
-                                                                <div class="song-audio-player-container-banda no-audio">
-                                                                    <span>(Audio no disponible)</span>
+                                                            <% 
+                                                                let videoTitle = "Video de YouTube";
+                                                                if (typeof tema.nombre !== 'undefined' && tema.nombre && tema.nombre.trim() !== '') {
+                                                                    videoTitle += ": " + tema.nombre;
+                                                                }
+                                                            %>
+                                                            <% if (typeof tema.ruta !== 'undefined' && tema.ruta && tema.ruta.trim() !== '') { %>
+                                                                <div class="youtube-video-container"> 
+                                                                    <iframe 
+                                                                        src="https://www.youtube.com/embed/<%= tema.ruta %>" 
+                                                                        title="<%= videoTitle %>"
+                                                                        frameborder="0" 
+                                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                                                        allowfullscreen>
+                                                                    </iframe>
+                                                                </div>
+                                                            <% } else { %>
+                                                                <div class="song-multimedia-container no-multimedia"> 
+                                                                    <span>(Video no disponible)</span>
                                                                 </div>
                                                             <% } %>
                                                         </li>
                                                     <% } %>
                                                 <% }); %>
-                                                <% if (typeof lanzamiento.audioPreviewAlbumSrc !== 'undefined' && lanzamiento.audioPreviewAlbumSrc && (!Array.isArray(lanzamiento.temas) || lanzamiento.temas.length === 0 || (Array.isArray(lanzamiento.temas) && !lanzamiento.temas.some(t => typeof t !== 'undefined' && t && t.ruta)))) { %>
-                                                    <div style="margin-top: 15px;">
-                                                        <p><strong>Preview del Álbum:</strong></p>
-                                                        <audio controls preload="none" style="width: 100%; max-width: 250px; height: 30px;">
-                                                            <source src="<%= lanzamiento.audioPreviewAlbumSrc %>" type="audio/mpeg">
-                                                            Tu navegador no soporta el elemento de audio.
-                                                        </audio>
-                                                    </div>
-                                                <% } %>
                                             </ul>
                                         </div>
                                     <% } %>
@@ -116,13 +119,14 @@
     </div>
 
     <div id="imageModal" class="image-modal">
-        <span class="image-modal-close">&times;</span>
-        <img class="image-modal-content" id="modalImageContent"> <div id="imageModalCaption"></div>  </div>
+        <span class="image-modal-close">×</span>
+        <img class="image-modal-content" id="modalImageContent">
+        <div id="imageModalCaption"></div>
+    </div>
 
-        <%# --- INICIO: Lightbox/Modal para la Galería de Imágenes Extra --- %>
     <% if (typeof banda !== 'undefined' && banda && typeof banda.imagenesextra !== 'undefined' && Array.isArray(banda.imagenesextra) && banda.imagenesextra.length > 0) { %>
         <div id="galleryLightbox" class="gallery-lightbox">
-            <span class="gallery-lightbox-close">&times;</span>
+            <span class="gallery-lightbox-close">×</span>
             <div class="gallery-lightbox-content-wrapper">
                 <img id="galleryLightboxImage" src="" alt="Imagen de la galería">
                 <a class="gallery-prev">❮</a>
@@ -135,72 +139,71 @@
             </div>
         </div>
     <% } %>
-    <%# --- FIN: Lightbox/Modal para la Galería de Imágenes Extra --- %>
-
-<script>
+    <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImageContent'); // Usar el nuevo ID
-        const captionText = document.getElementById('imageModalCaption'); // Usar el nuevo ID
-        const closeBtn = document.querySelector('.image-modal-close');
+        // --- Lógica del Modal para imágenes individuales (zoomable-image) ---
+        const imageModal = document.getElementById('imageModal');
+        const modalImgContent = document.getElementById('modalImageContent');
+        const modalCaptionText = document.getElementById('imageModalCaption');
+        // Asegurarse de que el selector es específico para este modal si hay múltiples botones de cierre
+        const imageModalCloseBtn = imageModal ? imageModal.querySelector('.image-modal-close') : null;
+        const zoomableImages = document.querySelectorAll('.zoomable-image');
         
-        // Seleccionar todas las imágenes que deben ser "zoomeables" en esta página
-        const zoomableImages = document.querySelectorAll('.zoomable-image'); 
+        let openImageTimeout;
+        let closeImageTimeout;
 
-        let openTimeout;
-        let closeTimeout;
         zoomableImages.forEach(img => {
             img.style.cursor = 'zoom-in'; 
             img.onclick = function() {
-                clearTimeout(openTimeout);
-                clearTimeout(closeTimeout);
-                openTimeout = setTimeout(() => {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = this.alt;
-                }, 200); // Retraso de 0.2 segundos
+                clearTimeout(openImageTimeout); clearTimeout(closeImageTimeout);
+                openImageTimeout = setTimeout(() => {
+                    if(imageModal) imageModal.style.display = "block";
+                    if(modalImgContent) modalImgContent.src = this.src;
+                    if(modalCaptionText) modalCaptionText.innerHTML = this.alt;
+                }, 200);
             }
         });
 
-        closeBtn.onclick = function() {
-            clearTimeout(openTimeout);
-            clearTimeout(closeTimeout);
-            closeTimeout = setTimeout(() => {
-                modal.style.display = "none";
-            }, 200); 
-        }
-
-        modal.onclick = function(event) {
-            if (event.target === modal) { 
-                 clearTimeout(openTimeout);
-                 clearTimeout(closeTimeout);
-                 closeTimeout = setTimeout(() => {
-                    modal.style.display = "none";
+        if(imageModalCloseBtn) {
+            imageModalCloseBtn.onclick = function() {
+                clearTimeout(openImageTimeout); clearTimeout(closeImageTimeout);
+                closeImageTimeout = setTimeout(() => {
+                    if(imageModal) imageModal.style.display = "none";
                 }, 200); 
             }
         }
-    
-    // --- INICIO: Lógica para la Galería de Imágenes Extra ---
-    const galleryLightbox = document.getElementById('galleryLightbox');
+
+        if(imageModal) {
+            imageModal.onclick = function(event) {
+                if (event.target === imageModal) { 
+                     clearTimeout(openImageTimeout); clearTimeout(closeImageTimeout);
+                     closeImageTimeout = setTimeout(() => {
+                        imageModal.style.display = "none";
+                    }, 200); 
+                }
+            }
+        }
+
+        // --- INICIO: Lógica para la Galería de Imágenes Extra ---
+        const galleryLightbox = document.getElementById('galleryLightbox');
         const openGalleryBtn = document.getElementById('openGalleryBtn');
+        // Asegurarse de que el selector es específico para este lightbox
         const galleryLightboxCloseBtn = galleryLightbox ? galleryLightbox.querySelector('.gallery-lightbox-close') : null;
         const galleryLightboxImage = document.getElementById('galleryLightboxImage');
-        const galleryThumbnailsContainer = galleryLightbox ? galleryLightbox.querySelector('.gallery-thumbnails') : null; // Contenedor de miniaturas
+        const galleryThumbnailsContainer = galleryLightbox ? galleryLightbox.querySelector('.gallery-thumbnails') : null;
         const prevBtn = galleryLightbox ? galleryLightbox.querySelector('.gallery-prev') : null;
         const nextBtn = galleryLightbox ? galleryLightbox.querySelector('.gallery-next') : null;
         
         let currentGallerySlideIndex = 0;
-        // Asegúrate que 'banda' y 'banda.imagenesextra' están disponibles en el scope del script
-        // La siguiente línea es para que el script tenga acceso al array de imágenes
+        // Pasar el array imagenesextra a JavaScript de forma segura
         const imagenesExtra = <% if (typeof banda !== 'undefined' && banda && typeof banda.imagenesextra !== 'undefined' && Array.isArray(banda.imagenesextra)) { %><%- JSON.stringify(banda.imagenesextra) %><% } else { %>[]<% } %>;
 
         function showGallerySlide(index) {
-            if (!galleryLightboxImage || imagenesExtra.length === 0) return;
+            if (!galleryLightboxImage || !imagenesExtra || imagenesExtra.length === 0) return;
             
-            currentGallerySlideIndex = (index + imagenesExtra.length) % imagenesExtra.length; // Manejo de bucle para la navegación
+            currentGallerySlideIndex = (index + imagenesExtra.length) % imagenesExtra.length; 
             galleryLightboxImage.src = imagenesExtra[currentGallerySlideIndex];
             
-            // Resaltar miniatura activa
             if (galleryThumbnailsContainer) {
                 const thumbnails = galleryThumbnailsContainer.querySelectorAll('.gallery-thumbnail-item');
                 thumbnails.forEach((thumb, i) => {
@@ -215,7 +218,7 @@
         if (openGalleryBtn && galleryLightbox) {
             openGalleryBtn.onclick = function() {
                 galleryLightbox.style.display = 'flex'; // Usar flex para centrar el contenido
-                showGallerySlide(0); // Mostrar la primera imagen al abrir
+                showGallerySlide(0); 
             }
         }
 
@@ -226,7 +229,6 @@
         }
 
         if (galleryLightbox) {
-            // Cerrar si se hace clic en el fondo del lightbox (fuera de la imagen o controles)
             galleryLightbox.onclick = function(event) {
                 if (event.target === galleryLightbox) { 
                     galleryLightbox.style.display = 'none';
@@ -236,32 +238,32 @@
         
         if(prevBtn) {
             prevBtn.onclick = function(e) {
-                e.stopPropagation(); // Evita que el clic en el botón cierre el lightbox
+                e.stopPropagation(); 
                 showGallerySlide(currentGallerySlideIndex - 1);
             }
         }
 
         if(nextBtn) {
             nextBtn.onclick = function(e) {
-                e.stopPropagation(); // Evita que el clic en el botón cierre el lightbox
+                e.stopPropagation(); 
                 showGallerySlide(currentGallerySlideIndex + 1);
             }
         }
         
-        // Añadir event listeners a las miniaturas generadas dinámicamente
         if (galleryThumbnailsContainer) {
             const thumbnails = galleryThumbnailsContainer.querySelectorAll('.gallery-thumbnail-item');
             thumbnails.forEach((thumbnail) => {
                 thumbnail.onclick = (e) => {
-                    e.stopPropagation(); // Evita que el clic en la miniatura cierre el lightbox
+                    e.stopPropagation(); 
                     const index = parseInt(e.target.getAttribute('data-index'));
-                    showGallerySlide(index);
+                    if (!isNaN(index)) { // Asegurarse que el índice es un número
+                        showGallerySlide(index);
+                    }
                 }
             });
         }
         // --- FIN: Lógica para la Galería de Imágenes Extra ---
-    }
-    );
+    });
 </script>
 </body>
 </html>

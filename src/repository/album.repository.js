@@ -1,23 +1,14 @@
-// src/repositories/albumRepository.js
-
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-// CORRECCIÓN DE RUTAS DE IMPORTACIÓN:
-// Asumiendo que tus modelos están en 'src/models/' (plural)
-// y los archivos se llaman 'Album.js' (PascalCase) y 'cancion.js' (minúsculas).
 import { Album } from "../models/album.js";
 import { Cancion } from "../models/cancion.js";
 
-// --- Configuración de la Ruta al Archivo JSON ---
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); // Ruta al directorio 'src/repositories'
 
-// Asumiendo que tu carpeta 'db' con 'lanzamientos.json' está en 'src/db/'
 const dataPath = path.join(__dirname, "..", "db", "lanzamientos.json");
-
-// --- Funciones del Repositorio ---
 
 const _readData = async () => {
 	try {
@@ -29,12 +20,6 @@ const _readData = async () => {
 				`Error: El archivo de datos JSON no se encontró en ${dataPath}`,
 			);
 			return [];
-		} else {
-			console.error(
-				"Error al leer o parsear el archivo de lanzamientos JSON:",
-				error,
-			);
-			throw error;
 		}
 	}
 };
@@ -51,11 +36,8 @@ export const findAll = async () => {
 					temaData.participes,
 					temaData.descripcion,
 					temaData.anio,
-					// Asegúrate que los parámetros coincidan con el constructor de tu clase Cancion
 				),
 		);
-		// Asegúrate que los parámetros aquí coincidan con el constructor de tu clase Album
-		// y con las propiedades que usas en tu plantilla EJS (ej. album.portada)
 		return new Album(
 			albumData.id,
 			albumData.nombre,
@@ -88,7 +70,6 @@ export const findById = async (id) => {
 				temaData.anio,
 			),
 	);
-	// Asegúrate que los parámetros aquí coincidan con el constructor de tu clase Album
 	return new Album(
 		albumData.id,
 		albumData.nombre,

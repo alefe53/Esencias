@@ -1,28 +1,30 @@
-import { findAll as findAllLanzamientos } from "../repository/album.repository.js";
+import albumService from "../services/album.service.js";
 
 /**
  * Función del controlador para obtener y mostrar la página de lanzamientos.
- * Ahora es una función asíncrona porque `findAllLanzamientos` lo es (debido a la lectura de archivos).
+ * Delega la obtención de datos al AlbumService.
  */
 export const getLanzamientosPage = async (req, res) => {
 	try {
-		// 1. Llama a la función del repositorio para obtener todos los lanzamientos.
-		const lanzamientos = await findAllLanzamientos();
+		// Llama al servicio para obtener todos los lanzamientos.
+		const lanzamientos = await albumService.getAllLanzamientos();
 
-		// 2. Renderiza la plantilla EJS, pasando los datos obtenidos.
+		// Renderiza la plantilla EJS, pasando los datos obtenidos.
 		res.render("musicdeadf", {
 			pageTitle: "Mis Lanzamientos",
-			lanzamientos: lanzamientos, // Pasa el array de álbumes (instancias de Album) a la plantilla
+			lanzamientos: lanzamientos, // Pasa el array de álbumes/lanzamientos a la plantilla
 		});
 	} catch (error) {
-		// 3. Manejo de errores básico.
 		console.error(
 			"Error en el controlador al obtener y renderizar lanzamientos:",
-			error,
+			error.message,
 		);
 		// Envía una respuesta de error al cliente.
 		res
 			.status(500)
-			.send("Error interno del servidor al cargar la página de lanzamientos.");
+			.send(
+				error.message ||
+					"Error interno del servidor al cargar la página de lanzamientos.",
+			);
 	}
 };

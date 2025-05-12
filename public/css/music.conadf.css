@@ -1,289 +1,282 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Hit+me,+punk!&display=swap'); /* Para el título principal */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); /* Para nombres de banda en tarjetas */
+@import url("https://fonts.googleapis.com/css2?family=Hit+me,+punk!&display=swap"); /* Para el título principal */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap"); /* Para nombres de banda en tarjetas */
 
 body {
-    font-family: 'Open Sans', 'Arial', sans-serif;
-    margin: 0;
-    padding: 0; 
-    background-image: url("/images/fondogastado.png"); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    min-height: 100vh; 
-    line-height: 1.6;
-    position: relative; 
-    padding-top: 140px; 
+	font-family: "Open Sans", "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url("/images/fondogastado.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
+	line-height: 1.6;
+	position: relative;
+	padding-top: 140px;
 }
 
 /* Contenedor para el botón de volver y el header de la página - AHORA FIJO Y TRANSPARENTE */
 .page-top-section {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999; /* Para que esté sobre el contenido scrolleable */
-    
-    padding-top: 20px; 
-    padding-bottom: 15px; 
-    box-sizing: border-box;
-    text-align: center; 
-    background-color: transparent; 
-    box-shadow: none; 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999; /* Para que esté sobre el contenido scrolleable */
+
+	padding-top: 20px;
+	padding-bottom: 15px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: transparent;
+	box-shadow: none;
 }
 
 .back-button-container-bandas {
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    left: 20px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 20px;
 }
 
 .back-button-bandas {
-    display: inline-block;
-    padding: 10px 18px;
-    background-color: rgba(0, 0, 0, 0.65); 
-    color: white;
-    text-decoration: none;
-    border-radius: 20px; 
-    font-size: 0.9em;
-    font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	display: inline-block;
+	padding: 10px 18px;
+	background-color: rgba(0, 0, 0, 0.65);
+	color: white;
+	text-decoration: none;
+	border-radius: 20px;
+	font-size: 0.9em;
+	font-weight: 600;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .back-button-bandas:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: scale(1.05);
+	background-color: rgba(0, 0, 0, 0.8);
+	transform: scale(1.05);
 }
 
 .back-button-bandas:active {
-    background-color: rgba(0, 0, 0, 0.9);
-    transform: scale(1);
+	background-color: rgba(0, 0, 0, 0.9);
+	transform: scale(1);
 }
 
 /* Contenedor del encabezado de la página de bandas */
 .page-header-bandas {
-    display: inline-block; 
-    margin-top: 0; 
-    margin-bottom: 0; 
-    padding: 0; 
-    background: transparent; /* El div que envuelve h1 no necesita fondo */
-    position: relative; 
-    border-radius: 50px; /* El h1::before heredará esto */
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	background: transparent; /* El div que envuelve h1 no necesita fondo */
+	position: relative;
+	border-radius: 50px; /* El h1::before heredará esto */
 }
 
 /* Título "Bandas en las que participé" - El "Cartel" */
 .page-header-bandas h1 {
-    font-family: "Hit me, punk! 01", cursive; 
-    font-size: 3.0em; 
-    color: #f5f5dc; 
-    font-weight: normal; 
-    
-    display: inline-block; 
-    padding: 15px 35px;    
-    
-    border-radius: 50px;   /* Mantenemos el border-radius para el overflow:hidden */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra para el cartel */
-    
-    margin: 0; 
-    text-shadow: 
-        1px 1px 0px #000000, 
-        -1px -1px 0 #000000,  
-         1px -1px 0 #000000,
-        -1px  1px 0 #000000,
-         1px  1px 0 #000000;
+	font-family: "Hit me, punk! 01", cursive;
+	font-size: 3.0em;
+	color: #f5f5dc;
+	font-weight: normal;
 
-    position: relative; 
-    z-index: 1; /* Texto por encima del fondo de imagen */
-    
-    transition: transform 0.3s ease-out; 
-    transform-origin: center center; 
-    letter-spacing: 1.5px; 
-    overflow: hidden; /* Importante para que el ::before se recorte con el border-radius */
+	display: inline-block;
+	padding: 15px 35px;
+
+	border-radius: 50px; /* Mantenemos el border-radius para el overflow:hidden */
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra para el cartel */
+
+	margin: 0;
+	text-shadow: 1px 1px 0px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000,
+		-1px 1px 0 #000000, 1px 1px 0 #000000;
+
+	position: relative;
+	z-index: 1; /* Texto por encima del fondo de imagen */
+
+	transition: transform 0.3s ease-out;
+	transform-origin: center center;
+	letter-spacing: 1.5px;
+	overflow: hidden; /* Importante para que el ::before se recorte con el border-radius */
 }
 
 .page-header-bandas h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("/images/fondoale1.png"); /* Imagen de fondo para el cartel del título */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.7; /* Opacidad base de la imagen de fondo del cartel */
-    border-radius: inherit; /* Hereda el border-radius del h1 */
-    z-index: -1; /* Detrás del texto del h1 */
-    transition: opacity 0.3s ease-out;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("/images/fondoale1.png"); /* Imagen de fondo para el cartel del título */
+	background-size: cover;
+	background-position: center;
+	opacity: 0.7; /* Opacidad base de la imagen de fondo del cartel */
+	border-radius: inherit; /* Hereda el border-radius del h1 */
+	z-index: -1; /* Detrás del texto del h1 */
+	transition: opacity 0.3s ease-out;
 }
 
 .page-header-bandas h1:hover {
-    transform: scale(1.03); 
+	transform: scale(1.03);
 }
 
 .page-header-bandas h1:hover::before {
-    opacity: 0.4; /* La imagen de fondo se vuelve más transparente en hover */
+	opacity: 0.4; /* La imagen de fondo se vuelve más transparente en hover */
 }
 
 .main-container-bandas {
-    width: 90%; 
-    max-width: 1000px; 
-    margin: 0 auto 40px auto; 
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto 40px auto;
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 12px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .band-grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px; 
-    padding: 0; 
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+	padding: 0;
 }
 
 .band-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block; 
-    /*transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;*/
-    height: 100%; 
-    /* -- AÑADIR ESTADO INICIAL PARA ANIMACIÓN -- */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.25s ease-in-out; /* Nueva transición combinada */
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	/*transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;*/
+	height: 100%;
+	/* -- AÑADIR ESTADO INICIAL PARA ANIMACIÓN -- */
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.25s
+		ease-in-out; /* Nueva transición combinada */
 }
 
 .band-card-link:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-
+	transform: translateY(-6px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .band-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    background-color: rgba(255, 255, 255, 0.95); 
-    border: 1px solid rgba(233, 236, 239, 0.7); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición aquí */
-
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+	background-color: rgba(255, 255, 255, 0.95);
+	border: 1px solid rgba(233, 236, 239, 0.7);
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición aquí */
 }
 .band-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .band-card-link.visible {
-    opacity: 1;
-    transform: translateY(0); /* Vuelve a su posición original */
+	opacity: 1;
+	transform: translateY(0); /* Vuelve a su posición original */
 }
 
 .band-card-image-container {
-    width: 100%;
-    padding-top: 75%; 
-    position: relative;
-    background-color: rgba(248, 249, 250, 0.7); 
-    overflow: hidden;
+	width: 100%;
+	padding-top: 75%;
+	position: relative;
+	background-color: rgba(248, 249, 250, 0.7);
+	overflow: hidden;
 }
 
 .band-card-image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    filter: grayscale(90%); /* Empieza casi B&N (0% = color, 100% = B&N) */
-    transform: scale(1.0); /* Estado inicial sin zoom */
-    transition: filter 0.4s ease-out, transform 0.4s ease-out; /* Transiciones */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: grayscale(90%); /* Empieza casi B&N (0% = color, 100% = B&N) */
+	transform: scale(1.0); /* Estado inicial sin zoom */
+	transition: filter 0.4s ease-out, transform 0.4s ease-out; /* Transiciones */
 }
 
 .band-card-link:hover .band-card-image-container img {
-    filter: grayscale(0%); /* Imagen a color */
-    transform: scale(1.08); /* Zoom ligero (ajusta el valor 1.08) */
+	filter: grayscale(0%); /* Imagen a color */
+	transform: scale(1.08); /* Zoom ligero (ajusta el valor 1.08) */
 }
 
 .band-card-name {
-    padding: 18px 15px;
-    text-align: center;
-    border-top: 1px solid rgba(233, 236, 239, 0.7); 
-    background-color: rgba(255, 255, 255, 0.9); 
+	padding: 18px 15px;
+	text-align: center;
+	border-top: 1px solid rgba(233, 236, 239, 0.7);
+	background-color: rgba(255, 255, 255, 0.9);
 }
 
 .band-card-name span {
-    font-family: 'Fighting Spirit turbo', cursive; 
-    font-size: 1.8em; 
-    font-weight: normal; 
-    /*color: #333; */
-    letter-spacing: 1px; 
-    display: block; 
-    line-height: 1.2; 
-    background: linear-gradient(60deg, #bca43b 0%, #bfb175 100%); 
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* Hace que el fondo se vea a través del texto */
+	font-family: "Fighting Spirit turbo", cursive;
+	font-size: 1.8em;
+	font-weight: normal;
+	/*color: #333; */
+	letter-spacing: 1px;
+	display: block;
+	line-height: 1.2;
+	background: linear-gradient(60deg, #bca43b 0%, #bfb175 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent; /* Hace que el fondo se vea a través del texto */
 }
 
 .no-bands-message {
-    grid-column: 1 / -1; 
-    text-align: center;
-    font-size: 1.1em;
-    color: #6c757d;
-    padding: 40px 20px;
-    background-color: rgba(248, 249, 250, 0.8); 
-    border-radius: 8px;
-    border: 1px dashed #dee2e6;
+	grid-column: 1 / -1;
+	text-align: center;
+	font-size: 1.1em;
+	color: #6c757d;
+	padding: 40px 20px;
+	background-color: rgba(248, 249, 250, 0.8);
+	border-radius: 8px;
+	border: 1px dashed #dee2e6;
 }
 
 /* Media Query para pantallas más pequeñas */
-@media (max-width: 768px) { 
-    body {
-        padding-top: 120px; 
-    }
-    .page-top-section {
-        padding-top: 15px; 
-        padding-bottom: 10px;
-    }
-    .page-header-bandas h1 {
-        font-size: 2.2em; 
-        padding: 10px 25px; 
-    }
-    .main-container-bandas {
-        width: 95%;
-        padding: 20px 15px;
-        margin: 0 auto 30px auto;
-        background-color: rgba(255, 255, 255, 0.85); 
-    }
-    .band-grid-container {
-        grid-template-columns: 1fr; 
-        gap: 20px;
-    }
-    .band-card-name span {
-        font-size: 1.5em; 
-    }
-    .back-button-bandas {
-        padding: 8px 15px;
-        font-size: 0.85em;
-    }
+@media (max-width: 768px) {
+	body {
+		padding-top: 120px;
+	}
+	.page-top-section {
+		padding-top: 15px;
+		padding-bottom: 10px;
+	}
+	.page-header-bandas h1 {
+		font-size: 2.2em;
+		padding: 10px 25px;
+	}
+	.main-container-bandas {
+		width: 95%;
+		padding: 20px 15px;
+		margin: 0 auto 30px auto;
+		background-color: rgba(255, 255, 255, 0.85);
+	}
+	.band-grid-container {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	.band-card-name span {
+		font-size: 1.5em;
+	}
+	.back-button-bandas {
+		padding: 8px 15px;
+		font-size: 0.85em;
+	}
 }
 
 @media (max-width: 480px) {
-    body {
-        padding-top: 110px; 
-    }
-    .page-header-bandas h1 {
-        font-size: 1.8em; 
-        padding: 8px 20px; 
-    }
-    .band-card-name span {
-        font-size: 1.3em; 
-    }
+	body {
+		padding-top: 110px;
+	}
+	.page-header-bandas h1 {
+		font-size: 1.8em;
+		padding: 8px 20px;
+	}
+	.band-card-name span {
+		font-size: 1.3em;
+	}
 }
-

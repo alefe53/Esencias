@@ -1,248 +1,251 @@
-/* Estilos generales */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-/* IMPORTANTE: Asegúrate de que la fuente "GodOfWar" esté disponible.
-   Opción 1: Si es una fuente web (ej. Google Fonts), impórtala aquí:
-   @import url('URL_DE_LA_FUENTE_GODOFWAR'); 
-
-   Opción 2: Si es una fuente local, define @font-face aquí:
-   @font-face {
-     font-family: "GodOfWar";
-     src: url("/fonts/GodOfWar.woff2") format("woff2"),
-          url("/fonts/GodOfWar.woff") format("woff"),
-          url("/fonts/GodOfWar.ttf") format("truetype");
-   }
-*/
-
 body {
-    font-family: "Arial", sans-serif; /* Fuente por defecto para el resto de la página */
-    background-image: url("/images/fondo1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	font-family: "Arial", sans-serif; /* Fuente por defecto para el resto de la página */
+	background-image: url("/images/fondo1.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+	width: 100%;
+	max-width: 1200px;
+	padding: 20px;
 }
 
 /* ADF */
 header {
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 20px;
-    background-image: url("/images/adfLogo.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    border: 2px solid #000;
+	text-align: center;
+	margin-bottom: 50px;
+	padding: 20px;
+	background-image: url("/images/adfLogo.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	border: 2px solid #000;
 }
 
 h1 {
-    font-size: 4rem; /* Este tamaño se aplicará a los contenedores de las letras */
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    /* La fuente del h1 en sí no necesita cambiarse si las letras individuales tienen su propia fuente */
+	font-size: 4rem; /* Este tamaño se aplicará a los contenedores de las letras */
+	letter-spacing: 1px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 }
 
 .letra-a-contenedor,
 .letra-d-contenedor,
 .letra-f-contenedor {
-    /* CAMBIO AQUÍ: Añadida la nueva fuente */
-    font-family: "GodOfWar", "Arial Black", "Impact", sans-serif; /* "GodOfWar" como primera opción, luego fallbacks */
-    display: inline-block; 
-    font-weight: 800; /* O el peso que mejor se adapte a la fuente "GodOfWar" */
-    position: relative; 
-    transition: transform 0.3s ease; 
-    cursor: default; 
+	font-family: "GodOfWar", "Arial Black", "Impact", sans-serif;
+	display: inline-block;
+	font-weight: 800; /* O el peso que mejor se adapte a la fuente "GodOfWar" */
+	position: relative;
+	transition: transform 0.3s ease;
+	cursor: default;
 }
 
 .letra-a-contenedor:hover,
 .letra-d-contenedor:hover,
 .letra-f-contenedor:hover {
-    transform: translateY(-5px); 
+	transform: translateY(-5px);
 }
 
 .letra-a-contenedor {
-    color: #ff2f00; 
-    --tooltip-bg-color: #ff2f00; 
-    text-shadow:
-        3px 3px 5px rgba(0, 0, 0, 0.5),
-        -1px -1px 0px rgba(255, 255, 255, 0.2),
-        0 1px 0 #cc2600, 0 2px 0 #b32200, 0 3px 0 #991d00, 0 4px 0 #801800, 0 5px 10px rgba(0,0,0,0.6);
+	color: #ff2f00;
+	--tooltip-bg-color: #ff2f00;
+	text-shadow:
+		3px 3px 5px rgba(0, 0, 0, 0.5),
+		-1px -1px 0px rgba(255, 255, 255, 0.2),
+		0 1px 0 #cc2600, 0 2px 0 #b32200, 0 3px 0 #991d00, 0 4px 0 #801800, 0 5px 10px rgba(
+			0,
+			0,
+			0,
+			0.6
+		);
 }
 
 .letra-d-contenedor {
-    color: #3c6f41; 
-    --tooltip-bg-color: #3c6f41;
-    text-shadow:
-        3px 3px 5px rgba(0, 0, 0, 0.5),
-        -1px -1px 0px rgba(255, 255, 255, 0.2),
-        0 1px 0 #305834, 0 2px 0 #27472a, 0 3px 0 #1e3520, 0 4px 0 #152416, 0 5px 10px rgba(0,0,0,0.6);
+	color: #3c6f41;
+	--tooltip-bg-color: #3c6f41;
+	text-shadow:
+		3px 3px 5px rgba(0, 0, 0, 0.5),
+		-1px -1px 0px rgba(255, 255, 255, 0.2),
+		0 1px 0 #305834, 0 2px 0 #27472a, 0 3px 0 #1e3520, 0 4px 0 #152416, 0 5px 10px rgba(
+			0,
+			0,
+			0,
+			0.6
+		);
 }
 
 .letra-f-contenedor {
-    color: #3357ff; 
-    --tooltip-bg-color: #3357ff;
-    text-shadow:
-        3px 3px 5px rgba(0, 0, 0, 0.5),
-        -1px -1px 0px rgba(255, 255, 255, 0.2),
-        0 1px 0 #2846cc, 0 2px 0 #2239b3, 0 3px 0 #1d2e99, 0 4px 0 #182480, 0 5px 10px rgba(0,0,0,0.6);
+	color: #3357ff;
+	--tooltip-bg-color: #3357ff;
+	text-shadow:
+		3px 3px 5px rgba(0, 0, 0, 0.5),
+		-1px -1px 0px rgba(255, 255, 255, 0.2),
+		0 1px 0 #2846cc, 0 2px 0 #2239b3, 0 3px 0 #1d2e99, 0 4px 0 #182480, 0 5px 10px rgba(
+			0,
+			0,
+			0,
+			0.6
+		);
 }
 
 .char-display {
-    display: inline-block; 
-    position: relative; 
-    /* Heredará font-family y font-weight del contenedor (.letra-X-contenedor) */
+	display: inline-block;
+	position: relative;
+	/* Heredará font-family y font-weight del contenedor (.letra-X-contenedor) */
 }
 
 .letra-3d {
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 }
-.letra-3d::before { 
-    content: attr(data-letter);
-    position: absolute;
-    z-index: -1;
-    top: 2px;
-    left: 2px;
-    text-shadow: none; 
-    opacity: 0.3;
+.letra-3d::before {
+	content: attr(data-letter);
+	position: absolute;
+	z-index: -1;
+	top: 2px;
+	left: 2px;
+	text-shadow: none;
+	opacity: 0.3;
 }
-.letra-3d::after { 
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: radial-gradient( ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 70% );
-    border-radius: 50%;
-    z-index: -2;
+.letra-3d::after {
+	content: "";
+	position: absolute;
+	bottom: -15px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: radial-gradient(
+		ellipse at center,
+		rgba(0, 0, 0, 0.3) 0%,
+		rgba(0, 0, 0, 0) 70%
+	);
+	border-radius: 50%;
+	z-index: -2;
 }
 
 /* Estilos para el tooltip (sin cambios aquí) */
 .tooltip-host {
-    position: relative; 
+	position: relative;
 }
 .tooltip-host::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 130%; 
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--tooltip-bg-color); 
-    color: #fff; 
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 0.9rem; 
-    font-weight: normal; 
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    z-index: 100; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 130%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--tooltip-bg-color);
+	color: #fff;
+	padding: 8px 12px;
+	border-radius: 5px;
+	font-size: 0.9rem;
+	font-weight: normal;
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+	z-index: 100;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .tooltip-host::before {
-    content: "";
-    position: absolute;
-    bottom: calc(130% - 10px); 
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px; 
-    border-style: solid;
-    border-color: var(--tooltip-bg-color) transparent transparent transparent; 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    z-index: 100;
+	content: "";
+	position: absolute;
+	bottom: calc(130% - 10px);
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 6px;
+	border-style: solid;
+	border-color: var(--tooltip-bg-color) transparent transparent transparent;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+	z-index: 100;
 }
 .tooltip-host:hover::after,
 .tooltip-host:hover::before {
-    opacity: 1;
-    visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 
 /* Estilos de los botones (sin cambios aquí) */
 .buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 30px;
 }
 .music-button {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    height: 300px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+	position: relative;
+	width: 100%;
+	max-width: 450px;
+	height: 300px;
+	border: 2px solid #000;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	overflow: hidden;
+	transition: transform 0.3s ease;
 }
 .music-button:hover {
-    transform: scale(1.05);
+	transform: scale(1.05);
 }
 .button-text {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-    padding: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	font-size: 2rem;
+	text-align: center;
+	padding: 20px;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .music-de-ale {
-    background-image: url("/images/adfBas.jpg");
-    background-size: cover;
-    background-position: center;
+	background-image: url("/images/adfBas.jpg");
+	background-size: cover;
+	background-position: center;
 }
 .music-con-ale {
-    background-image: url("/images/moladlr.jpg");
-    background-size: cover;
-    background-position: center;
+	background-image: url("/images/moladlr.jpg");
+	background-size: cover;
+	background-position: center;
 }
 
 /* Responsive (sin cambios aquí) */
 @media (max-width: 768px) {
-    .buttons-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    h1 {
-        font-size: 3rem;
-        gap: 10px;
-    }
-    .music-button {
-        height: 250px;
-    }
+	.buttons-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	h1 {
+		font-size: 3rem;
+		gap: 10px;
+	}
+	.music-button {
+		height: 250px;
+	}
 }
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2.5rem;
-        gap: 5px;
-    }
-    .button-text {
-        font-size: 1.5rem;
-    }
+	h1 {
+		font-size: 2.5rem;
+		gap: 5px;
+	}
+	.button-text {
+		font-size: 1.5rem;
+	}
 }

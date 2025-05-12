@@ -1,55 +1,39 @@
-import { findBandaById } from "../repository/banda.repository.js";
+import bandaService from "../services/banda.service.js";
 
 /**
  * Controlador para obtener y mostrar la página de detalle de una banda específica.
- * Es una función asíncrona porque la obtención de datos del repositorio (que lee un archivo) es asíncrona.
+ * Delega la obtención y procesamiento (ordenamiento de lanzamientos) al BandaService.
  */
 export const getBandaDetailPage = async (req, res) => {
 	try {
-		// 1. Obtener el ID de la banda desde los parámetros de la URL.
-		const bandaId = req.params.bandaId;
+		// Obtener el ID de la banda desde los parámetros de la URL.
+		const { bandaId } = req.params; // Usando destructuring para más limpieza
 
+		// Validación básica de la entrada (puede permanecer en el controlador).
 		if (!bandaId) {
 			return res.status(400).send("No se proporcionó un ID de banda.");
 		}
 
-		// 2. Buscar la banda por su ID usando la función del repositorio.
-		const banda = await findBandaById(bandaId);
+		// Llamar al método del servicio para obtener los detalles de la banda
+		const banda =
+			await bandaService.getBandaDetailsWithSortedLanzamientos(bandaId);
 
-		// 3. Verificar si la banda fue encontrada.
-		if (!banda) {
-			return res.status(404).send("Banda no encontrada.");
-		}
-
-		// 4. ORDENAR LOS LANZAMIENTOS DE LA BANDA POR AÑO (MÁS RECIENTE PRIMERO)
-		if (banda.lanzamientos && Array.isArray(banda.lanzamientos)) {
-			banda.lanzamientos.sort((lanzamientoA, lanzamientoB) => {
-				const anioA = lanzamientoA.anio
-					? Number.parseInt(lanzamientoA.anio, 10)
-					: 0;
-				const anioB = lanzamientoB.anio
-					? Number.parseInt(lanzamientoB.anio, 10)
-					: 0;
-
-				// Orden descendente (más reciente primero)
-				return anioB - anioA;
-			});
-		}
-
-		// 5. Renderizar la plantilla EJS 'musicconadfband.ejs'.
+		// Renderizar la plantilla EJS 'musicconadfband.ejs'.
 		res.render("musicconadfband", {
-			// Nombre del archivo EJS (sin la extensión .ejs)
-			pageTitle: banda.nombre || "Detalle de Banda", // Usa el nombre de la banda como título de la página
-			banda: banda, // Pasa el objeto completo de la banda (con lanzamientos ordenados) a la plantilla
+			pageTitle: banda.nombre || "Detalle de Banda", // Título de la página
+			banda: banda, // Pasa el objeto banda (con lanzamientos ordenados)
 		});
 	} catch (error) {
-		// 6. Manejo de errores general.
 		console.error(
-			`Error en el controlador al obtener el detalle de la banda con ID ${req.params.bandaId}:`,
-			error,
+			`Error en controlador al obtener detalle de banda ID ${req.params.bandaId}:`,
+			error.message,
 		);
+		const statusCode = error.statusCode || 500;
 		res
-			.status(500)
-			.send("Error interno del servidor al cargar el detalle de la banda.");
+			.status(statusCode)
+			.send(
+				error.message ||
+					"Error interno del servidor al cargar el detalle de la banda.",
+			);
 	}
 };
