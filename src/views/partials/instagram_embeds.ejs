@@ -1,0 +1,15 @@
+
+<section class="band-instagram-reels-section">
+    <h2>En Instagram: </h2>
+    <div class="instagram-reels-grid">
+        <% /* Itera sobre cada bloque de HTML en el array */ %>
+        <% banda.linksinstagram.forEach(function(embedHtmlString) { %>
+            <% if (embedHtmlString && typeof embedHtmlString === 'string' && embedHtmlString.trim() !== '') { %>
+                <div class="instagram-reel-item">
+                    <%# Imprime el HTML directamente. Asegúrate de que es seguro y de confianza %>
+                    <%- embedHtmlString %> 
+                </div>
+            <% } %>
+        <% }); %>
+    </div>
+</section>

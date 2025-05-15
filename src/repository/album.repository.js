@@ -36,6 +36,7 @@ export const findAll = async () => {
 					temaData.participes,
 					temaData.descripcion,
 					temaData.anio,
+					temaData.spotifyUrl,
 				),
 		);
 		return new Album(
@@ -68,6 +69,7 @@ export const findById = async (id) => {
 				temaData.participes,
 				temaData.descripcion,
 				temaData.anio,
+				temaData.spotifyUrl,
 			),
 	);
 	return new Album(

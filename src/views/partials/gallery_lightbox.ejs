@@ -1,0 +1,21 @@
+<%# src/views/partials/gallery_lightbox.ejs %>
+<%# Asegúrate de que 'banda' y 'banda.imagenesextra' existen y tienen elementos antes de incluir este parcial %>
+<div id="galleryLightbox" class="gallery-lightbox" style="display: none;"> <%# Oculto por defecto %>
+    <span class="gallery-lightbox-close">×</span>
+    <div class="gallery-lightbox-content-wrapper">
+        <img id="galleryLightboxImage" src="" alt="Imagen de la galería">
+        <a class="gallery-prev">❮</a>
+        <a class="gallery-next">❯</a>
+    </div>
+    <div class="gallery-thumbnails">
+        <% if (typeof banda !== 'undefined' && banda && typeof banda.imagenesextra !== 'undefined' && Array.isArray(banda.imagenesextra)) { %>
+            <% banda.imagenesextra.forEach(function(imgSrc, index) { %>
+                <img src="<%= imgSrc %>" 
+                     alt="Miniatura <%= banda.nombre || 'Banda' %> <%= index + 1 %>" 
+                     class="gallery-thumbnail-item" 
+                     data-index="<%= index %>"
+                     data-src="<%= imgSrc %>"> <%# <--- ATRIBUTO AÑADIDO AQUÍ %>
+            <% }); %>
+        <% } %>
+    </div>
+</div>

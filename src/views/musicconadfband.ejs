@@ -1,269 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><% if (typeof banda !== 'undefined' && banda && banda.nombre) { %><%= banda.nombre %><% } else { %>Detalle de Banda<% } %></title>
-    <link rel="stylesheet" href="/css/music.conadf.band.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <%- include('partials/head', {
+        pageTitle: (typeof banda !== 'undefined' && banda && banda.nombre) ? banda.nombre : 'Detalle de Banda',
+        cssFile: '/css/music.conadf.band.css'
+    }) %>
 </head>
+<body>
 
     <div class="back-button-container-detail">
         <a href="/music/musicconadf" class="back-button-detail">‹ Volver a Bandas</a>
     </div>
 
     <div class="band-detail-container">
+
         <% if (typeof banda !== 'undefined' && banda) { %>
-            <header class="band-detail-header">
-                <div class="band-main-image-container">
-                    <img class="zoomable-image" src="<% if (banda.imagen) { %><%= banda.imagen %><% } else { %>/images/default_band_cover.png<% } %>" 
-                         alt="Imagen de <%= banda.nombre || 'la banda' %>">
-                </div>
-                <div class="band-header-info">
-                    <h1><%= banda.nombre || 'Nombre de Banda Desconocido' %></h1>
-                    <% if (banda.integrantes) { %>
-                        <p class="band-integrantes"><strong>Integrantes:</strong> <%= banda.integrantes %></p>
-                    <% } %>
-                    <% if (banda.descripcion) { %>
-                        <p class="band-description-main"><%= banda.descripcion %></p>
-                    <% } %>
-                </div>
-            </header>
+
+            <%- include('partials/band_header', { banda: banda }) %>
 
             <% if (typeof banda.imagenesextra !== 'undefined' && Array.isArray(banda.imagenesextra) && banda.imagenesextra.length > 0) { %>
                 <div class="gallery-button-container">
-                    <button id="openGalleryBtn" class="gallery-button">Ver Galería de Fotos</button>
+                    <button id="openGalleryBtn" class="gallery-button">Galeria de Fotos</button>
                 </div>
             <% } %>
+
             <% if (typeof banda.youtubeVideoId !== 'undefined' && banda.youtubeVideoId && banda.youtubeVideoId.trim() !== '') { %>
-                <section class="band-video-section">
-                    <h2>Video Destacado</h2>
-                    <div class="video-responsive-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/<%= banda.youtubeVideoId %>" 
-                            title="Video de YouTube de <%= banda.nombre %>" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
+                <%- include('partials/youtube_bandvideosection', { banda: banda }) %>
+            <% } %>
+
+            <%# Nuevo contenedor para poner Lanzamientos e Instagram lado a lado %>
+            <%
+                // Variable para verificar si hay links de Instagram REALMENTE MOSTRABLES
+                const hasActualInstagramContent = typeof banda.linksinstagram !== 'undefined' &&
+                                                  Array.isArray(banda.linksinstagram) &&
+                                                  banda.linksinstagram.some(link => typeof link === 'string' && link.trim() !== '');
+            %>
+            <div class="lanzamientos-instagram-grid">
+
+                <%# Columna de Lanzamientos %>
+                <%# Añadimos la clase 'lanzamientos-column-full-width' si no hay contenido real de Instagram %>
+                <div class="lanzamientos-column<%= !hasActualInstagramContent ? ' lanzamientos-column-full-width' : '' %>">
+                    <% if (typeof banda.lanzamientos !== 'undefined' && Array.isArray(banda.lanzamientos) && banda.lanzamientos.length > 0) { %>
+                        <section class="band-lanzamientos-section">
+                            <h2>Lanzamientos de <%= banda.nombre %></h2>
+                            <% banda.lanzamientos.forEach(function(lanzamiento) { %>
+                                <% if (typeof lanzamiento !== 'undefined' && lanzamiento) { %>
+                                    <%- include('partials/lanzamiento_item', { lanzamiento: lanzamiento }) %>
+                                <% } %>
+                            <% }); %>
+                        </section>
+                    <% } else { %>
+                        <p class="no-lanzamientos-message">Esta banda aún no tiene lanzamientos registrados.</p>
+                    <% } %>
+                </div>
+
+                <%# Columna de Instagram: solo se renderiza si hay contenido real de Instagram %>
+                <% if (hasActualInstagramContent) { %>
+                    <div class="instagram-column">
+                        <%# El parcial instagram_embeds.ejs ya filtra internamente los links vacíos, %>
+                        <%# pero aquí controlamos la renderización de toda la columna. %>
+                        <%- include('partials/instagram_embeds', { links: banda.linksinstagram }) %>
                     </div>
-                </section>
-            <% } %>
-            
-            <% if (typeof banda.lanzamientos !== 'undefined' && Array.isArray(banda.lanzamientos) && banda.lanzamientos.length > 0) { %>
-                <section class="band-lanzamientos-section">
-                    <h2>Lanzamientos de <%= banda.nombre %></h2>
-                    <% banda.lanzamientos.forEach(function(lanzamiento) { %>
-                        <% if (typeof lanzamiento !== 'undefined' && lanzamiento) { %>
-                            <div class="lanzamiento-item">
-                                <div class="lanzamiento-cover">
-                                    <img class="zoomable-image" src="<% if (lanzamiento.portada) { %><%= lanzamiento.portada %><% } else { %>/images/default_cover.png<% } %>" 
-                                         alt="<% if (lanzamiento.nombre) { %>Portada de <%= lanzamiento.nombre %><% } else { %>Portada de Lanzamiento<% } %>">
-                                </div>
-                                <div class="lanzamiento-info">
-                                    <p><strong><%= lanzamiento.nombre || 'Lanzamiento sin nombre' %></strong></p>
-                                    <% if (lanzamiento.anio) { %><p><strong>Año:</strong> <%= lanzamiento.anio %></p><% } %>
-                                    <% if (lanzamiento.descripcion) { %><p><em><%= lanzamiento.descripcion %></em></p><% } %>
-                                    
-                                    <% if (typeof lanzamiento.temas !== 'undefined' && Array.isArray(lanzamiento.temas) && lanzamiento.temas.length > 0) { %>
-                                        <div class="tracklist-banda">
-                                            <p><strong>Temas:</strong></p>
-                                            <ul>
-                                                <% lanzamiento.temas.forEach(function(tema) { %>
-                                                    <% if (typeof tema !== 'undefined' && tema) { %>
-                                                        <li class="song-item-layout-banda">
-                                                            <div class="song-details-text-banda">
-                                                                <% if (tema.nombre) { %><strong><%= tema.nombre %></strong><% } %>
-                                                                <% if (tema.anio) { %> <span class="song-year-banda">(<%= tema.anio %>)</span><% } %>
-                                                            </div>
-                                                            <% 
-                                                                let videoTitle = "Video de YouTube";
-                                                                if (typeof tema.nombre !== 'undefined' && tema.nombre && tema.nombre.trim() !== '') {
-                                                                    videoTitle += ": " + tema.nombre;
-                                                                }
-                                                            %>
-                                                            <% if (typeof tema.ruta !== 'undefined' && tema.ruta && tema.ruta.trim() !== '') { %>
-                                                                <div class="youtube-video-container"> 
-                                                                    <iframe 
-                                                                        src="https://www.youtube.com/embed/<%= tema.ruta %>" 
-                                                                        title="<%= videoTitle %>"
-                                                                        frameborder="0" 
-                                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                                                        referrerpolicy="strict-origin-when-cross-origin" 
-                                                                        allowfullscreen>
-                                                                    </iframe>
-                                                                </div>
-                                                            <% } else { %>
-                                                                <div class="song-multimedia-container no-multimedia"> 
-                                                                    <span>(Video no disponible)</span>
-                                                                </div>
-                                                            <% } %>
-                                                        </li>
-                                                    <% } %>
-                                                <% }); %>
-                                            </ul>
-                                        </div>
-                                    <% } %>
-                                </div>
-                            </div>
-                        <% } %>
-                    <% }); %>
-                </section>
-            <% } else { %>
-                <p class="no-lanzamientos-message">Esta banda aún no tiene lanzamientos registrados.</p>
-            <% } %>
+                <% } %>
+
+            </div> <%# Fin de lanzamientos-instagram-grid %>
+
         <% } else { %>
             <p class="error-message">No se pudo cargar la información de la banda.</p>
         <% } %>
     </div>
 
-    <div id="imageModal" class="image-modal">
-        <span class="image-modal-close">×</span>
-        <img class="image-modal-content" id="modalImageContent">
-        <div id="imageModalCaption"></div>
-    </div>
+    <%- include('partials/image_modal') %>
 
     <% if (typeof banda !== 'undefined' && banda && typeof banda.imagenesextra !== 'undefined' && Array.isArray(banda.imagenesextra) && banda.imagenesextra.length > 0) { %>
-        <div id="galleryLightbox" class="gallery-lightbox">
-            <span class="gallery-lightbox-close">×</span>
-            <div class="gallery-lightbox-content-wrapper">
-                <img id="galleryLightboxImage" src="" alt="Imagen de la galería">
-                <a class="gallery-prev">❮</a>
-                <a class="gallery-next">❯</a>
-            </div>
-            <div class="gallery-thumbnails">
-                <% banda.imagenesextra.forEach(function(imgSrc, index) { %>
-                    <img src="<%= imgSrc %>" alt="Miniatura <%= banda.nombre %> <%= index + 1 %>" class="gallery-thumbnail-item" data-index="<%= index %>">
-                <% }); %>
-            </div>
-        </div>
+        <%- include('partials/gallery_lightbox', { banda: banda }) %>
     <% } %>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // --- Lógica del Modal para imágenes individuales (zoomable-image) ---
-        const imageModal = document.getElementById('imageModal');
-        const modalImgContent = document.getElementById('modalImageContent');
-        const modalCaptionText = document.getElementById('imageModalCaption');
-        // Asegurarse de que el selector es específico para este modal si hay múltiples botones de cierre
-        const imageModalCloseBtn = imageModal ? imageModal.querySelector('.image-modal-close') : null;
-        const zoomableImages = document.querySelectorAll('.zoomable-image');
-        
-        let openImageTimeout;
-        let closeImageTimeout;
 
-        zoomableImages.forEach(img => {
-            img.style.cursor = 'zoom-in'; 
-            img.onclick = function() {
-                clearTimeout(openImageTimeout); clearTimeout(closeImageTimeout);
-                openImageTimeout = setTimeout(() => {
-                    if(imageModal) imageModal.style.display = "block";
-                    if(modalImgContent) modalImgContent.src = this.src;
-                    if(modalCaptionText) modalCaptionText.innerHTML = this.alt;
-                }, 200);
-            }
-        });
-
-        if(imageModalCloseBtn) {
-            imageModalCloseBtn.onclick = function() {
-                clearTimeout(openImageTimeout); clearTimeout(closeImageTimeout);
-                closeImageTimeout = setTimeout(() => {
-                    if(imageModal) imageModal.style.display = "none";
-                }, 200); 
-            }
-        }
-
-        if(imageModal) {
-            imageModal.onclick = function(event) {
-                if (event.target === imageModal) { 
-                     clearTimeout(openImageTimeout); clearTimeout(closeImageTimeout);
-                     closeImageTimeout = setTimeout(() => {
-                        imageModal.style.display = "none";
-                    }, 200); 
-                }
-            }
-        }
-
-        // --- INICIO: Lógica para la Galería de Imágenes Extra ---
-        const galleryLightbox = document.getElementById('galleryLightbox');
-        const openGalleryBtn = document.getElementById('openGalleryBtn');
-        // Asegurarse de que el selector es específico para este lightbox
-        const galleryLightboxCloseBtn = galleryLightbox ? galleryLightbox.querySelector('.gallery-lightbox-close') : null;
-        const galleryLightboxImage = document.getElementById('galleryLightboxImage');
-        const galleryThumbnailsContainer = galleryLightbox ? galleryLightbox.querySelector('.gallery-thumbnails') : null;
-        const prevBtn = galleryLightbox ? galleryLightbox.querySelector('.gallery-prev') : null;
-        const nextBtn = galleryLightbox ? galleryLightbox.querySelector('.gallery-next') : null;
-        
-        let currentGallerySlideIndex = 0;
-        // Pasar el array imagenesextra a JavaScript de forma segura
-        const imagenesExtra = <% if (typeof banda !== 'undefined' && banda && typeof banda.imagenesextra !== 'undefined' && Array.isArray(banda.imagenesextra)) { %><%- JSON.stringify(banda.imagenesextra) %><% } else { %>[]<% } %>;
-
-        function showGallerySlide(index) {
-            if (!galleryLightboxImage || !imagenesExtra || imagenesExtra.length === 0) return;
-            
-            currentGallerySlideIndex = (index + imagenesExtra.length) % imagenesExtra.length; 
-            galleryLightboxImage.src = imagenesExtra[currentGallerySlideIndex];
-            
-            if (galleryThumbnailsContainer) {
-                const thumbnails = galleryThumbnailsContainer.querySelectorAll('.gallery-thumbnail-item');
-                thumbnails.forEach((thumb, i) => {
-                    thumb.classList.remove('active-thumbnail');
-                    if (i === currentGallerySlideIndex) {
-                        thumb.classList.add('active-thumbnail');
-                    }
-                });
-            }
-        }
-
-        if (openGalleryBtn && galleryLightbox) {
-            openGalleryBtn.onclick = function() {
-                galleryLightbox.style.display = 'flex'; // Usar flex para centrar el contenido
-                showGallerySlide(0); 
-            }
-        }
-
-        if (galleryLightboxCloseBtn && galleryLightbox) {
-            galleryLightboxCloseBtn.onclick = function() {
-                galleryLightbox.style.display = 'none';
-            }
-        }
-
-        if (galleryLightbox) {
-            galleryLightbox.onclick = function(event) {
-                if (event.target === galleryLightbox) { 
-                    galleryLightbox.style.display = 'none';
-                }
-            }
-        }
-        
-        if(prevBtn) {
-            prevBtn.onclick = function(e) {
-                e.stopPropagation(); 
-                showGallerySlide(currentGallerySlideIndex - 1);
-            }
-        }
-
-        if(nextBtn) {
-            nextBtn.onclick = function(e) {
-                e.stopPropagation(); 
-                showGallerySlide(currentGallerySlideIndex + 1);
-            }
-        }
-        
-        if (galleryThumbnailsContainer) {
-            const thumbnails = galleryThumbnailsContainer.querySelectorAll('.gallery-thumbnail-item');
-            thumbnails.forEach((thumbnail) => {
-                thumbnail.onclick = (e) => {
-                    e.stopPropagation(); 
-                    const index = parseInt(e.target.getAttribute('data-index'));
-                    if (!isNaN(index)) { // Asegurarse que el índice es un número
-                        showGallerySlide(index);
-                    }
-                }
-            });
-        }
-        // --- FIN: Lógica para la Galería de Imágenes Extra ---
-    });
-</script>
+   <script src="/js/band_detail_logic.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+<section class="band-video-section">
+    <h2>Video Destacado</h2>
+    <div class="video-responsive-container">
+        <iframe 
+            src="https://www.youtube.com/embed/<%= banda.youtubeVideoId %>"  <% /* Corregido: URL estándar de embed de YouTube */ %>
+            title="Video de YouTube de <%= banda.nombre %>" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>

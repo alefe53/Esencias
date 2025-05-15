@@ -1,0 +1,15 @@
+<header class="band-detail-header">
+    <div class="band-main-image-container">
+         <img class="zoomable-image" src="<% if (banda.imagen) { %><%= banda.imagen %><% } else { %>/images/default_band_cover.png<% } %>" 
+              alt="Imagen de <%= banda.nombre || 'la banda' %>">
+     </div>
+     <div class="band-header-info">
+         <h1><%= banda.nombre || 'Nombre de Banda Desconocido' %></h1>
+         <% if (banda.integrantes) { %>
+             <p class="band-integrantes"><strong>Integrantes:</strong> <%= banda.integrantes %></p>
+         <% } %>
+         <% if (banda.descripcion) { %>
+             <p class="band-description-main"><%= banda.descripcion %></p>
+         <% } %>
+     </div>
+</header>

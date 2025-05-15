@@ -33,11 +33,13 @@ body {
 	box-shadow: none;
 }
 
+/* Contenedor del botón "Volver" - AHORA FIJO ABAJO A LA IZQUIERDA */
 .back-button-container-bandas {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 20px;
+    position: fixed;   /* Fijo a la ventana */
+    bottom: 20px;      /* Distancia desde abajo */
+    left: 20px;        /* Distancia desde la izquierda */
+    z-index: 1005;     /* Asegura que esté por encima de otros elementos */
+    /* Ya no necesita top o transform para centrado vertical */
 }
 
 .back-button-bandas {
@@ -82,24 +84,20 @@ body {
 	font-size: 3.0em;
 	color: #f5f5dc;
 	font-weight: normal;
-
 	display: inline-block;
 	padding: 15px 35px;
-
-	border-radius: 50px; /* Mantenemos el border-radius para el overflow:hidden */
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra para el cartel */
-
+	border-radius: 50px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 	margin: 0;
 	text-shadow: 1px 1px 0px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000,
 		-1px 1px 0 #000000, 1px 1px 0 #000000;
-
 	position: relative;
-	z-index: 1; /* Texto por encima del fondo de imagen */
-
+	z-index: 1;
 	transition: transform 0.3s ease-out;
 	transform-origin: center center;
 	letter-spacing: 1.5px;
-	overflow: hidden; /* Importante para que el ::before se recorte con el border-radius */
+	overflow: hidden;
+	animation: fire-glow 6s infinite, fire-flicker 3s infinite; /* Added animations */
 }
 
 .page-header-bandas h1::before {
@@ -109,21 +107,64 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url("/images/fondoale1.png"); /* Imagen de fondo para el cartel del título */
+	background-image: url("/images/fondoale1.png");
 	background-size: cover;
 	background-position: center;
-	opacity: 0.7; /* Opacidad base de la imagen de fondo del cartel */
-	border-radius: inherit; /* Hereda el border-radius del h1 */
-	z-index: -1; /* Detrás del texto del h1 */
-	transition: opacity 0.3s ease-out;
+	opacity: 0.7;
+	border-radius: inherit;
+	z-index: -1;
+	transition: opacity 1s ease-out;
 }
 
 .page-header-bandas h1:hover {
-	transform: scale(1.03);
+	transform: scale(1.05);
 }
 
 .page-header-bandas h1:hover::before {
-	opacity: 0.4; /* La imagen de fondo se vuelve más transparente en hover */
+	opacity: 0.8;
+}
+
+@keyframes fire-glow {
+	/* Glow animation */
+	0% {
+		text-shadow:
+			0 0 10px #ffffff, 0 0 20px #eef28e, 0 0 30px #f4f6c4,
+			1px 1px 0px #000000, -1px -1px 0 #f3f0f0, 1px -1px 0 #000000,
+			-1px 1px 0 #000000, 1px 1px 0 #000000;
+	}
+
+	100% {
+		text-shadow:
+			0 0 10px #fefe00, 0 0 20px #f6ff00, 0 0 30px #ffffff,
+			1px 1px 0px #000000, -1px -1px 0 #f3f0f0, 1px -1px 0 #000000,
+			-1px 1px 0 #000000, 1px 1px 0 #000000;
+	}
+
+	33% {
+		text-shadow:
+			0 0 20px #ff5e00, 0 0 30px #ffc400, 0 0 40px #fee500,
+			1px 1px 0px #000000, -1px -1px 0 #f9f8f8, 1px -1px 0 #000000,
+			-1px 1px 0 #000000, 1px 1px 0 #000000;
+	}
+
+	66% {
+		text-shadow:
+			0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000,
+			1px 1px 0px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000,
+			-1px 1px 0 #000000, 1px 1px 0 #000000;
+	}
+}
+
+@keyframes fire-flicker {
+	/* Flicker animation */
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.95;
+	}
 }
 
 .main-container-bandas {

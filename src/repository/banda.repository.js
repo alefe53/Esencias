@@ -46,6 +46,8 @@ export const findAllBandas = async () => {
 			bandaData.imagen,
 			bandaData.lanzamientos || [],
 			bandaData.imagenesextra,
+			bandaData.linksinstagram,
+			bandaData.linksextras,
 		);
 	});
 
@@ -73,5 +75,7 @@ export const findBandaById = async (id) => {
 		bandaData.imagen,
 		bandaData.lanzamientos || [],
 		bandaData.imagenesextra,
+		bandaData.linksinstagram,
+		bandaData.linksextras,
 	);
 };

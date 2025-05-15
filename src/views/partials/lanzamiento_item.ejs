@@ -1,0 +1,75 @@
+<%# src/views/partials/lanzamiento_item.ejs %>
+<% if (typeof lanzamiento !== 'undefined' && lanzamiento) { %>
+    <div class="lanzamiento-item">
+        <div class="lanzamiento-cover">
+            <img class="zoomable-image" 
+                 src="<% if (lanzamiento.portada) { %><%= lanzamiento.portada %><% } else { %>/images/default_cover.png<% } %>" 
+                 alt="<% if (lanzamiento.nombre) { %>Portada de <%= lanzamiento.nombre %><% } else { %>Portada de Lanzamiento<% } %>">
+        </div>
+        <div class="lanzamiento-info">
+            <p><strong><%= lanzamiento.nombre || 'Lanzamiento sin nombre' %></strong></p>
+            <% if (lanzamiento.anio) { %><p><strong>Año:</strong> <%= lanzamiento.anio %></p><% } %>
+            <% if (lanzamiento.descripcion) { %><p class="lanzamiento-descripcion"><em><%= lanzamiento.descripcion %></em></p><% } %>
+            
+            <% if (typeof lanzamiento.temas !== 'undefined' && Array.isArray(lanzamiento.temas) && lanzamiento.temas.length > 0) { %>
+                <div class="tracklist-banda">
+                    <p class="tracklist-title"><strong>Temas:</strong></p>
+                    <ul>
+                        <% lanzamiento.temas.forEach(function(tema) { %>
+                            <% if (typeof tema !== 'undefined' && tema) { %>
+                                <li class="song-item-layout-banda">
+                                    <div class="song-title-year-block">
+                                        <strong class="song-title" 
+                                            <% if (tema.descripcion && tema.descripcion.trim() !== '') { %>
+                                                data-descripcion-tema="<%= tema.descripcion.replace(/"/g, '&quot;') %>" <%# CORREGIDO AQUÍ para usar &quot; %>
+                                            <% } %>>
+                                            <%= tema.nombre || 'Tema sin nombre' %>
+                                        </strong>
+                                        <% if (tema.anio) { %> <span class="song-year-banda">(<%= tema.anio %>)</span><% } %>
+                                    </div>
+    
+                                    <%# Lógica para mostrar video de YouTube, embed de Spotify o enlace a Spotify %>
+                                    <% 
+                                        let videoTitle = "Video de YouTube";
+                                        if (typeof tema.nombre !== 'undefined' && tema.nombre && tema.nombre.trim() !== '') {
+                                            videoTitle += ": " + tema.nombre;
+                                        }
+                                    %>
+                                    <% if (tema.ruta && tema.ruta.trim() !== '') { %>
+                                        <div class="youtube-video-container song-video-standalone"> 
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/<%= tema.ruta %>" 
+                                                title="<%= videoTitle %>"
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    <% } else if (tema.spotifyUrl && tema.spotifyUrl.trim() !== '') { %>
+                                        <% if (tema.spotifyUrl.trim().toLowerCase().startsWith('<iframe')) { %>
+                                            <%# Si es un código de iframe, renderizarlo directamente %>
+                                            <div class="spotify-embed-container song-media-standalone">
+                                                <%- tema.spotifyUrl %>
+                                            </div>
+                                        <% } else { %>
+                                            <%# Si es una URL, mostrarla como un enlace %>
+                                            <div class="spotify-link-container song-media-standalone">
+                                                <a href="<%= tema.spotifyUrl %>" target="_blank" rel="noopener noreferrer" class="spotify-link">
+                                                    Escuchar en Spotify: <%= tema.spotifyUrl %>
+                                                </a>
+                                            </div>
+                                        <% } %>
+                                    <% } else { %>
+                                        <div class="no-media-placeholder song-media-standalone">
+                                            <span>(Contenido multimedia no disponible)</span>
+                                        </div>
+                                    <% } %>
+                                </li>
+                            <% } %>
+                        <% }); %>
+                    </ul>
+                </div>
+            <% } %>
+        </div>
+    </div>
+<% } %>

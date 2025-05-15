@@ -1,344 +1,516 @@
+/* public/css/music.deadf.css */
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"); 
 
 @font-face {
-	font-family: "Camapana Script PERSONAL USE";
-	src: url("/fonts/CamapanaScriptPERSONALUSE.woff2") format("woff2"),
-		url("/fonts/CamapanaScriptPERSONALUSE.woff") format("woff"),
-		url("/fonts/CamapanaScriptPERSONALUSE.ttf") format("truetype");
-	font-weight: normal;
-	font-style: normal;
+    font-family: "Camapana Script PERSONAL USE";
+    src: url("/fonts/CamapanaScriptPERSONALUSE.woff2") format("woff2"),
+         url("/fonts/CamapanaScriptPERSONALUSE.woff") format("woff"),
+         url("/fonts/CamapanaScriptPERSONALUSE.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-	font-family: "Camapana Script PERSONAL USE", "Times New Roman", serif;
-	margin: 0;
-	padding: 0;
-	background-image: url("/images/fondomusicdeadf.png");
-	color: #333;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	min-height: 100vh;
-	position: relative;
-	padding-top: 160px;
+    font-family: "Philosopher", "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/fondomusicdeadf.png");
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 160px; 
+    line-height: 1.6;
 }
 
 .page-top-lanzamientos {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 999;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
-	box-sizing: border-box;
-	background-color: transparent;
-	box-shadow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .back-button-container {
-	position: absolute;
-	top: 25px;
-	left: 20px;
+    position: fixed;   
+    bottom: 20px;      
+    right: 20px;       
+    z-index: 1000;     
 }
 
 .back-button {
-	display: inline-block;
-	padding: 8px 16px;
-	background-color: rgba(30, 30, 30, 0.75);
-	color: #f0f0f0;
-	text-decoration: none;
-	border-radius: 20px;
-	font-family: "Camapana Script PERSONAL USE", sans-serif;
-	font-size: 1em;
-	border: 1px solid rgba(255, 255, 255, 0.25);
-	cursor: pointer;
-	transition: background-color 0.3s ease, transform 0.2s ease;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(30, 30, 30, 0.75);
+    color: #f0f0f0;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: "Camapana Script PERSONAL USE", sans-serif;
+    font-size: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .back-button:hover {
-	background-color: rgba(0, 0, 0, 0.85);
-	transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.85);
+    transform: scale(1.05); 
 }
 
 .back-button:active {
-	background-color: rgba(0, 0, 0, 0.95);
-	transform: scale(0.98);
+    background-color: rgba(0, 0, 0, 0.95);
+    transform: scale(0.98);
 }
 
 .page-top-lanzamientos h1 {
-	font-family: "Fredericka the Great", cursive;
-	font-size: 2.8em;
-	color: #d0f0c0;
-	display: inline-block;
-	padding: 15px 35px;
-	border-radius: 15px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-	text-shadow:
-		1px 1px 0px rgba(0, 0, 0, 0.7),
-		-1px -1px 0 rgba(0, 0, 0, 0.7),
-		1px -1px 0 rgba(0, 0, 0, 0.7),
-		-1px 1px 0 rgba(0, 0, 0, 0.7),
-		1px 1px 0 rgba(0, 0, 0, 0.7),
-		2px 2px 3px rgba(0, 0, 0, 0.5);
-	margin: 0;
-	letter-spacing: 1.5px;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	transition: transform 0.3s ease-out, text-shadow 0.3s ease-out;
+    font-family: "Fredericka the Great", cursive;
+    font-size: 2.8em;
+    color: #d0f0c0; 
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    text-shadow:
+        1px 1px 0px rgba(0, 0, 0, 0.7),
+        -1px -1px 0 rgba(0, 0, 0, 0.7),
+        1px -1px 0 rgba(0, 0, 0, 0.7),
+        -1px 1px 0 rgba(0, 0, 0, 0.7),
+        1px 1px 0 rgba(0, 0, 0, 0.7),
+        2px 2px 3px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, text-shadow 0.3s ease-out;
 }
 
 .page-top-lanzamientos h1::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-image: url("/images/adfLogo.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	opacity: 0.55;
-	border-radius: inherit;
-	z-index: -1;
-	transition: opacity 0.3s ease-out;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/images/adfLogo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.55;
+    border-radius: inherit;
+    z-index: -1;
+    transition: opacity 0.3s ease-out;
 }
 
 .page-top-lanzamientos h1:hover {
-	transform: scale(1.03);
-	text-shadow:
-		0 0 1px #743131,
-		0 0 5px #fff,
-		0 0 5px #ffffff,
-		0 0 10px #2fdcff,
-		0 0 25px #adff2f,
-		1px 1px 0px rgba(0, 0, 0, 0.5),
-		-1px -1px 0 rgba(0, 0, 0, 0.5),
-		1px -1px 0 rgba(0, 0, 0, 0.5),
-		-1px 1px 0 rgba(0, 0, 0, 0.5),
-		1px 1px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1.03);
+    text-shadow:
+        0 0 1px #743131,
+        0 0 5px #fff,
+        0 0 5px #ffffff,
+        0 0 10px #2fdcff,
+        0 0 25px #adff2f,
+        1px 1px 0px rgba(0, 0, 0, 0.5),
+        -1px -1px 0 rgba(0, 0, 0, 0.5),
+        1px -1px 0 rgba(0, 0, 0, 0.5),
+        -1px 1px 0 rgba(0, 0, 0, 0.5),
+        1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .page-top-lanzamientos h1:hover::before {
-	opacity: 0.7;
+    opacity: 0.7;
 }
 
 .container {
-	width: 80%;
-	margin: 20px auto 40px auto;
-	background-color: rgba(255, 255, 255, 0.25);
-	padding: 25px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	border-radius: 15px;
+    width: 90%; 
+    max-width: 1100px; 
+    margin: 20px auto 40px auto;
+    background-color: rgba(255, 255, 255, 0.35); 
+    padding: 30px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); 
+    border-radius: 15px;
 }
 
 .album-item {
-	display: flex;
-	align-items: flex-start;
-	margin-bottom: 30px;
-	padding: 20px;
-	border: 0.5px solid #ddd;
-	background-color: rgba(249, 249, 249, 0.3);
-	border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 35px; 
+    padding: 25px; 
+    border: 1px solid rgba(221, 221, 221, 0.7); 
+    background-color: rgba(249, 249, 249, 0.45); 
+    border-radius: 12px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+.album-item:last-child {
+    margin-bottom: 0;
 }
 
 .album-cover {
-	margin-right: 20px;
-	flex-shrink: 0;
-	position: relative;
+    margin-right: 25px; 
+    flex-shrink: 0;
+    position: relative;
 }
 
 .album-cover-image {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	border: 3px solid #ccc;
-	object-fit: cover;
-	display: block;
-	cursor: zoom-in;
-	transition: opacity 0.2s ease-in-out;
+    width: 160px; 
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #b0b0b0; 
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .album-cover-image:hover {
-	opacity: 0.8;
+    opacity: 0.85;
+    transform: scale(1.03);
 }
 
-/* Estilos del Modal para la imagen agrandada */
 .image-modal {
-	display: none;
-	position: fixed;
-	z-index: 10000;
-	padding-top: 50px;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.92);
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.92);
 }
 
 .image-modal-content {
-	margin: auto;
-	display: block;
-	width: auto;
-	height: auto;
-	max-width: 80vw;
-	max-height: 80vh;
-	border: 4px solid white;
-	border-radius: 5px;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 85vw; 
+    max-height: 85vh;
+    border: 4px solid white;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
 }
 
-#caption {
-	margin: 15px auto 0 auto;
-	display: block;
-	width: 80%;
-	max-width: 700px;
-	text-align: center;
-	color: #ccc;
-	padding: 10px 0;
-	font-family: sans-serif;
-	font-size: 1.1em;
+#caption { 
+    margin: 15px auto 0 auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-family: "Open Sans", sans-serif; 
+    font-size: 1.1em;
 }
 
 .image-modal-close {
-	position: absolute;
-	top: 20px;
-	right: 35px;
-	color: #f1f1f1;
-	font-size: 45px;
-	font-weight: bold;
-	transition: 0.3s;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .image-modal-close:hover,
 .image-modal-close:focus {
-	color: #bbb;
-	text-decoration: none;
-	cursor: pointer;
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* ... (resto de tus estilos) ... */
 .album-info {
-	flex-grow: 1;
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-size: 1.1em;
+    flex-grow: 1;
+    font-family: "Philosopher", cursive; 
+    font-size: 1.15em; 
 }
 
 .album-info p {
-	margin: 8px 0;
-	line-height: 1.5;
+    margin: 8px 0;
+    line-height: 1.5;
 }
 
-.album-info p em {
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-style: normal;
-	font-size: 1em;
+.album-info p em { 
+    font-family: "Philosopher", cursive; 
+    font-style: italic; 
+    font-size: 1em; 
+    color: #444;
 }
 
 .album-info strong {
-	font-weight: bold;
-	color: #222;
+    font-weight: bold; 
+    color: #222;
 }
 
 .tracklist {
-	margin-top: 15px;
-	padding-top: 10px;
-	border-top: 1px dashed #ccc;
+    margin-top: 20px; 
+    padding-top: 15px; 
+    border-top: 1px dashed #b0b0b0; 
 }
 
-.tracklist p strong {
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-size: 1.1em;
-	color: #333;
+.tracklist p strong { 
+    font-family: "Philosopher", cursive; 
+    font-size: 1.2em; 
+    color: #111;
+    font-weight: 600; 
 }
 
 .tracklist ul {
-	list-style-type: none;
-	padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.tracklist li {
-	padding: 4px 0;
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-size: 1em;
-	color: #383838;
+.tracklist li { 
+    padding: 4px 0;
+    font-family: "Philosopher", cursive; 
+    font-size: 1em;
+    color: #383838;
 }
 
 .song-item-layout {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 8px 0;
-	border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; 
+    border-bottom: 1px solid #e0e0e0; 
+    position: relative; /* Para el posicionamiento del tooltip */
 }
 .song-item-layout:last-child {
-	border-bottom: none;
+    border-bottom: none;
 }
 
 .song-details-text {
-	flex-grow: 1;
-	margin-right: 15px;
+    flex-grow: 1;
+    margin-right: 15px;
+    font-family: "Philosopher", cursive; 
 }
 
-.song-details-text strong {
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-weight: bold;
-	font-size: 1.05em;
-	color: #222;
+/* Estilos para el nombre del tema que activará el tooltip */
+.song-details-text strong.song-name-hover { 
+    font-weight: bold; 
+    font-size: 1.05em;
+    color: #222;
+    font-family: "Philosopher", cursive; 
+    cursor: pointer; 
+    transition: transform 0.2s ease-out; 
+    display: inline-block; /* Necesario para que transform:scale funcione correctamente */
+    position: relative; /* Para que el tooltip pueda posicionarse en relación a este si es necesario */
+}
+
+.song-details-text strong.song-name-hover:hover {
+    transform: scale(1.08); 
 }
 
 .song-year {
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-size: 0.9em;
-	color: #555;
-	margin-left: 5px;
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 8px; 
+    font-family: "Camapana Script PERSONAL USE", cursive;
 }
 
+/* La clase .song-description ya no se usa para mostrar estáticamente la descripción del tema */
+/* Se elimina o comenta si no tiene otros usos */
+/*
 .song-description {
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-style: normal;
-	font-size: 0.9em;
-	color: #505050;
-	margin-top: 3px;
+    font-family: "Philosopher", cursive, sans-serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #505050;
+    margin-top: 3px;
 }
+*/
 
 .song-audio-player-container {
-	flex-shrink: 0;
-	min-width: 220px;
+    flex-shrink: 0;
+    min-width: 250px; 
 }
 
 .song-audio-player-container audio {
-	width: 100%;
-	max-width: 220px;
-	height: 30px;
-	display: block;
+    width: 100%;
+    max-width: 250px; 
+    height: 35px; 
+    display: block;
 }
 
 .song-audio-player-container.no-audio span {
-	font-family: "Camapana Script PERSONAL USE", cursive;
-	font-style: italic;
-	color: #888;
-	font-size: 0.9em;
-	display: inline-block;
-	min-width: 220px;
-	text-align: right;
+    font-family: "Camapana Script PERSONAL USE", cursive;
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+    display: inline-block;
+    min-width: 250px;
+    text-align: right;
 }
 
-/* Contenedor del nombre del proyecto */
 .album-info .nombre-proyecto {
-	font-family: "Freshman", serif;
-	font-size: 2em; /* Tamaño */
-	color: #005f2b;
+    font-family: "Freshman", serif; 
+    font-size: 1.8em; 
+    color: #004d21; 
+    margin-bottom: 5px;
 }
 .album-info .nombre-proyecto strong {
-	font-family: inherit; /* Hereda "Freshman" del padre .nombre-proyecto */
-	font-weight: bold; /* Mantiene la negrita */
-	color: inherit; /* Hereda el color del padre .nombre-proyecto */
+    font-family: inherit; 
+    font-weight: normal; 
+    color: inherit; 
+}
+
+/* Estilos para el tooltip de descripción del tema (NUEVO) */
+.song-description-tooltip {
+    display: none; /* Oculto por defecto, JS lo muestra */
+    position: absolute;
+    /* top y left se calculan con JavaScript */
+    border: 1px solid #b0b0b0; 
+    padding: 10px 15px; /* Padding interno del tooltip */
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra más notoria */
+    z-index: 100; /* Asegurar que esté por encima de otros elementos del item */
+    max-width: 300px; /* Ancho máximo del tooltip */
+    font-family: "Open Sans", sans-serif; /* Fuente legible para el tooltip */
+    font-size: 0.88em; /* Tamaño de fuente para el texto del tooltip */
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; /* Transición más suave */
+    opacity: 0; 
+    transform: scale(0.9) translateY(8px); /* Estado inicial para animación de zoom y entrada */
+    pointer-events: none; /* Para que no interfiera con mouseleave del título */
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px; 
+    }
+
+    .page-top-lanzamientos {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .page-top-lanzamientos h1 {
+        font-size: 2.0em; 
+        padding: 10px 20px;
+    }
+
+    .back-button-container {
+        bottom: 15px;
+        right: 15px;
+    }
+    .back-button {
+        font-size: 0.85em;
+        padding: 7px 14px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .album-item {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        padding: 20px;
+    }
+
+    .album-cover {
+        margin-right: 0;
+        margin-bottom: 20px; 
+    }
+    .album-cover-image {
+        width: 140px; 
+        height: 140px;
+    }
+
+    .album-info {
+        font-size: 1.1em;
+    }
+
+    .tracklist p strong { 
+        font-size: 1.1em;
+    }
+
+    .song-item-layout {
+        flex-direction: column; 
+        align-items: flex-start; 
+        text-align: left; 
+    }
+    .song-details-text {
+        margin-right: 0;
+        margin-bottom: 10px; 
+        width: 100%; 
+    }
+    .song-audio-player-container {
+        min-width: 100%; 
+        text-align: left; 
+    }
+    .song-audio-player-container audio {
+        max-width: 100%;
+    }
+    .song-audio-player-container.no-audio span {
+        min-width: auto;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 80px; 
+    }
+    .page-top-lanzamientos h1 {
+        font-size: 1.6em; 
+        padding: 8px 15px;
+        letter-spacing: 1px;
+    }
+    .back-button-container {
+        bottom: 10px;
+        right: 10px;
+    }
+    .back-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .container {
+        width: 98%;
+        padding: 15px;
+    }
+    .album-item {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+    .album-cover-image {
+        width: 120px;
+        height: 120px;
+    }
+    .album-info {
+        font-size: 1.05em;
+    }
+    .album-info .nombre-proyecto {
+        font-size: 1.5em;
+    }
+    .tracklist p strong { 
+        font-size: 1.0em;
+    }
+    .tracklist li, 
+    .song-details-text strong.song-name-hover, 
+    .song-year {
+        font-size: 0.9em; 
+    }
 }

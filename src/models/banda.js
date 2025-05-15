@@ -7,6 +7,8 @@ export class Banda {
 		imagen,
 		lanzamientos,
 		imagenesextra,
+		linksinstagram,
+		linksextras,
 	) {
 		this.id = id;
 		this.nombre = nombre;
@@ -15,5 +17,7 @@ export class Banda {
 		this.imagen = imagen;
 		this.lanzamientos = lanzamientos;
 		this.imagenesextra = imagenesextra;
+		this.linksinstagram = linksinstagram;
+		this.linksextras = linksextras;
 	}
 }

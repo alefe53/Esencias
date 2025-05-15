@@ -226,6 +226,33 @@ h1 {
 	background-position: center;
 }
 
+.whatsapp-flotante {
+	position: fixed; /* Lo mantiene fijo en la pantalla */
+	bottom: 25px; /* Distancia desde abajo */
+	right: 25px; /* Distancia desde la derecha */
+	z-index: 1000; /* Asegura que esté por encima de otros elementos */
+	/* Ya no necesita background-color, border-radius, ni un tamaño fijo,
+	   se adaptará al tamaño de la imagen. */
+	/* Las propiedades de flexbox (display:flex, justify-content, align-items)
+	   ya no son necesarias aquí si el contenedor solo envuelve la imagen. */
+	transition: transform 0.2s ease-in-out; /* Mantenemos la animación de escala */
+}
+
+.whatsapp-flotante img {
+	display: block; /* Importante para que el 'a' tome el tamaño correcto y evitar espacios extra */
+	width: 100px; /* << AJUSTA ESTE VALOR al tamaño que quieras para tu logo de WhatsApp */
+	height: auto; /* Mantiene la proporción de la imagen */
+	/* Opcional: Si quieres una sombra directamente en la imagen (ideal para PNGs con transparencia) */
+	filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
+	/* Si la imagen no tuviera fondo transparente y quisieras una sombra de caja: */
+	/* box-shadow: 2px 2px 6px rgba(0,0,0,0.3); */
+}
+
+.whatsapp-flotante:hover {
+	transform: scale(1.5); /* Agranda un poco al pasar el mouse */
+	/* Ya no hay cambio de background-color aquí */
+}
+
 /* Responsive (sin cambios aquí) */
 @media (max-width: 768px) {
 	.buttons-container {
@@ -247,5 +274,12 @@ h1 {
 	}
 	.button-text {
 		font-size: 1.5rem;
+	}
+	.whatsapp-flotante {
+		bottom: 15px;
+		right: 15px;
+	}
+	.whatsapp-flotante img {
+		width: 45px;
 	}
 }

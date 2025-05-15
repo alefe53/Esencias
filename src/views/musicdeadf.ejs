@@ -7,11 +7,12 @@
     <title><% if (typeof pageTitle !== 'undefined' && pageTitle) { %><%= pageTitle %><% } else { %>Mis Lanzamientos<% } %></title>
     <link rel="stylesheet" href="/css/music.deadf.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="page-top-lanzamientos">
-        <div class="back-button-container"> <a href="/music" class="back-button">‹ Volver a la página principal</a>
+        <div class="back-button-container"> <a href="/music" class="back-button"> Volver a la página principal ›</a>
         </div>
         <h1>Mis Lanzamientos</h1>
     </div>
@@ -51,20 +52,25 @@
                         <% if (typeof tema !== 'undefined' && tema) { %>
                         <li class="song-item-layout">
                             <div class="song-details-text">
-                                <% if (typeof tema.nombre !== 'undefined' && tema.nombre) { %><strong><%= tema.nombre %></strong><% } %>
-                                <% if (typeof tema.anio !== 'undefined' && tema.anio) { %> <span class="song-year">(<%= tema.anio %>)</span><% } %>
-                                <% if (typeof tema.descripcion !== 'undefined' && tema.descripcion && tema.descripcion.trim() !== '') { %>
-                                <p class="song-description"><em><%= tema.descripcion %></em></p>
+                                <% if (typeof tema.nombre !== 'undefined' && tema.nombre) { %>
+                                    <strong class="song-name-hover" 
+                                        <% if (typeof tema.descripcion !== 'undefined' && tema.descripcion && tema.descripcion.trim() !== '') { %>
+                                            data-descripcion="<%= tema.descripcion.replace(/"/g, '&quot;') %>" 
+                                        <% } %>>
+                                        <%= tema.nombre %>
+                                    </strong>
                                 <% } %>
+                                <% if (typeof tema.anio !== 'undefined' && tema.anio) { %> <span class="song-year">(<%= tema.anio %>)</span><% } %>
                             </div>
                             <% if (typeof tema.ruta !== 'undefined' && tema.ruta && tema.ruta.trim() !== '') { %>
                             <div class="song-audio-player-container">
-                                <audio controls preload="none">
+                                <%# Añadido controlsList="noplaybackrate" %>
+                                <audio controls preload="none" controlsList="noplaybackrate">
                                     <source src="<%= tema.ruta %>" type="audio/mpeg">
                                     Tu navegador no soporta el audio.
                                 </audio>
                             </div>
-                            <% } else if (typeof tema.ruta !== 'undefined') { %>
+                            <% } else if (typeof tema.ruta !== 'undefined') { %> 
                             <div class="song-audio-player-container no-audio">
                                 <span>(Audio no disponible)</span>
                             </div>
@@ -79,7 +85,8 @@
                 <% if (typeof album.audioPreviewAlbumSrc !== 'undefined' && album.audioPreviewAlbumSrc && (!Array.isArray(album.temas) || album.temas.length === 0 || (Array.isArray(album.temas) && !album.temas.some(t => typeof t !== 'undefined' && t && t.ruta)))) { %>
                 <div style="margin-top: 15px;">
                     <p><strong>Preview del Álbum:</strong></p>
-                    <audio controls preload="none" style="width: 100%; max-width: 250px; height: 30px;">
+                    <%# Añadido controlsList="noplaybackrate" %>
+                    <audio controls preload="none" controlsList="noplaybackrate" style="width: 100%; max-width: 250px; height: 30px;">
                         <source src="<%= album.audioPreviewAlbumSrc %>" type="audio/mpeg">
                         Tu navegador no soporta el elemento de audio.
                     </audio>
@@ -102,6 +109,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Lógica del modal de imagen (existente)
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
             const captionText = document.getElementById('caption');
@@ -112,37 +120,111 @@
             let closeTimeout;
 
             albumImages.forEach(img => {
-                img.style.cursor = 'zoom-in'; // Asegura que el cursor cambie
+                img.style.cursor = 'zoom-in'; 
                 img.onclick = function() {
                     clearTimeout(openTimeout);
                     clearTimeout(closeTimeout);
                     openTimeout = setTimeout(() => {
-                        modal.style.display = "block";
-                        modalImg.src = this.src;
-                        captionText.innerHTML = this.alt;
-                    }, 200); // Reducido el retraso a 0.2 segundos para una mejor experiencia
+                        if(modal) modal.style.display = "block"; 
+                        if(modalImg) modalImg.src = this.src;
+                        if(captionText) captionText.innerHTML = this.alt;
+                    }, 200); 
                 }
             });
 
-            closeBtn.onclick = function() {
-                clearTimeout(openTimeout);
-                clearTimeout(closeTimeout);
-                closeTimeout = setTimeout(() => {
-                    modal.style.display = "none";
-                }, 200); // Reducido el retraso a 0.2 segundos
-            }
-
-            modal.onclick = function(event) {
-                if (event.target === modal) {
+            if (closeBtn) { 
+                closeBtn.onclick = function() {
                     clearTimeout(openTimeout);
                     clearTimeout(closeTimeout);
                     closeTimeout = setTimeout(() => {
-                        modal.style.display = "none";
-                    }, 200); // Reducido el retraso a 0.2 segundos
+                        if(modal) modal.style.display = "none";
+                    }, 200); 
                 }
             }
+            
+            if (modal) { 
+                modal.onclick = function(event) {
+                    if (event.target === modal) {
+                        clearTimeout(openTimeout);
+                        clearTimeout(closeTimeout);
+                        closeTimeout = setTimeout(() => {
+                            modal.style.display = "none";
+                        }, 200); 
+                    }
+                }
+            }
+
+            // --- INICIO: Lógica para Tooltips de Descripción de Temas ---
+            const songTitlesWithDesc = document.querySelectorAll('.song-name-hover[data-descripcion]');
+            let descriptionTooltip = null;
+
+            if (songTitlesWithDesc.length > 0) {
+                descriptionTooltip = document.createElement('div');
+                descriptionTooltip.className = 'song-description-tooltip';
+                document.body.appendChild(descriptionTooltip);
+            }
+
+            songTitlesWithDesc.forEach(titleEl => {
+                const descripcion = titleEl.dataset.descripcion;
+                if (!descripcion || descripcion.trim() === '') {
+                    titleEl.style.cursor = 'default';
+                    return;
+                }
+
+                titleEl.addEventListener('mouseenter', (event) => {
+                    if (!descriptionTooltip) return;
+                    descriptionTooltip.innerHTML = descripcion;
+
+                    const r = Math.floor(Math.random() * 200) + 55; 
+                    const g = Math.floor(Math.random() * 200) + 55;
+                    const b = Math.floor(Math.random() * 200) + 55;
+                    descriptionTooltip.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+                    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                    descriptionTooltip.style.color = brightness > 128 ? '#000000' : '#ffffff';
+                    
+                    const rect = titleEl.getBoundingClientRect();
+                    let top = rect.bottom + window.scrollY + 7;
+                    let left = rect.left + window.scrollX;
+
+                    descriptionTooltip.style.opacity = '0'; 
+                    descriptionTooltip.style.transform = 'scale(0.9) translateY(8px)';
+                    descriptionTooltip.style.display = 'block';
+
+                    const tooltipRect = descriptionTooltip.getBoundingClientRect();
+                    if (left + tooltipRect.width > window.innerWidth - 10) {
+                        left = window.innerWidth - tooltipRect.width - 10;
+                    }
+                    if (top + tooltipRect.height > window.innerHeight - 10) {
+                        top = rect.top + window.scrollY - tooltipRect.height - 7;
+                         descriptionTooltip.style.transform = 'scale(0.9) translateY(-8px)'; 
+                    }
+                     if (left < 10) left = 10;
+                     if (top < window.scrollY + 10) top = window.scrollY + 10;
+
+
+                    descriptionTooltip.style.left = `${left}px`;
+                    descriptionTooltip.style.top = `${top}px`;
+                    
+                    requestAnimationFrame(() => { 
+                        descriptionTooltip.style.opacity = '1';
+                        descriptionTooltip.style.transform = 'scale(1) translateY(0)';
+                    });
+                });
+
+                titleEl.addEventListener('mouseleave', () => {
+                    if (!descriptionTooltip) return;
+                    descriptionTooltip.style.opacity = '0';
+                    descriptionTooltip.style.transform = 'scale(0.9) translateY(8px)';
+                    setTimeout(() => {
+                        if (descriptionTooltip.style.opacity === '0') {
+                            descriptionTooltip.style.display = 'none';
+                        }
+                    }, 200); 
+                });
+            });
+            // --- FIN: Lógica para Tooltips de Descripción de Temas ---
         });
     </script>
 </body>
-
 </html>
