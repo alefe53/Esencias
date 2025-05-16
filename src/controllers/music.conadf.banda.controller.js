@@ -2,7 +2,7 @@ import bandaService from "../services/banda.service.js";
 
 /**
  * Controlador para obtener y mostrar la página de detalle de una banda específica.
- * Delega la obtención y procesamiento (ordenamiento de lanzamientos) al BandaService.
+ * Delega la obtención y procesamiento (ordenamiento de lanzamientos) al bandaService.
  */
 export const getBandaDetailPage = async (req, res) => {
 	try {

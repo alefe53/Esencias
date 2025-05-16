@@ -5,6 +5,7 @@ export class Banda {
 		integrantes,
 		descripcion,
 		imagen,
+		conMusica,
 		lanzamientos,
 		imagenesextra,
 		linksinstagram,
@@ -15,6 +16,7 @@ export class Banda {
 		this.integrantes = integrantes;
 		this.descripcion = descripcion;
 		this.imagen = imagen;
+		this.conMusica = conMusica;
 		this.lanzamientos = lanzamientos;
 		this.imagenesextra = imagenesextra;
 		this.linksinstagram = linksinstagram;

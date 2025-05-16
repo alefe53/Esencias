@@ -19,7 +19,6 @@ export const getLanzamientosPage = async (req, res) => {
 			"Error en el controlador al obtener y renderizar lanzamientos:",
 			error.message,
 		);
-		// Envía una respuesta de error al cliente.
 		res
 			.status(500)
 			.send(

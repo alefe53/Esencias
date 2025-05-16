@@ -1,21 +1,13 @@
 // src/repositories/bandaRepository.js
 import fs from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+
+import { config } from "../../config/config.js";
 
 import { Banda } from "../models/banda.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename); // src/repositories
+const dataPath = path.join(config.paths.DB, "bandas.json");
 
-// Ruta al archivo JSON de bandas (asumiendo que está en src/db/bandas.json)
-const dataPath = path.join(__dirname, "..", "db", "bandas.json");
-
-/**
- * Lee y parsea los datos de bandas desde el archivo JSON.
- * @private
- * @returns {Promise<Array<Object>>}
- */
 const _readData = async () => {
 	try {
 		const rawData = await fs.readFile(dataPath, "utf-8");
@@ -27,15 +19,18 @@ const _readData = async () => {
 			);
 			return [];
 		}
+		console.error(`Error al leer o parsear ${dataPath}:`, error);
+		throw error;
 	}
 };
 
-/**
- * Obtiene todas las bandas, convirtiéndolas en instancias de la clase Modelo Banda.
- * @returns {Promise<Array<Banda>>}
- */
 export const findAllBandas = async () => {
 	const jsonData = await _readData();
+
+	if (!Array.isArray(jsonData)) {
+		console.error("Error: Los datos leídos de bandas.json no son un array.");
+		return [];
+	}
 
 	const bandas = jsonData.map((bandaData) => {
 		return new Banda(
@@ -44,27 +39,29 @@ export const findAllBandas = async () => {
 			bandaData.integrantes,
 			bandaData.descripcion,
 			bandaData.imagen,
+			bandaData.conMusica,
 			bandaData.lanzamientos || [],
 			bandaData.imagenesextra,
 			bandaData.linksinstagram,
 			bandaData.linksextras,
+			bandaData.youtubeVideoId,
 		);
 	});
 
 	return bandas.reverse();
 };
 
-/**
- * Encuentra una banda por su ID.
- * @param {string} id - El ID de la banda a buscar.
- * @returns {Promise<Banda|null>} Una promesa que resuelve a la instancia de Banda o null si no se encuentra.
- */
 export const findBandaById = async (id) => {
 	const jsonData = await _readData();
+
+	if (!Array.isArray(jsonData)) {
+		console.error("Error: Los datos leídos de bandas.json no son un array.");
+		return null;
+	}
 	const bandaData = jsonData.find((banda) => banda.id === id);
 
 	if (!bandaData) {
-		return null; // Retorna null si no se encuentra la banda
+		return null;
 	}
 
 	return new Banda(
@@ -73,9 +70,11 @@ export const findBandaById = async (id) => {
 		bandaData.integrantes,
 		bandaData.descripcion,
 		bandaData.imagen,
+		bandaData.conMusica,
 		bandaData.lanzamientos || [],
 		bandaData.imagenesextra,
 		bandaData.linksinstagram,
 		bandaData.linksextras,
+		bandaData.youtubeVideoId,
 	);
 };

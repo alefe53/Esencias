@@ -1,0 +1,60 @@
+[
+	{
+		"id": "proyecto-1",
+		"banda": "Nombre de la Banda",
+		"artistas": "Integrantes de la Banda",
+		"descripcion": "Descripción detallada del proyecto de ingeniería de sonido. Incluye el rol que tuviste, el estudio donde se grabó/mezcló, etc.",
+		"anio": "YYYY-MM-DD",
+		"imagen_principal": "/images/proyectos/proyecto-1/principal.jpg",
+		"album": {
+			"id": "proyecto001-album001",
+			"nombre": "Nombre del Álbum (si aplica)",
+			"descripcion": "Fue un album fantasma",
+			"artistas": "Nombre del Artista/Banda",
+			"portada": "/images/proyectos/proyecto-1/portada.jpg",
+			"canciones": [
+				{
+					"id": "cancion-1",
+					"nombre": "Nombre de la Canción",
+					"participes": "Ingenieros, músicos, etc.",
+					"descripcion": "Descripción concisa de la canción",
+					"imagen": "/images/proyectos/proyecto-1/cancion-1.jpg",
+					"spotify_link": "URL de Spotify (si existe)",
+					"youtube_link": "URL de YouTube (si existe)",
+					"anio": 2024
+				},
+				{
+					"id": "cancion-2",
+					"nombre": "Otra Canción",
+					"participes": "Ingenieros, músicos, etc.",
+					"descripcion": "Descripción concisa de la canción",
+					"imagen": "/images/proyectos/proyecto-1/cancion-2.jpg",
+					"spotify_link": "URL de Spotify (si existe)",
+					"youtube_link": "URL de YouTube (si existe)",
+					"anio": 2024
+				}
+			]
+		},
+		"imagenes_extra": [
+			"/images/proyectos/proyecto-1/extra-1.jpg",
+			"/images/proyectos/proyecto-1/extra-2.jpg"
+		],
+		"links_externos": [
+			{
+				"nombre": "Sitio web del estudio",
+				"url": "https://www.ejemplo.com/estudio"
+			},
+			{
+				"nombre": "Otro enlace relevante",
+				"url": "https://www.ejemplo.com/otro"
+			}
+		],
+		"etiquetas": [
+			"grabacion",
+			"mezcla",
+			"masterizacion",
+			"genero:rock",
+			"estudio: LEDC"
+		]
+	}
+]

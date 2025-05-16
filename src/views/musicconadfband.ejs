@@ -34,33 +34,49 @@
                 const hasActualInstagramContent = typeof banda.linksinstagram !== 'undefined' &&
                                                   Array.isArray(banda.linksinstagram) &&
                                                   banda.linksinstagram.some(link => typeof link === 'string' && link.trim() !== '');
+
+                // Asumimos que 'banda.conMusica' es un booleano que viene del servidor.
+                // Si no está definido, por defecto consideramos que sí tiene música para mantener el comportamiento anterior.
+                const conMusica = typeof banda.conMusica === 'boolean' ? banda.conMusica : true;
             %>
             <div class="lanzamientos-instagram-grid">
 
-                <%# Columna de Lanzamientos %>
-                <%# Añadimos la clase 'lanzamientos-column-full-width' si no hay contenido real de Instagram %>
-                <div class="lanzamientos-column<%= !hasActualInstagramContent ? ' lanzamientos-column-full-width' : '' %>">
-                    <% if (typeof banda.lanzamientos !== 'undefined' && Array.isArray(banda.lanzamientos) && banda.lanzamientos.length > 0) { %>
-                        <section class="band-lanzamientos-section">
-                            <h2>Lanzamientos de <%= banda.nombre %></h2>
-                            <% banda.lanzamientos.forEach(function(lanzamiento) { %>
-                                <% if (typeof lanzamiento !== 'undefined' && lanzamiento) { %>
-                                    <%- include('partials/lanzamiento_item', { lanzamiento: lanzamiento }) %>
-                                <% } %>
-                            <% }); %>
-                        </section>
-                    <% } else { %>
-                        <p class="no-lanzamientos-message">Esta banda aún no tiene lanzamientos registrados.</p>
-                    <% } %>
-                </div>
-
-                <%# Columna de Instagram: solo se renderiza si hay contenido real de Instagram %>
-                <% if (hasActualInstagramContent) { %>
-                    <div class="instagram-column">
-                        <%# El parcial instagram_embeds.ejs ya filtra internamente los links vacíos, %>
-                        <%# pero aquí controlamos la renderización de toda la columna. %>
-                        <%- include('partials/instagram_embeds', { links: banda.linksinstagram }) %>
+                <% if (conMusica) { %>
+                    <%# Columna de Lanzamientos: se muestra si conMusica es true %>
+                    <%# Añadimos 'lanzamientos-column-full-width' si no hay contenido de Instagram Y hay música %>
+                    <div class="lanzamientos-column<%= !hasActualInstagramContent ? ' lanzamientos-column-full-width' : '' %>">
+                        <% if (typeof banda.lanzamientos !== 'undefined' && Array.isArray(banda.lanzamientos) && banda.lanzamientos.length > 0) { %>
+                            <section class="band-lanzamientos-section">
+                                <h2>Lanzamientos de <%= banda.nombre %></h2>
+                                <% banda.lanzamientos.forEach(function(lanzamiento) { %>
+                                    <% if (typeof lanzamiento !== 'undefined' && lanzamiento) { %>
+                                        <%- include('partials/lanzamiento_item', { lanzamiento: lanzamiento }) %>
+                                    <% } %>
+                                <% }); %>
+                            </section>
+                        <% } else { %>
+                            <p class="no-lanzamientos-message">Esta banda aún no tiene lanzamientos registrados.</p>
+                        <% } %>
                     </div>
+
+                    <%# Columna de Instagram: se muestra si hay contenido Y hay música %>
+                    <% if (hasActualInstagramContent) { %>
+                        <div class="instagram-column">
+                            <%- include('partials/instagram_embeds', { links: banda.linksinstagram, banda: banda }) %>
+                        </div>
+                    <% } %>
+
+                <% } else { %>
+                    <%# NO hay música (conMusica es false) %>
+                    <%# Columna de Instagram: se muestra si hay contenido y ocupa todo el ancho %>
+                    <% if (hasActualInstagramContent) { %>
+                        <div class="instagram-column instagram-column-full-width">
+                            <%- include('partials/instagram_embeds', { links: banda.linksinstagram, banda: banda }) %>
+                        </div>
+                    <% } else { %>
+                        <%# Opcional: Mensaje si no hay música NI Instagram %>
+                        <p class="no-content-message">Esta banda no tiene música ni contenido de Instagram para mostrar en este momento.</p>
+                    <% } %>
                 <% } %>
 
             </div> <%# Fin de lanzamientos-instagram-grid %>

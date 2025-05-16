@@ -5,6 +5,7 @@
 		"integrantes": "Gabriel Ordoñez, Stefano Vitacca, Ivan Silberstein, El Piojo, Christian Heinz, Alejandro D. Fenos",
 		"descripcion": "Voz: Gabriel Ordoñez / Bajo: Ivan Silberstein / Bateria: Stefano Vitacca / Armónica: El Piojo / Teclados: Christian Heinz / Guitarras: Alejandro D. Fenos. Un camino de ida la música, hermanos del alma.",
 		"imagen": "/images/pirutecniaprimerep.png",
+		"conMusica": true,
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -201,6 +202,7 @@
 		"integrantes": "Stefano Vitacca, Ivan Silberstein, El Piojo, Alejandro D. Fenos",
 		"descripcion": "Bajo: Ivan Silberstein / Bateria: Stefano Vitacca / Armónica: El Piojo / Guitarras: Alejandro D. Fenos. Una banda fugaz que nunca llegó a tocar en vivo. Pudo haber sido un proyecto que, de darle más manija, podría habernos dado temas rockeros memorables. Al menos nos dejó una grabación que aprecio mucho. Hubo varios integrantes en la banda que pasaron también como Hernán en otra guitarra y creo que hasta teclados.",
 		"imagen": "/images/etniarupikachicado.png",
+		"conMusica": true,
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -247,6 +249,7 @@
 		"integrantes": "Joe Ablop, Milton Zini, Juma Nalda, Alejandro D. Fenos",
 		"descripcion": "Teclado y Voz: Joe Ablop / Bateria: Juma Nulda / Guitarras: Milton Zini (luego ADF) / Bajo: Alejandro D. Fenos. Entré buscando experimentar y encontré unos hermanos del alma. Muchos años de caminos, kilómetros de distancias y toda la música. Tocamos en muchos lugares, hasta en festivales de la talla de Alejandro Lerner y Lali Espósito entre otros. También montamos, con Juma y Joe, un estudio de grabación propio que se llamó La Escena del Crimen. Trabajamos en cientos, sino miles de proyectos, propios y ajenos. Con el tiempo roté a ser guitarra y bajo en las producciones y en nuestra música. Luego lo mudamos a San Juan capital, allí todavía lo mantiene Joe. Seguimos haciendo música a la distancia y planeamos sacar el 5to disco de Media Octava pronto...",
 		"imagen": "/images/mediaoctavalogo.jpg",
+		"conMusica": true,
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -585,6 +588,7 @@
 		"integrantes": "Lucho Devita, ADF, Victor, Nacho, Mariano Quintana",
 		"descripcion": "Trompeta y Voz: Lucho Devita / Bajo: Victor / Bateria: Nacho / Saxo Tenor: Claudio / Saxo Baritono: Mariano Quintana / Saxo Alto: / Percusión: Daniel Ledesma / Guitarra: Alejandro D. Fenos. Banda de funk/rock, hard rock, con la que toqué muchas veces en vivo y conocí mucha gente copada. Solo me quedó una única grabación con los chicos por más que hicimos varios temas diferentes. Lucho en la trompeta, la verdad que un crack total, un lujo tenerlo en la banda, lo mismo con Daniel Ledesma en la percu. ¡Si pudiera pagarles fijo los tendría laburando conmigo!",
 		"imagen": "/images/ventarronfunklogo.jpg",
+		"conMusica": true,
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -637,9 +641,10 @@
 	{
 		"id": "005",
 		"nombre": "FlashBand",
-		"integrantes": "Joe Ablop, Alejandro D. Fenos, Zafiro, Nicolas Moreno",
-		"descripcion": "Teclados: Joe Ablop / Bajo: Zafiro / Bateria: Nicolas Moreno / Guitarra: Alejandro D. Fenos. Banda creada exclusivamente para la composición y grabación de estos tres temas. Con Joe, con Ledc ya funcionando regularmente, siempre habrientos de más música, nos asociamos a Zafiro y Nicolás para flashearla.",
+		"integrantes": "Joe Ablop, Alejandro D. Fenos, Zafiro Campillay, Nicolas Moreno",
+		"descripcion": "Teclados: Joe Ablop / Bajo: Zafiro / Bateria: Nicolas Moreno / Guitarra: Alejandro D. Fenos. \n Banda creada exclusivamente con el propósito de componer y grabar tres temas. \n Con Joe, en Ledc ya funcionando regularmente, siempre hambrientos de música, nos asociamos a Zafiro y Nicolás para flashearla. Creamos esta banda y ensayando 2 veces por semana llegamos a la instancia de grabación. \n Debajo los temas grabados en Ledc subidos a Instagram con su respectivo video.",
 		"imagen": "/images/flashband2.png",
+		"conMusica": false,
 		"lanzamientos": [
 			{
 				"id": "001",
@@ -723,6 +728,7 @@
 		"integrantes": "Sofía Leon, Alejandro Fenos",
 		"descripcion": "Música por ADF. Letra por Sofia Leon en conjunto con ADF. Aprovechando la hermosa voz de mi pareja armamos esta obra de 3 temas cuya portada también fue pintada en conjunto para este fin.",
 		"imagen": "/images/sofiyale.jpg",
+		"conMusica": true,
 		"lanzamientos": [
 			{
 				"id": "001",

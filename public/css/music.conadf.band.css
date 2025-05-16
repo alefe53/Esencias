@@ -226,7 +226,9 @@ body {
     max-width: 100% !important; 
 }
 
-
+.instagram-column-full-width {
+    flex-basis: 100%;
+}
 /* --- ESTILOS PARA LOS ITEMS DE LANZAMIENTO Y TEMAS --- */
 
 .lanzamiento-item {
