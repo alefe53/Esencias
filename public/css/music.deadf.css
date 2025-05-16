@@ -281,80 +281,123 @@ body {
     color: #383838;
 }
 
-.song-item-layout {
+
+.song-item-layout-vertical { /* Nueva clase para el <li> */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0; 
+    flex-direction: column; /* Nombre arriba, fila de reproductores abajo */
+    align-items: flex-start; /* Alinea el texto y la fila de reproductores a la izquierda */
+    padding: 15px 0; 
     border-bottom: 1px solid #e0e0e0; 
-    position: relative; /* Para el posicionamiento del tooltip */
+    position: relative; 
 }
-.song-item-layout:last-child {
+.song-item-layout-vertical:last-child {
     border-bottom: none;
 }
 
-.song-details-text {
-    flex-grow: 1;
-    margin-right: 15px;
+.song-details-text { /* Se mantiene similar, pero ahora siempre ocupa el ancho completo de su línea */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-bottom: 10px; /* Espacio entre el texto y la fila de reproductores */
     font-family: "Philosopher", cursive; 
+    /* margin-right ya no es necesario aquí porque los players van abajo */
 }
 
-/* Estilos para el nombre del tema que activará el tooltip */
-.song-details-text strong.song-name-hover { 
-    font-weight: bold; 
-    font-size: 1.05em;
-    color: #222;
-    font-family: "Philosopher", cursive; 
-    cursor: pointer; 
-    transition: transform 0.2s ease-out; 
-    display: inline-block; /* Necesario para que transform:scale funcione correctamente */
-    position: relative; /* Para que el tooltip pueda posicionarse en relación a este si es necesario */
+/* --- INICIO: NUEVOS Estilos para la FILA HORIZONTAL de reproductores de la canción --- */
+.song-media-players-horizontal-row {
+    display: flex;
+    flex-direction: row; /* Coloca los reproductores uno al lado del otro */
+    flex-wrap: wrap; /* Permite que se envuelvan si no caben en una línea */
+    align-items: flex-start; /* Alinea los reproductores en la parte superior de la fila */
+    gap: 15px; /* Espacio entre cada reproductor en la fila */
+    width: 100%; /* Ocupa el ancho disponible */
+    margin-top: 5px; /* Pequeño espacio arriba de la fila de reproductores */
 }
 
-.song-details-text strong.song-name-hover:hover {
-    transform: scale(1.08); 
+.song-media-item { /* Clase común para cada reproductor en la fila */
+    flex: 1 1 auto; /* Permite que los items crezcan y se encojan, base automática */
+    /* Define un ancho base o máximo para cada reproductor si quieres que sean de tamaño similar
+       o para evitar que uno ocupe demasiado espacio. Por ejemplo: */
+    /* max-width: 280px; */ /* O podrías usar porcentajes: flex-basis: 30%; */
+    min-width: 150px; /* Un ancho mínimo para que no se compriman demasiado */
 }
 
-.song-year {
-    font-size: 0.9em;
-    color: #555;
-    margin-left: 8px; 
-    font-family: "Camapana Script PERSONAL USE", cursive;
+/* Estilos específicos para cada tipo de reproductor (contenedores) */
+.song-youtube-player { /* Ya tenías esta clase */
+    /* width: 100%; No es necesario si .song-media-item controla el flex */
+    aspect-ratio: 16 / 9; 
+    min-height: 100px; /* Altura mínima, especialmente si el ancho es pequeño */
+    background-color: #1c1c1c; 
+    border-radius: 6px; 
+    overflow: hidden; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-/* La clase .song-description ya no se usa para mostrar estáticamente la descripción del tema */
-/* Se elimina o comenta si no tiene otros usos */
+.spotify-embed-container { /* Tu nueva clase para Spotify embed */
+    /* width: 100%; No es necesario si .song-media-item controla el flex */
+    /* La altura es definida por el iframe de Spotify, usualmente 80px o 152px */
+    /* min-height: 80px; Puedes establecer un min-height si es necesario */
+    border-radius: 6px; 
+    overflow: hidden; 
+    background-color: #1c1c1c; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.spotify-link-container { /* Tu nueva clase para el enlace de Spotify */
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+}
+.spotify-link {
+    color: #1DB954;
+    text-decoration: none;
+    font-weight: bold;
+}
+.spotify-link:hover {
+    text-decoration: underline;
+}
+
 /*
-.song-description {
-    font-family: "Philosopher", cursive, sans-serif;
-    font-style: normal;
-    font-size: 0.9em;
-    color: #505050;
-    margin-top: 3px;
+.song-audio-player-container { /* Contenedor del audio local */
+    /* width: 100%; No es necesario si .song-media-item controla el flex */
+    /* min-width: 250px; ahora controlado por .song-media-item 
 }
 */
-
-.song-audio-player-container {
-    flex-shrink: 0;
-    min-width: 250px; 
+.song-youtube-player iframe,
+.spotify-embed-container iframe { /* Estilos para los iframes dentro de sus contenedores */
+    width: 100%;
+    height: 100%; /* Para YouTube. Para Spotify, el iframe define su altura. */
+    border: none;
+    display: block; 
 }
 
+.spotify-embed-container iframe {
+    /* La altura del iframe de Spotify viene de su atributo 'height'.
+       Si quieres forzarla, puedes hacerlo aquí con !important, pero es mejor si el iframe la tiene.
+       Ejemplo: si tu iframe de spotify SIEMPRE es de 80px de alto: */
+    height: 80px; /* O 152px si ese es el que usas */
+    min-height: 80px; /* Asegurar altura mínima */
+}
+
+
 .song-audio-player-container audio {
-    width: 100%;
-    max-width: 250px; 
+    width: 100%; 
     height: 35px; 
     display: block;
 }
 
 .song-audio-player-container.no-audio span {
+    display: block; 
+    text-align: center; 
+    width: 100%;
+    padding: 8px 0; 
     font-family: "Camapana Script PERSONAL USE", cursive;
     font-style: italic;
     color: #888;
     font-size: 0.9em;
-    display: inline-block;
-    min-width: 250px;
-    text-align: right;
 }
+/* --- FIN: NUEVOS Estilos para la FILA HORIZONTAL de reproductores de la canción --- */
+
+
 
 .album-info .nombre-proyecto {
     font-family: "Freshman", serif; 
@@ -391,11 +434,79 @@ body {
 }
 
 
+
+/* --- INICIO: Estilos para el contenedor de detalles y video del álbum --- */
+.album-details-and-video-wrapper {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    align-items: flex-start; /* Alinea los elementos al inicio en el eje transversal */
+    gap: 20px; /* Espacio entre los detalles textuales y el video */
+    margin-bottom: 15px; /* Espacio antes de la descripción o la lista de temas */
+}
+
+.album-textual-details {
+    flex: 1 1 55%; /* Permite crecer, encogerse, con una base del 55% del espacio */
+    min-width: 200px; /* Evita que se comprima demasiado */
+}
+
+.album-youtube-video-embed {
+    flex: 1 1 40%; /* Permite crecer, encogerse, con una base del 40% */
+    min-width: 280px; /* Un ancho mínimo para el video */
+    max-width: 450px; /* Un ancho máximo para que no sea demasiado grande */
+    aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
+    background-color: #111; /* Color de fondo mientras carga el iframe */
+    border-radius: 8px;
+    overflow: hidden; /* Para que el iframe respete el border-radius */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.album-youtube-video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Sin borde en el iframe */
+    display: block; /* Para evitar espacios extra debajo del iframe */
+}
+
+/* Estilo para la descripción del álbum para asegurar que ocupe el ancho completo debajo */
+.album-description-fullwidth {
+    width: 100%; /* Asegura que la descripción ocupe todo el ancho disponible */
+    margin-top: 10px; /* Espacio si el wrapper de arriba tiene contenido */
+    clear: both; /* En caso de que se usaran floats, aunque con flex no es tan necesario */
+}
+/* --- FIN: Estilos para el contenedor de detalles y video del álbum --- */
+
+
+
+
+
+
+
+
 /* --- MEDIA QUERIES --- */
 
 @media (max-width: 768px) {
     body {
         padding-top: 100px; 
+    }
+
+    
+    .album-details-and-video-wrapper {
+         flex-wrap: wrap; /*ya está definido, así que se apilarán.*/
+          flex-direction: column; /* Puedes ajustar el orden aquí si es necesario con 
+           y luego order: X; en los hijos si quieres un orden específico. */
+    }
+
+    .album-textual-details,
+    .album-youtube-video-embed {
+        flex-basis: 100%; /* Cada elemento ocupa el ancho completo cuando se apilan */
+        min-width: 100%; /* Asegura que tomen el ancho completo */
+        max-width: 100%; /* Para el video, que no exceda el contenedor */
+    }
+    
+    .album-youtube-video-embed {
+        margin-left: auto; /* Centrar el video si es más angosto que el 100% */
+        margin-right: auto;
+        max-width: 450px; /* Puedes mantener un max-width incluso en móvil */
     }
 
     .page-top-lanzamientos {
@@ -447,15 +558,27 @@ body {
     }
 
     .song-item-layout {
-        flex-direction: column; 
-        align-items: flex-start; 
-        text-align: left; 
+        /* En pantallas pequeñas, podrías querer que el texto y los reproductores se apilen verticalmente.
+           Tu CSS actual ya hace esto para .song-item-layout (flex-direction: column)
+           y para .song-details-text (width: 100%, margin-bottom).
+           Solo necesitamos asegurar que .song-media-players-stack también se comporte bien.
+        */
+        align-items: center; /* Si se apilan, centrar los items */
     }
+
     .song-details-text {
-        margin-right: 0;
-        margin-bottom: 10px; 
-        width: 100%; 
+        text-align: center; /* Centrar el nombre de la canción cuando se apila */
+        margin-right: 0; /* Quitar margen derecho cuando se apila */
+        margin-bottom: 15px; /* Espacio entre el texto y el stack de reproductores */
     }
+
+    .song-media-players-stack {
+        width: 100%; /* Que ocupe el ancho completo del .album-item */
+        max-width: 320px; /* Un ancho máximo para que no se vea demasiado grande en móviles */
+        margin-left: auto;  /* Centrar el stack de reproductores */
+        margin-right: auto; /* Centrar el stack de reproductores */
+    }
+
     .song-audio-player-container {
         min-width: 100%; 
         text-align: left; 
@@ -512,5 +635,8 @@ body {
     .song-details-text strong.song-name-hover, 
     .song-year {
         font-size: 0.9em; 
+    }
+    .song-media-players-stack {
+        max-width: 100%; /* En pantallas muy pequeñas, permitir que ocupe todo el ancho si es necesario */
     }
 }

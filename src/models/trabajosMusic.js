@@ -1,8 +1,8 @@
-// src/models/trabajoIngenieria.js
-import { AlbumTrabajo } from "./albumTrabajo.js";
-import { LinkExterno } from "./linkExterno.js";
+// src/models/trabajosMusic.js
+import { AlbumTrabajo } from "./albumTrabajo.js"; // Asegúrate que este archivo y clase existan
+import { LinkExterno } from "./linkExterno.js"; // Asegúrate que este archivo y clase existan
 
-export class TrabajoIngenieria {
+export class TrabajosMusic {
 	constructor(
 		id,
 		banda,
@@ -19,12 +19,13 @@ export class TrabajoIngenieria {
 		this.banda = banda || "Artista/Banda Desconocida";
 		this.artistas = artistas || "";
 		this.descripcion = descripcion || "Descripción no disponible.";
-		this.anio = anio || "Fecha Desconocida";
+		this.anio = anio || new Date().getFullYear().toString(); // Default a string del año actual
 		this.imagen_principal = imagen_principal || "/images/default_proyecto.png";
 
 		this.album =
 			albumData && Object.keys(albumData).length > 0
 				? new AlbumTrabajo(
+						// Asumiendo que AlbumTrabajo está definido y se importa correctamente
 						albumData.id,
 						albumData.nombre,
 						albumData.descripcion,
@@ -37,7 +38,7 @@ export class TrabajoIngenieria {
 		this.imagenes_extra = Array.isArray(imagenes_extra) ? imagenes_extra : [];
 		this.links_externos = Array.isArray(links_externosData)
 			? links_externosData.map(
-					(linkData) => new LinkExterno(linkData.nombre, linkData.url),
+					(linkData) => new LinkExterno(linkData.nombre, linkData.url), // Asumiendo LinkExterno definido
 				)
 			: [];
 		this.etiquetas = Array.isArray(etiquetas) ? etiquetas : [];
@@ -47,7 +48,7 @@ export class TrabajoIngenieria {
 		if (this.anio && typeof this.anio === "string" && this.anio.includes("-")) {
 			return this.anio.split("-")[0];
 		}
-		return this.anio;
+		return String(this.anio); // Asegurar que sea string
 	}
 
 	getEtiquetasPrincipales(cantidad = 3) {

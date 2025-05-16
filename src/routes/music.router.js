@@ -7,6 +7,7 @@ import { config } from "../../config/config.js";
 import { getBandaDetailPage } from "../controllers/music.conadf.banda.controller.js";
 import { getMusicConAdfPage } from "../controllers/music.conadf.controller.js";
 import { getLanzamientosPage } from "../controllers/music.deadf.controller.js";
+import { getTrabajosPage } from "../controllers/music.trabajos.controller.js";
 
 const router = express.Router();
 
@@ -30,5 +31,6 @@ router.get("/", (req, res) => {
 router.get("/musicdeadf", getLanzamientosPage);
 router.get("/musicconadf", getMusicConAdfPage);
 router.get("/con-adf/banda/:bandaId", getBandaDetailPage);
+router.get("/trabajosMusic", getTrabajosPage);
 
 export default router;

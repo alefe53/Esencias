@@ -1,0 +1,67 @@
+<% if (typeof tema !== 'undefined' && tema) { %>
+<li class="song-item-layout-vertical"> <%# Clase principal del item de canción, ahora con layout vertical interno %>
+    <div class="song-details-text">
+        <% if (typeof tema.nombre !== 'undefined' && tema.nombre) { %>
+        <strong class="song-name-hover" 
+            <% if (typeof tema.descripcion !== 'undefined' && tema.descripcion && tema.descripcion.trim() !== '') { %>
+            data-descripcion="<%= tema.descripcion.replace(/"/g, '"') %>" 
+            <% } %>>
+            <%= tema.nombre %>
+        </strong>
+        <% } %>
+        <% if (typeof tema.anio !== 'undefined' && tema.anio) { %> <span class="song-year">(<%= tema.anio %>)</span><% } %>
+    </div>
+
+    <%# Contenedor para la fila de reproductores multimedia, solo se renderiza si hay al menos un reproductor %>
+    <% if ((tema.youtubeId && tema.youtubeId.trim() !== '') || (tema.spotifyUrl && tema.spotifyUrl.trim() !== '') || (tema.ruta && tema.ruta.trim() !== '')) { %>
+        <div class="song-media-players-horizontal-row">
+            <%# Video de YouTube para la Canción %>
+            <% if (typeof tema.youtubeId !== 'undefined' && tema.youtubeId && tema.youtubeId.trim() !== '') { %>
+            <div class="song-media-item song-youtube-player">
+                <iframe 
+                    src="https://www.youtube.com/embed/<%= tema.youtubeId %>" 
+                    title="YouTube video player de <%= tema.nombre %>" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <% } %>
+    
+            <%# Spotify Embed para la Canción %>
+            <% if (tema.spotifyUrl && tema.spotifyUrl.trim() !== '') { %>
+                <% if (tema.spotifyUrl.trim().toLowerCase().startsWith('<iframe')) { %>
+                    <div class="song-media-item spotify-embed-container">
+                        <%- tema.spotifyUrl %>
+                    </div>
+                <% } else { %>
+                    <div class="song-media-item spotify-link-container">
+                        <a href="<%= tema.spotifyUrl %>" target="_blank" rel="noopener noreferrer" class="spotify-link">
+                            Escuchar en Spotify
+                        </a>
+                    </div>
+                <% } %>
+            <% } %>
+    
+            <%# Reproductor de audio local existente %>
+            <% if (typeof tema.ruta !== 'undefined' && tema.ruta && tema.ruta.trim() !== '') { %>
+            <div class="song-media-item song-audio-player-container">
+                <audio controls preload="none" controlsList="noplaybackrate">
+                    <source src="<%= tema.ruta %>" type="audio/mpeg">
+                    Tu navegador no soporta el audio.
+                </audio>
+            </div>
+            <% } %>
+        </div>
+    <% } else if (typeof tema.ruta !== 'undefined') { %> 
+        <%# Caso donde solo existe 'ruta' pero está vacía y no hay otros players (ya cubierto por la lógica anterior, pero por si acaso) %>
+        <%# O si quieres mostrar "Media no disponible" si NO hay NADA %>
+        <div class="song-media-players-horizontal-row"> <%# Para mantener consistencia si se muestra algo %>
+            <div class="song-audio-player-container no-audio">
+                <span>(Media no disponible)</span>
+            </div>
+        </div>
+    <% } %>
+</li>
+<% } %>

@@ -45,6 +45,8 @@ export const findAll = async () => {
 					temaData.participes,
 					temaData.descripcion,
 					temaData.anio,
+					temaData.portada,
+					temaData.youtubeId,
 					temaData.spotifyUrl,
 				),
 		);
@@ -55,6 +57,7 @@ export const findAll = async () => {
 			albumData.descripcion,
 			albumData.portada,
 			albumData.anio,
+			albumData.youtubeId,
 			temas,
 		);
 	});
@@ -85,6 +88,8 @@ export const findById = async (id) => {
 				temaData.participes,
 				temaData.descripcion,
 				temaData.anio,
+				temaData.portada,
+				temaData.youtubeId,
 				temaData.spotifyUrl,
 			),
 	);
@@ -95,6 +100,7 @@ export const findById = async (id) => {
 		albumData.descripcion,
 		albumData.portada,
 		albumData.anio,
+		albumData.youtubeId,
 		temas,
 	);
 };

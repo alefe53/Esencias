@@ -20,6 +20,7 @@
 		"descripcion": "Ya después de tantos años de componer y grabar tenía que sacar algo. La pandemia fue como mi click. Me obligó internamente a publicar algo. Decidí montar una selección de temas y sacarlos. Album compilacion de múltiples canciones propias y con amigos. El nombre del disco quiere denotar que son todos temas de diferentes momentos, diferentes personas, diferentes estilos. ¡Pero todo made in Argentina papá!",
 		"portada": "/images/atra.jpg",
 		"anio": "2020",
+		"youtubeId": "",
 		"temas": [
 			{
 				"id": "atra01",
@@ -35,7 +36,9 @@
 					"Damián \"Chompi\" Giménez"
 				],
 				"descripcion": "Uno de mis primeros temas solitas subidos pensados, recuerdo grabaciones en el ex local de Ivan, en lo de Chompi el yorugua con sus instrumentos de percu raros brasileros, letras con el Moncho en su lugar y debates con Stefa en casa. Ni hablar de la incorporación de Juma en la bata. Milton e Ingrid fantásticos.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "Ak8ZpEiSm38",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0FaP17jjHf1JTuOeNKThL3?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra02",
@@ -48,7 +51,9 @@
 					"Christian Heinz"
 				],
 				"descripcion": "Recuerdo las sesiones en ese barrio privado. Un paraíso para elegir guitarras en una sala llena de instrumentos y equipos. Tocar con las mejores que probé, elegir e incorporar por poder nomas. El tema tiene Una les paul grabada para los estribillos y una stratocaster y un telecaster para las estrofas. Hermosos recuerdos de Pirutecnia.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "m7jpvM7XW6k",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/12Rcp4TnVdU9qDxekS3GdD?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra03",
@@ -61,7 +66,9 @@
 					"Christian Heinz"
 				],
 				"descripcion": "Idea improvisada con Pirutecnia en las salas de almagro de mario bravo y corrientes. Christian en el piano y sus arreglos ¡que maravilla! La forma de dividir la bata de Stefa con el aro y el tacho me encanta. Gaby en las voces siempre dandolo todo... ¡ni hablar cuando tocaba el bajo como en este tema! Pirutecnia en su esplendor.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "ghVhxS0LQPc",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/7LyOfyHkArQXNP7V4RSbSH?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra04",
@@ -76,15 +83,19 @@
 					"Damián \"Chompi\" Giménez"
 				],
 				"descripcion": "Momentos tristes. Veniamos de una separación. Los que quedamos armamos otro proyecto maravilloso llamado Etnia Rupik. Tuvo cosas lindas como este tema que grabamos en lo de Stefa en su casa cerrando las puertas del balcón para no joder demasiado a los vecinos. Rama se copó con el Saxo, Piojo con un ampli la descosió. El tema nace de Ivan y un riff maravilloso contado de 3, el final idea de Stefa que quería volver al hard rock y al cuatro cuartos para mostrar el contraste.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "TDFPqw7TPKU",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0NeGyXBgTXRXwUx3WoXWsW?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra05",
-				"nombre": "Pierdas",
+				"nombre": "Piedras",
 				"ruta": "/musicadf/piedras.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Cuando estudiaba sonido me gustaba usar música propia para probar cosas. Siempre tuve base q arranca en B, medio hipnótica en la mente simplemente la plasme de esa forma... En realidad esa idea viene de una grabación más vieja en una consola que le compré a Leo que me permitía manejar todo desde el mismo lugar con sonidos de guitarra maravillosos. Charly tenía una similar que usaba en sus giras para grabar sus ideas, yo grababa mis ideas ahí, todavía la tengo. En esa consola nace este tema a través de una idea. Memorias.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/4c2UAbc86bsRAr0Lds0DDQ?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra06",
@@ -97,7 +108,9 @@
 					"Christian Heinz"
 				],
 				"descripcion": "Más allá del lugar que era hermoso porque fue parte de la trilogía de Hijo de la Noche, Perdido en el Tiempo y este tema, la energía que generaba nos encantaba. Teníamos en Pirutecnia un tema que era nuestra obra más querida, Sangre, un tema psicodélico que disfrutabamos mucho. Cuando compusimos este tema nos hizo recordar el clima que generaba a ese tema y decidimos llamarlo provisoriamente Sangre 2. El provisional se convirtió en efectivo como suele suceder tras el uso. Recuerdo el Slide del medio grabarlo con una petaca de Whisky mientras escuchaba la letra, 'el león entonará su melodía triunfal...'...",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "3O6aa5Gl9Go",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/2kgUa4zHzwab6KBU3qyhjf?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra07",
@@ -105,7 +118,9 @@
 				"ruta": "/musicadf/novenooctogenario.mp3",
 				"participes": ["Alejandro D. Fenos", "Juma Nalda"],
 				"descripcion": "Épocas de experimentación con rítmicas, distintos instrumentos virtuales, formas de comprimir y agregar modulación y delay. Párticularmente nace por la métrica. Cuando un se divierte experimentando es más fácil. Luego le compartí esa locura a Juma para que le meta las bata una locura parece un pulpo. Me gusta hacer viajar en mi música, que se sienta una historia; algo único; cada instante trato de que sea original.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "xiwtUIomE6o",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/09tlQ3uyohZbPMCbjYTIhZ?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra08",
@@ -113,7 +128,9 @@
 				"ruta": "/musicadf/urbanizacion.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Vivir en un departamento sobre Av Rivadavia... es como que siempre es un quilombo. Intente abstraerme, me bajé sonidos ambientes de un bosque me puse auriculares y con la guitarra acústica me puse a componer encima. Luego la idea era molestar esa tranquilidad de lo compuesto. Por eso el concepto de Urbanización se convierte en un proceso humano, estructurado, denso, dominante y agresivo.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/4EXRqEVjPuJDf8FRcWaZhz?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra09",
@@ -126,7 +143,9 @@
 					"Damián \"Chompi\" Giménez"
 				],
 				"descripcion": "La idea era hacer algo minimalista como escuchaba mi viejo en esa época. Clásicos videos de luces de autos en ciudades pasando en cámara rápida, junto a gente fantasma que no se distingue a esa velocidad. Asíque metí metronomo y repetición. Luego, años después, mi amigo Joe Ablop le metió el piano, cuando teníamos el estudio en Parque Patricios, La Escena del Crimen.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/1f2wZZms1sT4N28IlkQSaH?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "atra10",
@@ -134,7 +153,9 @@
 				"ruta": "/musicadf/maderadelassierras.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Aquellos que me conocen saben que tengo sangre cordobesa también. En uno de mis cientos de viajes parando en lo de mis primos, en Aguas de Oro. Un lugar hermoso, descansando cerca de la pileta, a metros del río con mis primos en el sol. Hay lugares en donde uno se siente uno con si mismo pero, que dependen también de la compañia. Mis primos, unos músicos increibles. El Diegote me prestó su guitarra criolla preciosa, imposible no ponerse a componer en esa fiesta. El Andy las charlas de música y del universo.",
-				"anio": "2020"
+				"anio": "2020",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/6qBojknxeSVkSwLmHWnPvA?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			}
 		]
 	},
@@ -146,6 +167,7 @@
 		"descripcion": "Un album compuesto en 2 semanas en el 2025, con la intensión de perder el control. Hacer y sacar, nada de demorar los temas o esperar a la perfección. Con la intensión de ser Lo Fi. Quería aprender a usar el Live Ableton y siempre la mejor forma de aprender es a las piñas. Un disco que sirva para tener de fondo para estudiar, ese fue el objetivo. También quiero dar un especial agradecimiento a Hernán Perez.",
 		"portada": "/images/adfBas.jpg",
 		"anio": "2025",
+		"youtubeId": "Zc74Uu6Wu9E",
 		"temas": [
 			{
 				"id": "bas01",
@@ -153,7 +175,9 @@
 				"ruta": "/musicadf/burbujasdemaderatransparente.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Los temas no están en el orden en el que se compusieron. Éste fue el décimo en ver la luz, me pareció una buena forma de arrancar.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/3aJKxeGkvEk8q7i6RWvt6T?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas02",
@@ -161,7 +185,9 @@
 				"ruta": "/musicadf/comandanteageneral.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "El quinto tema compuesto de esas 2 semanas. Disfruto mucho en general crear climas oscuros, pero el camino de hacer un disco chill para estudiar no lo suele contemplar. Naturalmente me sale hacer temas asi, me cuestan más los 'alegres'. Fue un verdadero reto tratar de dejar al mínimo la cantidad de temas como éste.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/4DgbIPrBNyxfct5IeAupIf?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas03",
@@ -169,7 +195,9 @@
 				"ruta": "/musicadf/relojalalba.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Cuarto día de composición. Personalmente creo que es el tema más bonito del disco, la 'conversación' entre el piano, el bajo y la guitarra se siente natural. Como detalle, la primer frase del piano natural post intro me costó una banda bouncearla/renderizarla/descargarla. Si lo escuchás con auriculares seguramente notás que cuando termina esa frase se asoma un pitido. El VST (Instrumento Virtual) que usaba no me dejaba exportar sin agregarle por alguna extraña razón un pitido como feedback o acople. Literal me volvió loco, no pude solucionarlo por eso no se escucha la cola del piano, simplemente tiene un Fade out. Más allá de esa anécdota, el tema fue un gran disfrute de hacer.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/4BnT8qNIiDslxKMafslUCu?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas04",
@@ -177,15 +205,19 @@
 				"ruta": "/musicadf/origen.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "El verdadero catalizador de toda la obra. En esa época me encontraba escuchando mucho Lo Fi que me daba paz en momentos tranquilos sin sumergirme en el silencio. Queriendo aprender a usar el Live Ableton terminó saliendo este tema. El primero. Tuvo el destino más cruel. La semana siguiente, en pleno torrente creativo para el disco desapareció. Llamar a las carpetas de tus temas por la fecha de creación creeme que no es una buena idea. Al renombrar y querer organizar (ya que no podía distinguir que tema era cual) terminé borrando la carpeta sin percatarme. Tuve que conformarme con la última bajada, el único .WAV que quedaba...",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/6zz3SGuoYkevdZ0gGTYgtU?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas05",
-				"nombre": "Pierdas",
+				"nombre": "Pájaro Surfista",
 				"ruta": "/musicadf/pajarosurfista.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Número 3 en creación. Cumple su propósito, se deja escuchar sin mostrar protagonismo y al final le pone un poco más de onda funky para cambiar. La gran mayoría de los nombres de las canciones vienen a sugerencia de mi pareja Sofía a quien adoro. Para no aburrir agregar audios externos suele estar muy bueno si está bien llevado. Después de nombrarlo le agregué los sonidos de gaviotas para terminar de complementar el funky.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/38Q2Y1ifCtB4W3SIXsDuNY?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas06",
@@ -193,7 +225,9 @@
 				"ruta": "/musicadf/arrebolyelcharco.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "La complejidad no suele traer la conexión rápidamente. Una simple base alegre o divertida puede ser más entretenida aunque no tan original. Sentía que tenía la música pero necesitaba un acompañamiento. Surfeando en youtube encontré , por alguna razón, un discurso de una niña en Méjico que me conmovió con sus sabias palabras, y me pareció que era lo que le faltaba al tema. El octavo tema materializado también en menos de 24 horas.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/3HefaMMBcR8IroYL52pgd6?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas07",
@@ -201,7 +235,9 @@
 				"ruta": "/musicadf/cristaloblicuo.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Casi uno de los últimos temas en componerse. Quería salir un poco del metronomo y de los bits, agarre el piano y me puse a tocar un poco usando como sonido un Piano Electrico. Tocando vino la melo, grabé en una toma. Corregí el Midi creado y le agregué otros sonidos. Después vino el resto. Otro detalle a destacar es el sonido del punteo de la guitarra, de los más desopilantes que he logrado.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/7MG8nH0O3efm4TUuHILrzO?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas08",
@@ -209,7 +245,9 @@
 				"ruta": "/musicadf/bonudspianohop.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Aquellos temas con base como ésta fueron los últimos. Este fue el principio del final, ya cansado de armar beats con el Live Ableton. La guitarra tenemos un largo recorrido, pero más largo (pero con menos actividad) es el recorrido que tengo con el piano. Puse la base, y la armonía vino sola. En mi mente bailaba al compás del piano, era re divertido. El resto vino solo. A destacar el sonido del punteo de viola, me enrosqué en usar un pedal que no suelo usar, el Fuzz Factory, salió esa locura... ¡Tengo que empezar a usarlo un poco más! ",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/3QBynaMbbKfhpsDRrEcB1v?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas09",
@@ -217,7 +255,9 @@
 				"ruta": "/musicadf/elespejodelcampanario.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "En toda camada incontrolable de temas hay una oveja negra. Este fue el segundo tema en salir. Aburrido, triste, melancólico. No me gusta, no lo hubiera sacado si no fuera por el concepto de perder el control y ceder a 2 semanas intensas de composición y trabajo. Lo único que rescato es el efecto que se genera al minuto 1:41. Me hace acordar a 2 temas de Sumo que vinen uno detras del otro que son 'Teléfonos / White Thrash'. Lo que pasa en esas canciones es que Teléfonos es re bajonero y después de fumarte unos minutos, White Thrash aparece y es un subidón para arriba. En mi tema esto no sucede ni a gancho pero al menos en ese minuto se pierde la melancolía y se vuelve como más natural.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/3v6yq9vNM3djXr2Xr2vx2W?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas10",
@@ -225,7 +265,9 @@
 				"ruta": "/musicadf/jarillaymiel.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Tema N° 6 en composición. Siento que es el más apropiado dentro de la categoría de 'Música para Estudiar'. Por alguna razón me toca una vibra sensible este tema.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0ELm5aXevEBNIZWdrymOPo?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas11",
@@ -233,7 +275,9 @@
 				"ruta": "/musicadf/vitacuna.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Uno de los temas del final. le agregué la mandolina para darle un poco de variedad tímbrica al disco. Algunos temas no nacieron sólo en un día. Esta fue una base que surgió mientras grababa otro, decidí usar esa base para el tema del día siguiente.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/6Hon8WQuFRrJWldBmNhkfp?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas12",
@@ -241,7 +285,9 @@
 				"ruta": "/musicadf/llamadaperdida.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Número primo. El séptimo tema en componerse. La mitad del disco. Ésta es la onda que más me gusta, el problema es que posiblemente no sirva mucho para estudiar. El Massive siempre ayudando en la locura. El inicio es un arpegio de piano interpretado con mucho delay en los costados. Es bastante irregular y me gustaba el groove. Los audios agregados en distintos idiomas le dan el nombre al tema claramente. Otro detalle, las guitarras del final mientras suena el telefono, tienen un efecto muy divertido con un plug in que simula ser un Buda y que se mueve a medida que modificas los valores, modulando la señal.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/3Hvj9ujzxrkOlTT3xHZczh?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas13",
@@ -249,7 +295,9 @@
 				"ruta": "/musicadf/jugandoenelpatio.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Manteniendo la onda chill, el noveno tema en componerse. Me tomé bastante tiempo en hacer entrar bien los audios extras agregados, quería mostrar la inocencia y la alegría de niños jugando. Muchas veces no hay sonido más lindo que ese.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/6SvGbNfd9nnN5PKhUW9RfV?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			},
 			{
 				"id": "bas14",
@@ -257,7 +305,9 @@
 				"ruta": "/musicadf/bonushopper.mp3",
 				"participes": ["Alejandro D. Fenos"],
 				"descripcion": "Último tema en componerse y en cerrar el disco. Ya quería salir del chill, me aburría. El proceso de composición puede ser bastante embolante. Las horas pasan repitiendo toma tras toma, editando cosas que ya escuchaste mil veces. En ese afán de salir de esa metodología simplemente mande una base, tire grooves personales que suelo hacer nada demasiado original si vamos al caso pero con la intensión de tener un buen funky. Un tema divertido y bailable para cerrar el disco. Una experiencia hermosa.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0G0tlJQ7T6ELrGZHU2eKkc?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			}
 		]
 	},
@@ -274,6 +324,7 @@
 		"descripcion": "Single hecho con el Piojo en 'La Escena del Crimen'. Compuesto entre épocas jodidas de nuestro país. Entre los seres maravillosos que me regaló la vida se encuentra el Piojo. Días, semanas, meses de zapadas bluseras. Un dúo guitarra/armónica insaciable. Lo del Vasco Baraian, cuando lo tuve con el Mic en frente... ¡Pfff! ¡Mamita que vozarrón! Tomó la letra, se hizo dueño y hasta metió alguna palabra. Una locura el control sobre su registro. Su voz con su overdrive natural, una belleza.. Agradecido infinitamente con todos los que participaron.",
 		"portada": "/images/empiojado.jpg",
 		"anio": "2025",
+		"youtubeId": "",
 		"temas": [
 			{
 				"id": "emp001",
@@ -287,7 +338,50 @@
 					"Joe Ablop"
 				],
 				"descripcion": "Con ganas de armar algo rockero y de tocar la batería, hablé con el piojo para hacer un rock fuerte blusero. Terminó siendo mi sonidista y me grabó como un profesional mientras yo flasheaba con la guitarra, el bajo y la batería. Recuerdo las reflexiones en la Reserva Ecológica Costanera Sur, sentados en la mini playa escribiendo palabras para la canción que luego el Vasco se apropiaría. Francisco, vecino de La Escena Del Crimen, siempre presente cuando lo necesitan, metió su Pedal Steel haciendo envidiar hasta a Jack White. Joe aportó desde las teclas, cada vez que mete algo la descose.",
-				"anio": "2025"
+				"anio": "2025",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/55v31XCHI11Hd0eWsDJvIG?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+			}
+		]
+	},
+	{
+		"id": "004",
+		"nombre": "Elementales",
+		"participes": ["Alejandro D. Fenos", "Sofía Leon"],
+		"descripcion": "Una obra de 3 canciones. Letra por Sofía León y ADF. Música por ADF. \n Un ep acústico inspirado en un hermoso viaje de acampe por los ríos de Valle Fértil, San Juan.",
+		"portada": "/images/elementales.jpg",
+		"anio": "2024",
+		"youtubeId": "TeO6IZ-_EGE",
+		"temas": [
+			{
+				"id": "elem001",
+				"nombre": "Alquimia Dorada",
+				"ruta": "/musicadf/alquimiadorada.mp3",
+				"participes": ["ADF", "Sofía Leon"],
+				"descripcion": "El origen de todo. En el afán de componer algo en conjunto, experimentando con la hermosa voz de Sofi, creamos este tema. Una mezcla acústica exótica.",
+				"anio": "2024",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/1GPBqettJgqidfrr9asgJ6?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+			},
+			{
+				"id": "elem002",
+				"nombre": "Murmullo de Vieno",
+				"ruta": "/musicadf/murmullodeviento.mp3",
+				"participes": ["ADF", "Sofía Leon"],
+				"descripcion": "Mientras componíamos el primer tema, sobró una parte de guitarra que fue el catalizador para el segundo tema.",
+				"anio": "2024",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/7t9fqlYrLwANCoUSJvzTlr?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+			},
+			{
+				"id": "elem004",
+				"nombre": "Sofuego",
+				"ruta": "/musicadf/sofuego.mp3",
+				"participes": ["ADF", "Sofía Leon"],
+				"descripcion": "El fuego debía mostrar sus chispas. El final ameritaba dejar un poco de lado el concepto acústico",
+				"anio": "2024",
+				"youtubeId": "",
+				"spotifyUrl": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/33S5dKvIWDPCISeavCWHEb?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
 			}
 		]
 	}

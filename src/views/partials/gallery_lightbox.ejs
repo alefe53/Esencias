@@ -1,5 +1,4 @@
 <%# src/views/partials/gallery_lightbox.ejs %>
-<%# Asegúrate de que 'banda' y 'banda.imagenesextra' existen y tienen elementos antes de incluir este parcial %>
 <div id="galleryLightbox" class="gallery-lightbox" style="display: none;"> <%# Oculto por defecto %>
     <span class="gallery-lightbox-close">×</span>
     <div class="gallery-lightbox-content-wrapper">
@@ -14,7 +13,7 @@
                      alt="Miniatura <%= banda.nombre || 'Banda' %> <%= index + 1 %>" 
                      class="gallery-thumbnail-item" 
                      data-index="<%= index %>"
-                     data-src="<%= imgSrc %>"> <%# <--- ATRIBUTO AÑADIDO AQUÍ %>
+                     data-src="<%= imgSrc %>"> 
             <% }); %>
         <% } %>
     </div>

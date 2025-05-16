@@ -276,6 +276,45 @@ h1 {
 
 /* Responsive (ajustes para el nuevo botón si es necesario) */
 @media (max-width: 768px) {
+
+ .song-item-layout-vertical {
+        align-items: center; 
+    }
+    .song-details-text {
+        text-align: center; 
+        margin-bottom: 15px; 
+    }
+
+    .song-media-players-row {
+        flex-direction: column; /* Apila los items (sean columnas especiales o reproductores individuales) */
+        align-items: center; 
+        width: 100%;
+        max-width: 350px; /* Ancho máximo para el stack vertical en móviles */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .song-media-item { /* Cada item (sea reproductor o columna especial) ocupa el ancho completo en móvil */
+        flex-basis: 100%; 
+        width: 100%;    
+        max-width: 100%; 
+        min-width: unset; 
+        margin-bottom: 10px; /* Espacio entre items apilados verticalmente */
+    }
+    .song-media-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* En el caso especial, las columnas internas también deben ser 100% de ancho */
+    .youtube-column-special,
+    .spotify-audio-column-special {
+        width: 100%;
+    }
+    
+    .spotify-audio-column-special {
+         gap: 10px; /* Mantiene el gap entre spotify y audio */
+    }
+    
     .buttons-container {
         flex-direction: column;
         align-items: center;

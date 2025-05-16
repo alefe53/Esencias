@@ -7,6 +7,7 @@ export class Cancion {
 		descripcion,
 		anio,
 		portada,
+		youtubeId,
 		spotifyUrl,
 	) {
 		this.id = id;
@@ -16,6 +17,7 @@ export class Cancion {
 		this.descripcion = descripcion;
 		this.anio = anio;
 		this.portada = portada;
+		this.youtubeId = youtubeId;
 		this.spotifyUrl = spotifyUrl;
 	}
 }

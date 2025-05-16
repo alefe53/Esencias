@@ -1,0 +1,81 @@
+<%# src/views/partials/_album_item.ejs %>
+<% if (typeof album !== 'undefined' && album) { %>
+<div class="album-item">
+    <div class="album-cover">
+        <img class="album-cover-image" src="<% if (typeof album.portada !== 'undefined' && album.portada) { %><%= album.portada %><% } else { %>/images/default_cover.png<% } %>" alt="<% if (typeof album.nombre !== 'undefined' && album.nombre) { %>Portada de <%= album.nombre %><% } else { %>Portada de Álbum<% } %>">
+    </div>
+    <div class="album-info">
+        <div class="album-details-and-video-wrapper"> 
+            <div class="album-textual-details">
+                <div class="nombre-proyecto">
+                    <p>
+                        <% if (typeof album.nombre !== 'undefined' && album.nombre) { %><%= album.nombre %><% } %></p>
+                </div>
+                <p><strong>Artistas partícipes:</strong>
+                    <% if (typeof album.participes !== 'undefined' && album.participes) { %>
+                    <% if (Array.isArray(album.participes)) { %>
+                    <%= album.participes.join(', ') %>
+                    <% } else { %>
+                    <%= album.participes %>
+                    <% } %>
+                    <% } %>
+                </p>
+                <p><strong>Año:</strong> <% if (typeof album.anio !== 'undefined' && album.anio) { %><%= album.anio %><% } %></p>
+            
+                <% if (typeof album.descripcion !== 'undefined' && album.descripcion && album.descripcion.trim() !== '') { %>
+                    <p class="album-description-fullwidth"><em><%= album.descripcion %></em></p>
+                <% } %>
+            </div>
+
+            <%# --- Video de YouTube para el Álbum --- %>
+            <% if (typeof album.youtubeId !== 'undefined' && album.youtubeId && album.youtubeId.trim() !== '') { %>
+            <div class="album-youtube-video-embed">
+                <iframe 
+                    src="https://www.youtube.com/embed/<%= album.youtubeId %>" 
+                    title="YouTube video player del álbum <%= album.nombre %>" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <% } %>
+        </div>
+        <%# --- FIN: Contenedor para información textual y video del álbum --- %>
+
+      
+
+        <%# Lista de Temas (se mantiene debajo) %>
+        <% if (typeof album.temas !== 'undefined' && Array.isArray(album.temas) && album.temas.length > 0) { %>
+        <div class="tracklist">
+            <p><strong>Lista de Temas:</strong></p>
+            <ul>
+                <% album.temas.forEach(function(tema) { %>
+                    <%- include('_song_item', { tema: tema }) %>
+                <% }); %>
+            </ul>
+        </div>
+        <% } %>
+
+        <% 
+        let albumHasAnyPlayableTrackMedia = false;
+        if (Array.isArray(album.temas) && album.temas.length > 0) {
+            albumHasAnyPlayableTrackMedia = album.temas.some(t => 
+                (typeof t !== 'undefined' && t && t.ruta && t.ruta.trim() !== '') ||
+                (typeof t !== 'undefined' && t && t.youtubeId && t.youtubeId.trim() !== '') ||
+                (typeof t !== 'undefined' && t && t.spotifyURL && t.spotifyURL.trim() !== '')
+            );
+        }
+        %>
+        <% if (typeof album.audioPreviewAlbumSrc !== 'undefined' && album.audioPreviewAlbumSrc && album.audioPreviewAlbumSrc.trim() !== '' && !albumHasAnyPlayableTrackMedia) { %>
+        <div style="margin-top: 15px;">
+            <p><strong>Preview del Álbum:</strong></p>
+            <audio controls preload="none" controlsList="noplaybackrate" style="width: 100%; max-width: 250px; height: 30px;">
+                <source src="<%= album.audioPreviewAlbumSrc %>" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <% } %>
+    </div>
+</div>
+<% } %>

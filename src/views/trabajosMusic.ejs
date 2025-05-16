@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/head', { 
+        pageTitle: pageTitle, 
+        cssFile: '/css/music.trabajos.css'  // Nuevo archivo CSS
+    }) %>
+</head>
+<body>
+    <%- include('partials/navbar', { currentPath: currentPath }) %>
+
+    <div class="container trabajos-portfolio-container">
+        <header class="portfolio-header">
+            <h1><%= pageTitle %></h1>
+            <p class="portfolio-subtitle">Explora una selección de proyectos en los que he trabajado como ingeniero de sonido.</p>
+        </header>
+
+        <% if (trabajos && trabajos.length > 0) { %>
+            <div class="trabajos-grid">
+                <% 
+                // Definimos algunas clases de formas que podríamos aplicar
+                const formas = ['forma-cuadrado', 'forma-circulo', 'forma-hexagono', 'forma-rombo']; 
+                %>
+                <% trabajos.forEach((trabajo, index) => { %>
+                    <% 
+                    // Asignar una forma basada en el índice (para demostración)
+                    // Para aleatoriedad real en cada carga, necesitarías JS del lado del cliente
+                    const formaClase = formas[index % formas.length]; 
+                    %>
+                    <a href="/music/trabajos/<%= trabajo.id %>" class="trabajo-card-link">
+                        <figure class="trabajo-card <%= formaClase %>">
+                            <div class="trabajo-imagen-wrapper">
+                                <img src="<%= trabajo.imagen_principal %>" alt="Imagen de <%= trabajo.titulo %>">
+                            </div>
+                            <figcaption class="trabajo-caption">
+                                <h2 class="trabajo-titulo"><%= trabajo.titulo %></h2>
+                                <p class="trabajo-artista-anio"><%= trabajo.banda %> (<%= trabajo.getAnioFormateado() %>)</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <div class="no-trabajos-container">
+                <img src="/images/iconos/audio-mixer.svg" alt="Mesa de mezclas" class="no-trabajos-icon"> <%# Asume un icono SVG %>
+                <p class="no-content-message">Aún no hay trabajos destacados para mostrar. ¡Vuelve pronto!</p>
+            </div>
+        <% } %>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <%# Opcional: Script para aleatorizar formas en el lado del cliente (ejemplo básico) %>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.trabajo-card');
+            const formasBase = ['forma-cuadrado', 'forma-circulo', 'forma-hexagono', 'forma-rombo'];
+            
+            cards.forEach(card => {
+                // Eliminar cualquier clase de forma preexistente (si la hubo del EJS)
+                formasBase.forEach(f => card.classList.remove(f));
+                
+                // Aplicar una forma aleatoria
+                const formaAleatoria = formasBase[Math.floor(Math.random() * formasBase.length)];
+                card.classList.add(formaAleatoria);
+            });
+        });
+    </script>
+</body>
+</html>

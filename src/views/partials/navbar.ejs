@@ -1,0 +1,47 @@
+<%# src/views/partials/navbar.ejs %>
+<nav class="main-navbar">
+    <ul>
+        <li><a href="/music" class="<%= currentPath === '/music' ? 'active' : '' %>">Inicio Música</a></li>
+        <li><a href="/music/musicdeadf" class="<%= currentPath === '/music/musicdeadf' ? 'active' : '' %>">Música De Ale</a></li>
+        <li><a href="/music/musicconadf" class="<%= currentPath === '/music/musicconadf' ? 'active' : '' %>">Música Con Ale</a></li>
+        <li><a href="/music/trabajos" class="<%= currentPath === '/music/trabajos' ? 'active' : '' %>">Mis Trabajos</a></li>
+        <%# Añade más enlaces según necesites %>
+    </ul>
+</nav>
+
+<style>
+/* Estilos básicos para el navbar, puedes moverlos a tu CSS principal o a un CSS de componentes */
+.main-navbar {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed; /* Para que quede fija arriba */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Para que esté sobre otros contenidos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.main-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main-navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+.main-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.main-navbar ul li a:hover,
+.main-navbar ul li a.active {
+    background-color: #555;
+    color: #f0c040; /* Un color para destacar el activo */
+}
+</style>

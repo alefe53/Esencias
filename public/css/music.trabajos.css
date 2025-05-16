@@ -1,0 +1,180 @@
+/* public/css/music.trabajos.css */
+
+body {
+    /* Puedes heredar estilos base de un CSS general si lo tienes,
+       o definir aquí los necesarios para esta página específica */
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Un fondo suave para la página */
+    color: #333;
+    margin: 0;
+    padding-top: 80px; /* Asumiendo altura de navbar */
+}
+
+.container.trabajos-portfolio-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.portfolio-header h1 {
+    font-size: 2.8rem;
+    color: #2c3e50; /* Un azul oscuro */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.portfolio-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d; /* Un gris suave */
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.trabajos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid responsivo */
+    gap: 35px;
+    padding: 20px 0;
+}
+
+.trabajo-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Para que la tarjeta ocupe el espacio del grid item */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.trabajo-card-link:hover .trabajo-card {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.trabajo-card-link:hover .trabajo-caption {
+    background-color: rgba(44, 62, 80, 0.95); /* Más oscuro en hover */
+}
+
+
+.trabajo-card {
+    background-color: #ffffff;
+    border-radius: 8px; /* Un radio base, las formas pueden anularlo */
+    overflow: hidden; /* Muy importante para las formas con clip-path */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex; /* Para controlar la imagen y el caption */
+    flex-direction: column;
+    height: 380px; /* Altura fija para las tarjetas, ajusta según necesites */
+    position: relative; /* Para el caption absoluto */
+    transition: inherit; /* Hereda la transición del enlace padre */
+}
+
+.trabajo-imagen-wrapper {
+    width: 100%;
+    height: 75%; /* La imagen ocupa la mayor parte de la tarjeta */
+    overflow: hidden; /* Para que la imagen se contenga en la forma */
+    position: relative; /* Para transformaciones de la imagen si es necesario */
+}
+
+.trabajo-imagen-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    display: block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.trabajo-card-link:hover .trabajo-imagen-wrapper img {
+    transform: scale(1.1); /* Sutil zoom a la imagen en hover */
+}
+
+.trabajo-caption {
+    padding: 18px;
+    text-align: center;
+    background-color: rgba(44, 62, 80, 0.85); /* Un fondo semitransparente oscuro */
+    color: #ffffff;
+    position: absolute; /* Posicionar sobre la parte inferior de la imagen */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-out;
+    height: 25%; /* El caption ocupa el resto de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trabajo-titulo {
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.trabajo-artista-anio {
+    font-size: 0.9rem;
+    color: #bdc3c7; /* Un gris claro para el subtitulo */
+    margin: 0;
+}
+
+/* --- Estilos para las Formas --- */
+/* Estos clip-path son ejemplos. Puedes buscar "css clip-path generator" para crear formas más complejas. */
+
+.trabajo-card.forma-cuadrado {
+    /* El cuadrado es la forma por defecto, no necesita clip-path si no hay radius */
+    border-radius: 8px; 
+}
+
+.trabajo-card.forma-circulo {
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%; /* Ayuda con el overflow y anti-aliasing */
+}
+.trabajo-card.forma-circulo .trabajo-imagen-wrapper,
+.trabajo-card.forma-circulo .trabajo-imagen-wrapper img {
+    border-radius: 50%; /* Aplicar también a la imagen para un mejor efecto */
+}
+
+
+.trabajo-card.forma-hexagono {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.trabajo-card.forma-rombo {
+     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Para que las imágenes dentro de formas con clip-path se vean bien 
+.trabajo-card.forma-hexagono .trabajo-imagen-wrapper,
+.trabajo-card.forma-rombo .trabajo-imagen-wrapper {
+    /* No se necesita un clip-path aquí si el padre ya lo tiene y overflow:hidden 
+}
+
+*/
+/* Mensaje si no hay trabajos */
+.no-trabajos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 300px; /* Para que ocupe algo de espacio */
+}
+
+.no-trabajos-icon {
+    width: 80px;
+    height: 80px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.no-content-message { /* Reutilizando la clase si ya la tienes */
+    font-size: 1.2rem;
+    color: #555;
+}

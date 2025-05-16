@@ -4,7 +4,7 @@
 		"banda": "Nombre de la Banda",
 		"artistas": "Integrantes de la Banda",
 		"descripcion": "Descripción detallada del proyecto de ingeniería de sonido. Incluye el rol que tuviste, el estudio donde se grabó/mezcló, etc.",
-		"anio": "YYYY-MM-DD",
+		"anio": 2024,
 		"imagen_principal": "/images/proyectos/proyecto-1/principal.jpg",
 		"album": {
 			"id": "proyecto001-album001",
